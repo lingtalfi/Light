@@ -30,9 +30,10 @@ Or just download it and place it where you want otherwise.
 
 Summary
 ===========
-- [Light api](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light.md) (generated with [DocTools](https://github.com/lingtalfi/DocTools))
+<!-- - [Light api](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light.md) (generated with [DocTools](https://github.com/lingtalfi/DocTools))-->
 - Pages
-    - [Diary](https://github.com/lingtalfi/Light/blob/master/doc/pages/diary.md)
+    - [Diary](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/diary.md)
+    <!-- - [Diary](https://github.com/lingtalfi/Light/blob/master/doc/pages/diary.md)-->
 
 
 
