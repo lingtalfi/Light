@@ -287,6 +287,17 @@ so that the app maintainer can safely create a service conf file which name star
 to put all her services in it. 
 
 
+While I'm at the service container: how do we overwrite "plugins" configuration?
+
+An idea that attracts me is the one of creating a zzz.byml file in the config/services, and to override the configuration
+services from there. The benefits of doing so are:
+
+- we don't touch the original services config files, which might be rewritten every time plugin planets are re-imported
+- the zzz naming ensures that the file is read last, thus overriding any other files.
+- we don't need to create a special system (like a separate variables injection like in Jin, or an dedicated override system),
+    we just re-use what's already there at our advantage
+
+So, quite tricky, but quite simple really.
 
 
 

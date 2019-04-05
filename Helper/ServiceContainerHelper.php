@@ -43,6 +43,9 @@ class ServiceContainerHelper
     public static function getInstance(string $appDir, array $options = []): LightServiceContainerInterface
     {
 
+
+        az(self::getServicesConf($appDir));
+
         $type = $options['type'] ?? 'blue';
         $blueMode = $options['blueMode'] ?? 'frozen';
 
