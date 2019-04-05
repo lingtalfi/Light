@@ -43,8 +43,8 @@ class ServiceContainerHelper
     public static function getInstance(string $appDir, array $options = []): LightServiceContainerInterface
     {
 
-
-        az(self::getServicesConf($appDir));
+//        $conf = self::getServicesConf($appDir);
+//        az($conf);
 
         $type = $options['type'] ?? 'blue';
         $blueMode = $options['blueMode'] ?? 'frozen';
@@ -108,6 +108,7 @@ class ServiceContainerHelper
      *
      * @param string $appDir
      * @return array
+     * @throws \Exception
      */
     private static function getServicesConf(string $appDir)
     {
