@@ -1,0 +1,10 @@
+dependencies: 
+    Ling: 
+        - BabyYaml
+        - Bat
+        - DirScanner
+        - Octopus
+        - PhpUploadFileFix
+    
+
+post_install: []
