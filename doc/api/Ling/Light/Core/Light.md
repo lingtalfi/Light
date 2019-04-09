@@ -43,7 +43,7 @@ Often, especially during the development phase, things go wrong: a route doesn't
 some parameters are missing, etc...
 
 Whenever a failure happens, an exception is thrown.
-The Light instance intercepts that and ask whether an error handler can handle this error.
+The Light instance intercepts that and ask whether an error handler can handle this error (which usually has an error type associated with it).
 
 Note: the error handlers are registered by you (or some plugins you've installed).
 
