@@ -7,7 +7,9 @@ namespace Ling\Light\Core;
 use Ling\Light\Exception\LightException;
 use Ling\Light\Http\HttpRequest;
 use Ling\Light\Http\HttpResponse;
+use Ling\Light\Http\HttpResponseInterface;
 use Ling\Light\Router\LightRouter;
+use Ling\Light\ServiceContainer\LightDummyServiceContainer;
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
 
 /**
@@ -97,6 +99,20 @@ class Light
         $this->container = $container;
     }
 
+    /**
+     * Returns the services container of this instance.
+     * If no instance was set, it returns a dummy container.
+     *
+     * @return LightServiceContainerInterface
+     */
+    public function getContainer(): LightServiceContainerInterface
+    {
+        if (null === $this->container) {
+            return new LightDummyServiceContainer();
+        }
+        return $this->container;
+    }
+
 
     /**
      * Registers a route item for this Light instance.
@@ -124,14 +140,41 @@ class Light
 
 
     /**
+     * Registers a error handler callback.
+     *
+     * The error handler callback is a callback with the following signature:
+     *
+     * ```txt
+     *      function errorHandler ( $errorType, \Exception $e, &$response = null )
+     * ```
+     *
+     * The error handler callback should handle the given exception if necessary (i.e. if it can
+     * handle this errorType} and set the response to either a string or an HttpResponseInterface.
+     *
+     * Note: multiple error handlers will be in concurrence for handling a given error, and the first
+     * handler to return a response will be used (i.e. subsequent handlers will be discarded).
+     *
+     * Note: the errorType might be null.
+     *
+     *
+     *
+     *
+     *
+     * @param callable $errorHandler
+     */
+    public function registerErrorHandler(callable $errorHandler)
+    {
+        $this->errorHandlers[] = $errorHandler;
+    }
+
+    /**
      * Runs the Light web application.
      */
     public function run()
     {
 
         $httpRequest = HttpRequest::createFromEnv();
-
-
+        $response = null;
 
 
         if (null !== $this->container) {
@@ -140,7 +183,6 @@ class Light
                 $initializer->initialize($this, $httpRequest);
             }
         }
-
 
 
         try {
@@ -215,19 +257,39 @@ class Light
 
             $washHandled = false;
             foreach ($this->errorHandlers as $errorHandler) {
-
+                if (null === $response) {
+                    call_user_func_array($errorHandler, [$lightErrorCode, $e, &$response]);
+                    if (null !== $response) {
+                        $washHandled = true;
+                        break;
+                    }
+                }
             }
 
 
             if (false === $washHandled) {
                 if (false === $this->debug) {
-                    $this->showInternalServerErrorPage();
+                    $response = $this->renderInternalServerErrorPage();
 
                 } else {
-                    $this->showDebugPage($e);
+                    $response = $this->renderDebugPage($e);
                 }
             }
         }
+
+
+        //--------------------------------------------
+        // DISPLAYING THE RESPONSE IF ANY
+        //--------------------------------------------
+        if (null !== $response) {
+            if (is_string($response)) {
+                $response = new HttpResponse($response);
+            }
+            if ($response instanceof HttpResponseInterface) {
+                $response->send();
+            }
+        }
+
 
     }
 
@@ -237,30 +299,34 @@ class Light
     //
     //--------------------------------------------
     /**
-     * Displays the debug page.
+     * Renders (returns the html code of) the debug page.
      * You should override this method if you need a more sophisticated/fancy display.
      *
      * @param \Exception $e
-     * @overrideMe
+     * @return string|HttpResponseInterface
      * @throws \Exception
      */
-    protected function showDebugPage(\Exception $e)
+    protected function renderDebugPage(\Exception $e)
     {
+
+        $response = null;
 
         $handled = false;
         if (null !== $this->container) {
             if ($this->container->has("prettyDebugPage")) {
                 $handled = true;
-                $this->container->get("prettyDebugPage")->print($e);
+                $response = $this->container->get("prettyDebugPage")->renderPage($e);
             }
         }
 
 
         if (false === $handled) {
+            ob_start();
             echo '<h1>An error occurred -- debug mode</h1>';
             echo nl2br((string)$e);
+            $response = ob_get_clean();
         }
-
+        return $response;
     }
 
 
@@ -270,13 +336,14 @@ class Light
      *
      * You should override this method if you want a more fancy display.
      *
+     * @return string|HttpResponseInterface
      * @overrideMe
      */
-    protected function showInternalServerErrorPage()
+    protected function renderInternalServerErrorPage()
     {
         $response = new HttpResponse("
             <h1>Internal server error</h1>
             <p>The server encountered an internal error misconfiguration and was unable to complete your request.</p>", 500);
-        $response->send();
+        return $response;
     }
 }

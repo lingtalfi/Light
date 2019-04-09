@@ -375,7 +375,183 @@ makes this initializer idea an even better candidate.
 TODO: next, make the Light_DynamicRouter plugin (extending the default Light Router)
          
     
+
      
+2019-04-08 Brief before the week
+-----------------
+This week-end just ended. I did nothing but chess and watching movies, depressing really.
+But that was a good thing, because my mind could rest, and so waking up this morning I could re-plan what I want
+to implement, and what not.
+
+
+
+Jinja, is it really necessary?
+---------------
+2019-04-08
+
+First, let's start with Jinja. When I saw the python tutorial I was amazed by the conciseness brought by the {{ jinja.tags }},
+and I just thought: "I need that".
+
+But this morning, my reasoning scanned the idea again, and it turns out it's a bad idea.
+
+First of all, there is a cost to creating a template system: you have to parse the template.
+I can't help myself but thinking that it will cost a lot. 
+
+I saw some systems out there, similar to jinja, and they use a cache system. 
+
+So it adds some complexity to your app, for the benefit of having a slightly more readable template.
+
+- ```{{ this }}```
+
+vs
+
+- ```<?php echo $z['this']; ?>```  
+ 
+ 
+Isn't that a ridiculous gain of readability?
+
+I believe it is. Being used to write php code, I don't mind having the second version, I can read it very well.
+To write it, I can always use some ide shortcuts/live templates, so that I'm not slower to inject tags into a template.
+
+In my case, I have a second cost: creating the templating system, including:
+
+- creating the if/else system
+- creating the for loops (recursively)
+- asking if we deal with objects or just string/arrays
+ 
+That's a lot, could take a whole week.
+ 
+Now, in python I understand that there is not much choice but to implement a template system.
+
+But hey, I'm using php, and php integrates very well in html pages. In fact, it seems to me php was designed
+as a templating language. 
+
+So, why reinvent the for loop when your language allows you to inject it directly in the html code?
+
+That would be stupid.
+
+Plus, Php would be more flexible that any templating system created with php, so that's one more reason to simply use php (via zeus for instance).
+
+Another idea of Jinja that deserves some thoughts is the extends/inheritance system.
+
+I thought about it and I don't like it so much. I prefer the wordpress/widgets approach which seems more flexible.
+
+With inheritance and extends block, it seems that you are bound to put all your children in one file, while if you take
+the classical (and perhaps more intuitive) top-down approach, you can organize your widgets in files/folders more naturally.
+
+So, with all that said, I will not implement a jinja system, but rather I will continue on my idea of the kit system that I started
+with Jin.
+
+Good thing I had this thought this morning, saved me tons of work.
+
+
+Now what about ORM?
+-------------------------
+2019-04-08
+
+Also, I tested the idea of having an ORM.
+And again, I don't think it's worth it. 
+
+Now I only speak for myself, obviously.
+
+I personally like simplicity and performances over syntactic sugar syntax.
+
+I saw in the python course something awful which looked like this:
+
+
+```python
+blog_posts = BlogPost.query.order_by(BlogPost.date.desc()).paginate(page=page, per_page=10)
+```
+
+Now in terms of syntactic sugar, that's awesome, but if you think about what happens under the hood,
+you see that a query is performed, and then paginated.
+
+That's just something I can't do, because it means you fetch all records from the database, and then filter them
+using your language's logic. 
+
+I don't want to do that: I want my query to transpose the pagination in the query directly, which is much less costly 
+in terms of performances.
+
+However, I like the idea of delegating the pagination to some object, because pagination is a hassle and it comes
+all the time.
+
+I realized that I was not creating a web framework for people to use, but just for me, so that I can be more efficient
+at creating websites later.
+
+That's an important point, because I don't have to think of other's needs, and decisions making is now a much easier process. 
+
+
+Now for inserts/update operations, I can re-use my SimplePdoWrapper, which also handles basic fetching by the way.
+
+In fact, I personally like to write the sql queries, I fell more in control of what's happening.
+
+
+I sure could generate objects in advance and have syntactic sugar, but I believe it's also not worth it.
+
+To me, with each query I want to ask this: does this query need cache, and that's a per-query question.
+
+So, I would need a simple caching system, but as for the ORM, I don't see the need for it.
+
+
+
+A good thing brought by the ORM is the sense of organization: every model is an object, and so when you need to extend an
+object, it's already there for you.
+
+I would create an object only if the need for it comes: if you need a complex query multiple times, 
+that's a good moment to create an object (simple factorizing).
+
+Another attractive idea in favour of using an ORM is that you could abstract the database system easily (change from mysql to sqlite).
+
+Personally, I've never used something else than mysql, so this use case is more fiction than reality, 
+and I plan to stick with mysql/php for my upcoming projects, it just works well for me.
+
+
+Hooks? I forgot to think about hooks this morning. 
+But if I think about them now, I would say that they could also be encapsulated in an object's method.
+
+So basically what I'm saying is that model objects are good, but (I feel like) they should only be created when needed, and not generate them in advance.
+
+
+So, a good amount of work/time saving here as well.
+
+
+
+So, those were the two main ideas I had this morning. Now let me continue the implementation where I left off last week... 
+
+
+
+The registerErrorHandler method
+-----------------
+2019-04-08
+
+I hesitated between two versions of the Light->registerErrorHandler method:
+
+
+```php
+$light->registerErrorHandler("404", function (\Exception $e, &$response) {
+    $response = "blabla";
+});
+```
+
+and
+
+
+```php
+$light->registerErrorHandler(function ($errorType, \Exception $e, &$response) {
+    if ('404' === $errorType) {
+        $response = "blabla";
+    }
+});
+```
+
+
+The second version seems best to me, as we have more flexibility.
+We could for instance decide that the error handler handles all error types starting with a certain
+prefix.
+
+
+
+
 
 
 

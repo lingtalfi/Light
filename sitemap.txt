@@ -1,3 +1,4 @@
 https://github.com/lingtalfi/Light/blob/master/README.md
 https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/diary.md
+https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/light-application-recommended-structure.md
 https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/plugin.md
