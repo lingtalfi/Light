@@ -14,6 +14,75 @@ use Ling\Light\ServiceContainer\LightServiceContainerInterface;
 
 /**
  * The Light class.
+ *
+ *
+ * The Light class has a **run** method, which handles the web application.
+ * Basically, you just call the **run** method, and web pages will automatically be printed on the screen for you.
+ * But of course, you need to configure the Light instance before you can see anything.
+ *
+ * There are two main concepts to grasp when working with the Light instance:
+ *
+ * - routes
+ * - error handlers
+ *
+ *
+ * Routes
+ * -----------
+ * A route binds the http request to a controller.
+ * So in other words, when the web user types something in the url bar of her browser (for instance http://your_site.com/home),
+ * then the route does the job of deciding which controller should handle this request.
+ *
+ * A controller is just a function that returns a response (generally an html web page).
+ *
+ *
+ *
+ * Error handlers
+ * ----------------
+ * Often, especially during the development phase, things go wrong: a route doesn't match, or a controller fails because
+ * some parameters are missing, etc...
+ *
+ * Whenever a failure happens, an exception is thrown.
+ * The Light instance intercepts that and ask whether an error handler can handle this error.
+ *
+ * Note: the error handlers are registered by you (or some plugins you've installed).
+ *
+ * If an error handler can handle the error, it will. Usually, it will either display a pretty error message,
+ * or redirect to a default page.
+ *
+ * If no error handlers was able to handle the error, then the Light instance has a fallback mechanism for that:
+ * it will display a 500 internal server error.
+ * And if you set the debug mode=true, it will print a debug page showing the exception trace instead.
+ *
+ *
+ * Those concepts are the fundamental ideas behind the Light instance.
+ *
+ *
+ *
+ * The service container
+ * ----------------
+ * The service container is a very important object in a Light application.
+ *
+ * The philosophy of Light is to start your application from scratch, and build it progressively by adding the blocks
+ * of functionality you need.
+ *
+ * The service container helps implementing this idea: it's a container where each plugin can provide its own services.
+ *
+ * And so when you install a plugin, it automatically adds its services to the services container, thus bringing to
+ * the application the functionality you need.
+ *
+ *
+ * The service container is the central piece in a Light application.
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
  */
 class Light
 {
@@ -211,7 +280,7 @@ class Light
                     $result = $router->match($httpRequest, $this->routes);
                     if (false !== $result) {
 
-
+az($result);
                         //--------------------------------------------
                         // NOW INTERPRETING THE ROUTE
                         //--------------------------------------------
