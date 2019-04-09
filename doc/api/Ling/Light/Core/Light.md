@@ -162,6 +162,77 @@ Methods
 - [Light::renderInternalServerErrorPage](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/renderInternalServerErrorPage.md) &ndash; it should display an internal server error page with code 500.
 
 
+Examples
+==========
+
+Example #1: Light hello world
+==============
+2019-04-09
+
+
+Here is the simplest example of a light application.
+
+```php
+<?php
+
+
+use Ling\Light\Core\Light;
+
+
+require_once __DIR__ . "/../universe/bigbang.php"; // activate universe
+
+
+$light = new Light();
+$light->setDebug(true); // set this to false in production
+
+
+$light->registerRoute("/", function () {
+    return "I'm the home page";
+});
+
+
+$light->run();
+```
+Example #2: Using a service container
+==============
+2019-04-09
+
+
+A Light instance using a service container.
+
+```php
+<?php
+
+
+use Ling\Light\Core\Light;
+use Ling\Light\Helper\ServiceContainerHelper;
+
+
+require_once __DIR__ . "/../universe/bigbang.php"; // activate universe
+
+
+
+$appDir = __DIR__ . "/..";
+$container = ServiceContainerHelper::getInstance($appDir, [
+    'type' => 'blue',
+    'blueMode' => 'create',
+]);
+
+
+$light = new Light();
+$light->setDebug(true); // set this to false in production
+$light->setContainer($container);
+
+
+$light->registerRoute("/", function () {
+    return "I'm the home page";
+});
+
+
+
+
+$light->run();
+```
 
 
 
