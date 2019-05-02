@@ -2,12 +2,12 @@
 [Back to the Ling\Light\ServiceContainer\LightDummyServiceContainer class](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightDummyServiceContainer.md)
 
 
-LightDummyServiceContainer::get
+LightDummyServiceContainer::all
 ================
 
 
 
-LightDummyServiceContainer::get — Returns the service which name is given.
+LightDummyServiceContainer::all — Returns the list of all service names for this instance.
 
 
 
@@ -16,14 +16,12 @@ Description
 ================
 
 
-public [LightDummyServiceContainer::get](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightDummyServiceContainer/get.md)(string $service) : object
+public [LightDummyServiceContainer::all](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightDummyServiceContainer/all.md)() : array
 
 
 
 
-Returns the service which name is given.
-
-Note: a service is an object (i.e. an instance).
+Returns the list of all service names for this instance.
 
 
 
@@ -31,16 +29,13 @@ Note: a service is an object (i.e. an instance).
 Parameters
 ================
 
-
-- service
-
-    
+This method has no parameters.
 
 
 Return values
 ================
 
-Returns object.
+Returns array.
 
 
 
@@ -54,5 +49,5 @@ See Also
 
 The [LightDummyServiceContainer](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightDummyServiceContainer.md) class.
 
-Next method: [has](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightDummyServiceContainer/has.md)<br>
+Previous method: [has](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightDummyServiceContainer/has.md)<br>
 
