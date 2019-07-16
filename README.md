@@ -43,6 +43,10 @@ Summary
 History Log
 =============
 
+- 0.3.0 -- 2019-07-16
+
+    - update Light instance to take into account the new LightInitializerInterface interface
+    
 - 0.2.0 -- 2019-07-11
 
     - add LightServiceContainerAwareInterface

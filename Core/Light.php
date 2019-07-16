@@ -293,99 +293,102 @@ class Light
         if (null !== $this->container) {
             if ($this->container->has("initializer")) {
                 $initializer = $this->container->get("initializer");
-                $initializer->initialize($this, $httpRequest);
+                $initializer->initialize($this, $httpRequest, $response);
             }
         }
 
 
-        try {
-            if (null !== $this->applicationDir) {
-                if (is_dir($this->applicationDir)) {
+        if (null === $response) {
+
+            try {
+                if (null !== $this->applicationDir) {
+                    if (is_dir($this->applicationDir)) {
 
 
-                    // route auto-registering plugins here...
+                        // route auto-registering plugins here...
 
 
-                    //--------------------------------------------
-                    // SEARCHING A MATCHING ROUTE
-                    //--------------------------------------------
-                    $router = null;
-                    if (null !== $this->container) {
-                        if ($this->container->has("router")) {
-                            // todo: dynamic routers, see RoutineRouter...
-                            $router = $this->container->get("router");
+                        //--------------------------------------------
+                        // SEARCHING A MATCHING ROUTE
+                        //--------------------------------------------
+                        $router = null;
+                        if (null !== $this->container) {
+                            if ($this->container->has("router")) {
+                                // todo: dynamic routers, see RoutineRouter...
+                                $router = $this->container->get("router");
+                            }
                         }
-                    }
 
-                    if (null === $router) {
-                        $router = new LightRouter();
-                    }
-
-
-                    $route = $router->match($httpRequest, $this->routes);
-                    if (false !== $route) {
+                        if (null === $router) {
+                            $router = new LightRouter();
+                        }
 
 
-                        //--------------------------------------------
-                        // NOW RESOLVING THE CONTROLLER
-                        //--------------------------------------------
-                        $controller = $route['controller'];
+                        $route = $router->match($httpRequest, $this->routes);
+                        if (false !== $route) {
 
 
-                        //--------------------------------------------
-                        // CALLING THE CONTROLLER
-                        //--------------------------------------------
-                        if (is_callable($controller)) {
+                            //--------------------------------------------
+                            // NOW RESOLVING THE CONTROLLER
+                            //--------------------------------------------
+                            $controller = $route['controller'];
 
 
-                            // we need to inject variables in the controller
-                            $controllerArgs = $this->getControllerArgs($controller, $route, $httpRequest);
-                            $response = call_user_func_array($controller, $controllerArgs);
+                            //--------------------------------------------
+                            // CALLING THE CONTROLLER
+                            //--------------------------------------------
+                            if (is_callable($controller)) {
 
 
+                                // we need to inject variables in the controller
+                                $controllerArgs = $this->getControllerArgs($controller, $route, $httpRequest);
+                                $response = call_user_func_array($controller, $controllerArgs);
+
+
+                            } else {
+                                $routeName = $route['name'];
+                                $type = gettype($controller);
+                                throw new LightException("The given controller is not a callable for route $routeName, $type given.");
+                            }
                         } else {
-                            $routeName = $route['name'];
-                            $type = gettype($controller);
-                            throw new LightException("The given controller is not a callable for route $routeName, $type given.");
+                            throw new LightException("No route matches", "404");
                         }
+
+
                     } else {
-                        throw new LightException("No route matches", "404");
+                        throw new LightException("Application dir does not exist: $this->applicationDir.");
                     }
-
-
                 } else {
-                    throw new LightException("Application dir does not exist: $this->applicationDir.");
+                    throw new LightException("Application dir not set.");
                 }
-            } else {
-                throw new LightException("Application dir not set.");
-            }
-        } catch (\Exception $e) {
+            } catch (\Exception $e) {
 
 
-            $lightErrorCode = null;
-            if ($e instanceof LightException) {
-                $lightErrorCode = $e->getLightErrorCode();
-            }
+                $lightErrorCode = null;
+                if ($e instanceof LightException) {
+                    $lightErrorCode = $e->getLightErrorCode();
+                }
 
 
-            $washHandled = false;
-            foreach ($this->errorHandlers as $errorHandler) {
-                if (null === $response) {
-                    call_user_func_array($errorHandler, [$lightErrorCode, $e, &$response]);
-                    if (null !== $response) {
-                        $washHandled = true;
-                        break;
+                $washHandled = false;
+                foreach ($this->errorHandlers as $errorHandler) {
+                    if (null === $response) {
+                        call_user_func_array($errorHandler, [$lightErrorCode, $e, &$response]);
+                        if (null !== $response) {
+                            $washHandled = true;
+                            break;
+                        }
                     }
                 }
-            }
 
 
-            if (false === $washHandled) {
-                if (false === $this->debug) {
-                    $response = $this->renderInternalServerErrorPage();
+                if (false === $washHandled) {
+                    if (false === $this->debug) {
+                        $response = $this->renderInternalServerErrorPage();
 
-                } else {
-                    $response = $this->renderDebugPage($e);
+                    } else {
+                        $response = $this->renderDebugPage($e);
+                    }
                 }
             }
         }
