@@ -300,8 +300,9 @@ class Light
 
         if (null !== $this->container) {
             if ($this->container->has("initializer")) {
+
                 $initializer = $this->container->get("initializer");
-                $initializer->initialize($this, $httpRequest, $response);
+                $initializer->initialize($this, $httpRequest);
             }
         }
 

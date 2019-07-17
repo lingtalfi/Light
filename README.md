@@ -43,6 +43,10 @@ Summary
 History Log
 =============
 
+- 0.7.0 -- 2019-07-17
+
+    - update Light instance to take into account the new LightInitializerInterface interface 
+    
 - 0.6.0 -- 2019-07-17
 
     - add HttpRedirectResponse 
