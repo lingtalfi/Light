@@ -222,8 +222,14 @@ class Light
      * @param array $urlParams
      * An array of key/value pairs representing the potential variables to inject into the controller callback.
      *
+     * @param string|null $host
+     * The host associated to this route.
+     *
+     * @param bool=true $isSecure
+     * Whether the https protocol or the http protocol is the preferred way to call this route.
+     *
      */
-    public function registerRoute(string $pattern, $controller, string $name = null, array $requirements = [], array $urlParams = [])
+    public function registerRoute(string $pattern, $controller, string $name = null, array $requirements = [], array $urlParams = [], string $host = null, bool $isSecure = true)
     {
 
         $routeName = (null !== $name) ? $name : $pattern;
@@ -234,6 +240,8 @@ class Light
             'controller' => $controller,
             'requirements' => $requirements,
             'url_params' => $urlParams,
+            'host' => $host,
+            "is_secure_protocol" => $isSecure,
         ];
     }
 

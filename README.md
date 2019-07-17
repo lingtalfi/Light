@@ -43,6 +43,10 @@ Summary
 History Log
 =============
 
+- 0.5.0 -- 2019-07-17
+
+    - update the route concept: now has the host and protocol bound to it 
+    
 - 0.4.0 -- 2019-07-17
 
     - add service container documentation page
