@@ -101,8 +101,30 @@ The object that implements the merging of the service configuration files is the
 Read the documentation for this class to understand the nitty-gritty details of how it's implemented.
 
 
+As a quick reminder, here are some special notation that we can use in the service container:
 
 
+- ${app_dir}                the application root directory. This variable is passed by the ServiceContainerHelper (the object used to instantiate the container in a light app).
+- @service(my_service)      to call another service, this is provided by the [Octopus](https://github.com/lingtalfi/Octopus) implementation used by the light service container by default.
+- @container(my_service)    to reference the service container itself, this is also provided by Octopus 
+
+
+We can also use the [variable reference mechanism of the SicFileCombinerUtil](https://github.com/lingtalfi/SicTools/blob/master/doc/api/Ling/SicTools/Util/SicFileCombinerUtil.md#variable-references) class to override any property of the resulting
+configuration array, like this:
+
+```yaml
+my_vars:
+    app_dir: /komin/jin_site_demo
+
+
+
+$zephyr_template_vars.root_dir: ${my_vars.app_dir}
+
+
+```
+
+If you do so, be sure that the configuration file containing the code above is called AFTER the other
+configuration files. 
 
 
 
