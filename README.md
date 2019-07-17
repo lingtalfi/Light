@@ -43,6 +43,10 @@ Summary
 History Log
 =============
 
+- 0.6.0 -- 2019-07-17
+
+    - add HttpRedirectResponse 
+    
 - 0.5.0 -- 2019-07-17
 
     - update the route concept: now has the host and protocol bound to it 
