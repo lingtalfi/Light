@@ -43,6 +43,10 @@ Summary
 History Log
 =============
 
+- 0.4.0 -- 2019-07-17
+
+    - add service container documentation page
+    
 - 0.3.0 -- 2019-07-16
 
     - update Light instance to take into account the new LightInitializerInterface interface
