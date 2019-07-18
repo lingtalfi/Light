@@ -84,6 +84,11 @@ Returns void.
 
 
 
+Source Code
+===========
+See the source code for method [Light::registerRoute](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L232-L246)
+
+
 See Also
 ================
 

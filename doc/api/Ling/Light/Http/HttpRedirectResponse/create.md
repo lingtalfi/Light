@@ -47,6 +47,11 @@ Returns [HttpRedirectResponse](https://github.com/lingtalfi/Light/blob/master/do
 
 
 
+Source Code
+===========
+See the source code for method [HttpRedirectResponse::create](https://github.com/lingtalfi/Light/blob/master/Http/HttpRedirectResponse.php#L21-L40)
+
+
 See Also
 ================
 

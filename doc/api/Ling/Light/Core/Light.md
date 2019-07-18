@@ -4,7 +4,7 @@
 
 The Light class
 ================
-2019-04-09 --> 2019-07-17
+2019-04-09 --> 2019-07-18
 
 
 
@@ -242,7 +242,9 @@ $light->run();
 
 Location
 =============
-Ling\Light\Core\Light
+Ling\Light\Core\Light<br>
+See the source code of [Ling\Light\Core\Light](https://github.com/lingtalfi/Light/blob/master/Core/Light.php)
+
 
 
 SeeAlso

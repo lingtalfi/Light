@@ -4,7 +4,7 @@
 
 The HttpRequest class
 ================
-2019-04-09 --> 2019-07-17
+2019-04-09 --> 2019-07-18
 
 
 
@@ -215,7 +215,9 @@ Methods
 
 Location
 =============
-Ling\Light\Http\HttpRequest
+Ling\Light\Http\HttpRequest<br>
+See the source code of [Ling\Light\Http\HttpRequest](https://github.com/lingtalfi/Light/blob/master/Http/HttpRequest.php)
+
 
 
 SeeAlso

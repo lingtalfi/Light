@@ -43,6 +43,10 @@ Summary
 History Log
 =============
 
+- 0.7.1 -- 2019-07-18
+
+    - update docTools documentation, add links to source code for classes and methods
+    
 - 0.7.0 -- 2019-07-17
 
     - update Light instance to take into account the new LightInitializerInterface interface 

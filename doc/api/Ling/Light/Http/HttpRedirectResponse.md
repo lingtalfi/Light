@@ -4,7 +4,7 @@
 
 The HttpRedirectResponse class
 ================
-2019-04-09 --> 2019-07-17
+2019-04-09 --> 2019-07-18
 
 
 
@@ -62,7 +62,9 @@ Methods
 
 Location
 =============
-Ling\Light\Http\HttpRedirectResponse
+Ling\Light\Http\HttpRedirectResponse<br>
+See the source code of [Ling\Light\Http\HttpRedirectResponse](https://github.com/lingtalfi/Light/blob/master/Http/HttpRedirectResponse.php)
+
 
 
 SeeAlso

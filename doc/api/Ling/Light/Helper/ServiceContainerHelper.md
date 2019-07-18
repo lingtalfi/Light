@@ -4,7 +4,7 @@
 
 The ServiceContainerHelper class
 ================
-2019-04-09 --> 2019-07-17
+2019-04-09 --> 2019-07-18
 
 
 
@@ -55,7 +55,9 @@ Methods
 
 Location
 =============
-Ling\Light\Helper\ServiceContainerHelper
+Ling\Light\Helper\ServiceContainerHelper<br>
+See the source code of [Ling\Light\Helper\ServiceContainerHelper](https://github.com/lingtalfi/Light/blob/master/Helper/ServiceContainerHelper.php)
+
 
 
 SeeAlso

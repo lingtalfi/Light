@@ -299,12 +299,28 @@ class Light
 
 
         if (null !== $this->container) {
-            if ($this->container->has("initializer")) {
 
+            //--------------------------------------------
+            // INITIALIZE PHASE
+            //--------------------------------------------
+            if ($this->container->has("initializer")) {
                 $initializer = $this->container->get("initializer");
                 $initializer->initialize($this, $httpRequest);
             }
+
+
+            //--------------------------------------------
+            // PRE-ROUTE PHASE
+            //--------------------------------------------
+            if ($this->container->has("preroute_hub")) {
+                $prerouteHub = $this->container->get("preroute_hub");
+                $prerouteHub->run($this, $httpRequest, $response);
+            }
         }
+
+
+
+
 
 
         if (null === $response) {
