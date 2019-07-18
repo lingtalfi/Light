@@ -43,6 +43,10 @@ Summary
 History Log
 =============
 
+- 0.7.2 -- 2019-07-18
+
+    - update route concept, the default protocol is now null instead of true
+    
 - 0.7.1 -- 2019-07-18
 
     - update docTools documentation, add links to source code for classes and methods

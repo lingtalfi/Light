@@ -225,11 +225,11 @@ class Light
      * @param string|null $host
      * The host associated to this route.
      *
-     * @param bool=true $isSecure
+     * @param bool|null=null $isSecure
      * Whether the https protocol or the http protocol is the preferred way to call this route.
      *
      */
-    public function registerRoute(string $pattern, $controller, string $name = null, array $requirements = [], array $urlParams = [], string $host = null, bool $isSecure = true)
+    public function registerRoute(string $pattern, $controller, string $name = null, array $requirements = [], array $urlParams = [], string $host = null, bool $isSecure = null)
     {
 
         $routeName = (null !== $name) ? $name : $pattern;
