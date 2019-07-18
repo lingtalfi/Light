@@ -43,6 +43,10 @@ Summary
 History Log
 =============
 
+- 0.7.3 -- 2019-07-18
+
+    - update LightReverseRouterInterface to reflect the new route concept
+
 - 0.7.2 -- 2019-07-18
 
     - update route concept, the default protocol is now null instead of true
