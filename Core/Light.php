@@ -184,6 +184,28 @@ class Light
         return $this->container;
     }
 
+    /**
+     * Returns the applicationDir of this instance.
+     *
+     * @return string
+     */
+    public function getApplicationDir(): string
+    {
+        return $this->applicationDir;
+    }
+
+    /**
+     * Sets the applicationDir.
+     *
+     * @param string $applicationDir
+     */
+    public function setApplicationDir(string $applicationDir)
+    {
+        $this->applicationDir = $applicationDir;
+    }
+
+
+
 
     /**
      * Registers a route item, as defined in @page(the route page).
@@ -319,10 +341,6 @@ class Light
         }
 
 
-
-
-
-
         if (null === $response) {
 
             try {
@@ -357,13 +375,42 @@ class Light
                             // NOW RESOLVING THE CONTROLLER
                             //--------------------------------------------
                             $controller = $route['controller'];
+                            $instance = null;
+
+                            // if not a callable yet, we want to turn it into a callable
+                            if (false === is_callable($controller)) {
+                                if (is_string($controller)) {
+                                    /**
+                                     * We want to allow the following notations:
+                                     *
+                                     * - for non static method: MyVendor\Controller\MyController->myMethod
+                                     *
+                                     *
+                                     */
+                                    $p = explode('->', $controller);
+                                    if (2 === count($p)) {
+                                        $class = $p[0];
+                                        $method = $p[1];
+                                        $instance = new $class;
+                                        $controller = [$instance, $method];
+                                    }
+
+                                }
+                            }
+
+
+                            //--------------------------------------------
+                            // INJECT THE LIGHT APP FOR CONTROLLERS WHO WANT IT
+                            //--------------------------------------------
+                            if (null !== $instance && $instance instanceof LightAwareInterface) {
+                                $instance->setLight($this);
+                            }
 
 
                             //--------------------------------------------
                             // CALLING THE CONTROLLER
                             //--------------------------------------------
                             if (is_callable($controller)) {
-
 
                                 // we need to inject variables in the controller
                                 $controllerArgs = $this->getControllerArgs($controller, $route, $httpRequest);

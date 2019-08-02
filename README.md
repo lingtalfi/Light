@@ -43,6 +43,15 @@ Summary
 History Log
 =============
 
+- 0.9.0 -- 2019-08-02
+
+    - add setter/getter for Light applicationDir property.
+    
+- 0.8.0 -- 2019-07-18
+
+    - add LightController
+    - add LightAwareInterface
+    
 - 0.7.3 -- 2019-07-18
 
     - update LightReverseRouterInterface to reflect the new route concept
