@@ -43,6 +43,10 @@ Summary
 History Log
 =============
 
+- 0.10.0 -- 2019-08-09
+
+    - add LightHelper::executeMethod
+    
 - 0.9.0 -- 2019-08-02
 
     - add setter/getter for Light applicationDir property.

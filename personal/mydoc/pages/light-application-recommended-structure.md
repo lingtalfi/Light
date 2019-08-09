@@ -31,7 +31,9 @@ Here are the potential directories of my ideal light web app:
                 /css:                       # an example directory, not part of the recommendation
                     - style.css             # an example file, not part of the recommendation
                         
-                                 
+        /users:                             # anything created by users should be in this directory
+            /$userId:                       # anything created by user with identifier $userId should be in this directory
+                                            # This include uploaded files, created website roots (www-one, www-two, ...), anything really.                                       
 ```
 
 

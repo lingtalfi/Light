@@ -32,6 +32,7 @@ https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/Environ
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/EnvironmentHelper/isDev.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/EnvironmentHelper.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper/createDummyRoutes.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper/executeMethod.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ServiceContainerHelper/buildDarkBlueContainer.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ServiceContainerHelper/createHashMap.md
@@ -116,5 +117,6 @@ https://github.com/lingtalfi/Light/blob/master/doc/pages/light-application-recom
 https://github.com/lingtalfi/Light/blob/master/doc/pages/light-general-philosophy.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/light-service-container.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/plugin.md
+https://github.com/lingtalfi/Light/blob/master/doc/pages/rights.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/route.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/sic-cheatsheet.md
