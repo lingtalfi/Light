@@ -43,6 +43,10 @@ Summary
 History Log
 =============
 
+- 0.11.0 -- 2019-08-13
+
+    - changed application recommended structure
+    
 - 0.10.0 -- 2019-08-09
 
     - add LightHelper::executeMethod
