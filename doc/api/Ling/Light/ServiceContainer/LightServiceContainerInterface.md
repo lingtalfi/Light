@@ -4,7 +4,7 @@
 
 The LightServiceContainerInterface class
 ================
-2019-04-09 --> 2019-08-13
+2019-04-09 --> 2019-08-14
 
 
 

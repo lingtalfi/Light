@@ -1,6 +1,6 @@
 Ling/Light
 ================
-2019-04-09 --> 2019-08-13
+2019-04-09 --> 2019-08-14
 
 
 
@@ -12,6 +12,8 @@ Table of contents
     - [LightController::__construct](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/LightController/__construct.md) &ndash; Builds the LightController instance.
     - [LightController::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/LightController/setLight.md) &ndash; Sets the light instance.
 - [LightControllerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/LightControllerInterface.md) &ndash; The LightControllerInterface interface.
+- [RouteAwareControllerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/RouteAwareControllerInterface.md) &ndash; The RouteAwareControllerInterface interface.
+    - [RouteAwareControllerInterface::setRoute](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/RouteAwareControllerInterface/setRoute.md) &ndash; Sets the matching route to this controller instance.
 - [Light](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light.md) &ndash; The Light class.
     - [Light::__construct](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/__construct.md) &ndash; Builds the Light instance.
     - [Light::setDebug](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/setDebug.md) &ndash; Sets the debug.

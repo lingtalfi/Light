@@ -5,6 +5,8 @@ https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/Lig
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/LightController/setLight.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/LightController.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/LightControllerInterface.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/RouteAwareControllerInterface/setRoute.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/RouteAwareControllerInterface.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/__construct.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/getApplicationDir.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/getContainer.md
