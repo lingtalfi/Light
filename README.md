@@ -43,6 +43,10 @@ Summary
 History Log
 =============
 
+- 0.13.1 -- 2019-08-21
+
+    - fix HttpJsonResponse typo
+    
 - 0.13.0 -- 2019-08-21
 
     - added HttpJsonResponse

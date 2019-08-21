@@ -30,7 +30,7 @@ class <span class="pl-k">HttpJsonResponse</span> extends [HttpResponse](https://
     - protected int [HttpResponse::$httpVersion](#property-httpVersion) ;
 
 - Methods
-    - public static [create](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpJsonResponse/create.md)(string $data) : [HttpJsonResponse](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpJsonResponse.md)
+    - public static [create](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpJsonResponse/create.md)(?$data) : [HttpJsonResponse](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpJsonResponse.md)
     - protected [sendHeaders](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpJsonResponse/sendHeaders.md)() : void
 
 - Inherited methods

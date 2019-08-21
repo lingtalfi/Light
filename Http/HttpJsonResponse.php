@@ -21,7 +21,7 @@ class HttpJsonResponse extends HttpResponse
      *
      * @return $this
      */
-    public static function create(string $data)
+    public static function create($data)
     {
         return new static(json_encode($data));
     }
