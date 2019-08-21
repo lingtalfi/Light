@@ -43,6 +43,10 @@ Summary
 History Log
 =============
 
+- 0.13.0 -- 2019-08-21
+
+    - added HttpJsonResponse
+    
 - 0.12.0 -- 2019-08-14
 
     - changed application recommended structure philosophy

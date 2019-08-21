@@ -87,6 +87,10 @@ But then I re-thought this, and now I believe that the first solution is better 
 - it gets simpler to write packing routines (i.e. scripts that packs the plugin for you, so that you can publish it on github for instance)
 - as long as the developer knows the plugin from which originates the data she is looking for, it's not less efficient to have things organized that way.
         And most of the time, the developer knows those kind of things.
+        To know the location of the data one's looking, we actually need to answer two questions:
+        - Who (i.e. which plugin) is using the host service?
+        - What host service (i.e. which plugin) are we using?
+        
 - on a semantic level, as said previously, the storage could be a database or the files, and so if we had chosen the database, the approach would have been
     that the subscriber plugin would have register its data to the host plugin, and so by analogy it seems logical that the same applies to the file storage:
     the subscriber plugin owns them, and registers them to the host (but it doesn't give them away to the host like this was not a big deal, the subscriber owns the files after all).          

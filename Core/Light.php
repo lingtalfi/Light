@@ -138,6 +138,7 @@ class Light
     {
         /**
          * By default, I assume that the Light instance is created from $appDir/www/index.php
+         * If that's not the case, you should set the applicationDir just after instantiating this class.
          */
         $appDir = $_SERVER['DOCUMENT_ROOT'] ?? null;
         if ($appDir) {
