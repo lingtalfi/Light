@@ -48,6 +48,11 @@ Summary
 History Log
 =============
 
+- 0.14.0 -- 2019-09-19
+
+    - add route.is_ajax property
+    - add Light->run end routine service handling
+    
 - 0.13.2 -- 2019-09-03
 
     - add doc link to api
