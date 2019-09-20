@@ -477,28 +477,32 @@ class Light
                 $response = new HttpResponse($response);
             }
 
+
+
+            if (null !== $this->container) {
+                //--------------------------------------------
+                // END ROUTINE
+                //--------------------------------------------
+                if ($this->container->has("end_routine")) {
+                    if (null === $route) {
+                        $route = [];
+                    }
+                    /**
+                     * @var $endRoutine Light_EndRoutineService
+                     */
+                    $endRoutine = $this->container->get('end_routine');
+                    $endRoutine->executeEndRoutines($route);
+                }
+            }
+
+
             if ($response instanceof HttpResponseInterface) {
                 $response->send();
             }
         }
 
 
-        if (null !== $this->container) {
 
-            //--------------------------------------------
-            // END ROUTINE
-            //--------------------------------------------
-            if ($this->container->has("end_routine")) {
-                if (null === $route) {
-                    $route = [];
-                }
-                /**
-                 * @var $endRoutine Light_EndRoutineService
-                 */
-                $endRoutine = $this->container->get('end_routine');
-                $endRoutine->executeEndRoutines($route);
-            }
-        }
 
     }
 
