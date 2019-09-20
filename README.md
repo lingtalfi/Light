@@ -48,6 +48,10 @@ Summary
 History Log
 =============
 
+- 0.15.0 -- 2019-09-20
+
+    - add LightRouterInterface->getMatchingRoute method
+    
 - 0.14.0 -- 2019-09-19
 
     - add route.is_ajax property
