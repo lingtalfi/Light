@@ -24,6 +24,7 @@ Table of contents
     - [Light::registerRoute](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/registerRoute.md) &ndash; Registers a route item, as defined in [the route page](https://github.com/lingtalfi/Light/blob/master/doc/pages/route.md).
     - [Light::getRoutes](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/getRoutes.md) &ndash; Returns the routes of this instance.
     - [Light::registerErrorHandler](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/registerErrorHandler.md) &ndash; Registers a error handler callback.
+    - [Light::initialize](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/initialize.md) &ndash; Triggers the initialize phase if set in the service container.
     - [Light::run](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/run.md) &ndash; Runs the Light web application.
 - [LightAwareInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/LightAwareInterface.md) &ndash; The LightAwareInterface interface.
     - [LightAwareInterface::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/LightAwareInterface/setLight.md) &ndash; Sets the light instance.

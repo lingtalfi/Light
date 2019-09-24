@@ -48,6 +48,10 @@ Summary
 History Log
 =============
 
+- 0.18.0 -- 2019-09-24
+
+    - add Light->initialize debug method
+    
 - 0.17.0 -- 2019-09-24
 
     - removed route.is_ajax property, judged too painful for plugin authors
