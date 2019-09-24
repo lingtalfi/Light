@@ -48,6 +48,10 @@ Summary
 History Log
 =============
 
+- 0.17.0 -- 2019-09-24
+
+    - removed route.is_ajax property, judged too painful for plugin authors
+
 - 0.16.0 -- 2019-09-20
 
     - update Light, end routine service is now called just before the response is sent (rather than after)
