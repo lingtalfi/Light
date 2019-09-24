@@ -48,6 +48,10 @@ Summary
 History Log
 =============
 
+- 0.19.0 -- 2019-09-24
+
+    - add route.is_ajax property again
+    
 - 0.18.0 -- 2019-09-24
 
     - add Light->initialize debug method

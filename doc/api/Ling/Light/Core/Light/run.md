@@ -46,7 +46,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [Light::run](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L331-L520)
+See the source code for method [Light::run](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L332-L521)
 
 
 See Also

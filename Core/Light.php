@@ -257,6 +257,7 @@ class Light
             'url_params' => [],
             'host' => null,
             "is_secure_protocol" => null,
+            "is_ajax" => false,
         ], $route);
 
     }
