@@ -129,6 +129,8 @@ Table of contents
     - OctopusServiceContainerInterface::get &ndash; Returns the service which name is given.
     - OctopusServiceContainerInterface::has &ndash; The has method
     - OctopusServiceContainerInterface::all &ndash; Returns the list of all service names for this instance.
+- [LightTool](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Tool/LightTool.md) &ndash; The LightTool class.
+    - [LightTool::isAjax](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Tool/LightTool/isAjax.md) &ndash; Returns whether the matching route (if any) is an ajax route.
 
 
 Dependencies

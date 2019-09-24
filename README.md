@@ -48,6 +48,10 @@ Summary
 History Log
 =============
 
+- 0.20.0 -- 2019-09-24
+
+    - add LightTool
+    
 - 0.19.0 -- 2019-09-24
 
     - add route.is_ajax property again

@@ -119,6 +119,8 @@ https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContain
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerAwareInterface/setContainer.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerAwareInterface.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Tool/LightTool/isAjax.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Tool/LightTool.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/diary.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/light-application-recommended-structure.md
