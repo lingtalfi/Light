@@ -38,11 +38,6 @@ Return values
 Returns bool.
 
 
-Exceptions thrown
-================
-
-- [Exception](http://php.net/manual/en/class.exception.php).&nbsp;
-
 
 
 
@@ -51,7 +46,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightTool::isAjax](https://github.com/lingtalfi/Light/blob/master/Tool/LightTool.php#L18-L21)
+See the source code for method [LightTool::isAjax](https://github.com/lingtalfi/Light/blob/master/Tool/LightTool.php#L17-L20)
 
 
 See Also
@@ -59,5 +54,5 @@ See Also
 
 The [LightTool](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Tool/LightTool.md) class.
 
-
+Next method: [getPluginName](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Tool/LightTool/getPluginName.md)<br>
 

@@ -131,6 +131,7 @@ Table of contents
     - OctopusServiceContainerInterface::all &ndash; Returns the list of all service names for this instance.
 - [LightTool](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Tool/LightTool.md) &ndash; The LightTool class.
     - [LightTool::isAjax](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Tool/LightTool/isAjax.md) &ndash; Returns whether the matching route (if any) is an ajax route.
+    - [LightTool::getPluginName](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Tool/LightTool/getPluginName.md) &ndash; Returns the plugin name from the given instance.
 
 
 Dependencies

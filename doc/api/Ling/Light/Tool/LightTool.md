@@ -26,6 +26,7 @@ class <span class="pl-k">LightTool</span>  {
 
 - Methods
     - public static [isAjax](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Tool/LightTool/isAjax.md)() : bool
+    - public static [getPluginName](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Tool/LightTool/getPluginName.md)(?$instance) : string
 
 }
 
@@ -38,6 +39,7 @@ Methods
 ==============
 
 - [LightTool::isAjax](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Tool/LightTool/isAjax.md) &ndash; Returns whether the matching route (if any) is an ajax route.
+- [LightTool::getPluginName](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Tool/LightTool/getPluginName.md) &ndash; Returns the plugin name from the given instance.
 
 
 

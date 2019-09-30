@@ -48,7 +48,12 @@ Summary
 History Log
 =============
 
-- 0.21.0 -- 2019-09-24
+
+- 0.22.0 -- 2019-09-30
+
+    - add LightTool::getPluginName
+
+- 0.21.0 -- 2019-09-30
 
     - removed route.is_ajax property again, found new heuristic to guess without it
     
