@@ -48,6 +48,10 @@ Summary
 History Log
 =============
 
+- 0.21.0 -- 2019-09-24
+
+    - removed route.is_ajax property again, found new heuristic to guess without it
+    
 - 0.20.0 -- 2019-09-24
 
     - add LightTool
