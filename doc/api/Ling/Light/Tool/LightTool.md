@@ -4,7 +4,7 @@
 
 The LightTool class
 ================
-2019-04-09 --> 2019-09-30
+2019-04-09 --> 2019-10-01
 
 
 
@@ -25,7 +25,7 @@ Class synopsis
 class <span class="pl-k">LightTool</span>  {
 
 - Methods
-    - public static [isAjax](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Tool/LightTool/isAjax.md)() : bool
+    - public static [isAjax](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Tool/LightTool/isAjax.md)([Ling\Light\ServiceContainer\LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md) $container) : bool
     - public static [getPluginName](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Tool/LightTool/getPluginName.md)(?$instance) : string
 
 }

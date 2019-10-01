@@ -16,7 +16,7 @@ Description
 ================
 
 
-public static [LightTool::isAjax](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Tool/LightTool/isAjax.md)() : bool
+public static [LightTool::isAjax](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Tool/LightTool/isAjax.md)([Ling\Light\ServiceContainer\LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md) $container) : bool
 
 
 
@@ -29,7 +29,10 @@ Returns whether the matching route (if any) is an ajax route.
 Parameters
 ================
 
-This method has no parameters.
+
+- container
+
+    
 
 
 Return values
@@ -37,6 +40,11 @@ Return values
 
 Returns bool.
 
+
+Exceptions thrown
+================
+
+- [Exception](http://php.net/manual/en/class.exception.php).&nbsp;
 
 
 
@@ -46,7 +54,7 @@ Returns bool.
 
 Source Code
 ===========
-See the source code for method [LightTool::isAjax](https://github.com/lingtalfi/Light/blob/master/Tool/LightTool.php#L17-L20)
+See the source code for method [LightTool::isAjax](https://github.com/lingtalfi/Light/blob/master/Tool/LightTool.php#L22-L34)
 
 
 See Also

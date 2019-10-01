@@ -240,6 +240,7 @@ class Light
      * - url_params: []
      * - host: null
      * - is_secure_protocol: null
+     * - is_ajax: false
      *
      * See the @page(route page) for more details.
      *
@@ -257,6 +258,7 @@ class Light
             'url_params' => [],
             'host' => null,
             "is_secure_protocol" => null,
+            "is_ajax" => false,
         ], $route);
 
     }

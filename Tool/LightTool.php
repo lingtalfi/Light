@@ -3,6 +3,9 @@
 
 namespace Ling\Light\Tool;
 
+use Ling\Light\Router\LightRouterInterface;
+use Ling\Light\ServiceContainer\LightServiceContainerInterface;
+
 /**
  * The LightTool class.
  */
@@ -12,11 +15,22 @@ class LightTool
     /**
      * Returns whether the matching route (if any) is an ajax route.
      *
+     * @param LightServiceContainerInterface $container
      * @return bool
+     * @throws \Exception
      */
-    public static function isAjax(): bool
+    public static function isAjax(LightServiceContainerInterface $container): bool
     {
-        return ('/index.php' !== $_SERVER["SCRIPT_NAME"]);
+        /**
+         * @var $router LightRouterInterface
+         */
+        $router = $container->get('router');
+        $matchingRoute = $router->getMatchingRoute();
+        if (false !== $matchingRoute) {
+            $isAjax = $matchingRoute['is_ajax'] ?? false;
+            return $isAjax;
+        }
+        return false;
     }
 
     /**
