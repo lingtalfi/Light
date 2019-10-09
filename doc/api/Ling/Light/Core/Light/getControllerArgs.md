@@ -70,7 +70,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [Light::getControllerArgs](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L601-L656)
+See the source code for method [Light::getControllerArgs](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L613-L668)
 
 
 See Also

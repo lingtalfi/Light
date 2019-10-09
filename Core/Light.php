@@ -164,6 +164,18 @@ class Light
     }
 
     /**
+     * Returns the debug of this instance.
+     *
+     * @return bool
+     */
+    public function isDebug(): bool
+    {
+        return $this->debug;
+    }
+
+
+
+    /**
      * Sets the container.
      *
      * @param LightServiceContainerInterface $container

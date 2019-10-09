@@ -49,6 +49,10 @@ History Log
 =============
 
 
+- 0.23.1 -- 2019-10-09
+
+    - added Light->isDebug method
+    
 - 0.23.0 -- 2019-10-01
 
     - added route.is_ajax property again (new heuristic didn't work as hoped)
