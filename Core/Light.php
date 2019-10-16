@@ -174,7 +174,6 @@ class Light
     }
 
 
-
     /**
      * Sets the container.
      *
@@ -614,6 +613,7 @@ class Light
     {
         $controllerArgs = [];
         $routeUrlParams = $route['url_params'];
+        $requestArgs = $httpRequest->getGet();
         $controllerArgsInfo = ControllerHelper::getControllerArgsInfo($controller);
         foreach ($controllerArgsInfo as $argName => $info) {
 
@@ -621,6 +621,8 @@ class Light
             list($hasDefaultValue, $defaultValue, $hintType) = $info;
             if (array_key_exists($argName, $routeUrlParams)) {
                 $controllerArgs[] = $routeUrlParams[$argName];
+            } elseif (array_key_exists($argName, $requestArgs)) {
+                $controllerArgs[] = $requestArgs[$argName];
             } elseif (true === $hasDefaultValue) {
                 $controllerArgs[] = $defaultValue;
             } else {

@@ -49,6 +49,10 @@ History Log
 =============
 
 
+- 0.24.0 -- 2019-10-16
+
+    - update Light->getControllerArgs, now controller can use arguments from the $_GET array
+    
 - 0.23.1 -- 2019-10-09
 
     - added Light->isDebug method
