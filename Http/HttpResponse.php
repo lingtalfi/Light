@@ -109,6 +109,19 @@ class HttpResponse implements HttpResponseInterface
      */
     protected $mimeType;
 
+    /**
+     * This property holds the fileName for this instance.
+     *
+     * You generally want to use this when your body is a file content
+     * that you intend to serve to the user, and you want to override the default fileName provided by the browser.
+     *
+     * If null, the browser fileName will not be overridden.
+     *
+     *
+     * @var string|null
+     */
+    protected $fileName;
+
 
     /**
      * Builds the HttpResponse instance.
@@ -122,6 +135,7 @@ class HttpResponse implements HttpResponseInterface
         $this->statusCode = $code;
         $this->httpVersion = "1.1";
         $this->mimeType = null;
+        $this->fileName = null;
     }
 
     /**
@@ -141,6 +155,16 @@ class HttpResponse implements HttpResponseInterface
     public function setMimeType(?string $mimeType)
     {
         $this->mimeType = $mimeType;
+    }
+
+    /**
+     * Sets the fileName.
+     *
+     * @param string|null $fileName
+     */
+    public function setFileName(?string $fileName)
+    {
+        $this->fileName = $fileName;
     }
 
 
@@ -169,9 +193,15 @@ class HttpResponse implements HttpResponseInterface
         }
         header(sprintf('HTTP/%s %s %s', $this->httpVersion, $this->statusCode, $statusText), true, $this->statusCode);
 
+        if (null !== $this->fileName) {
+            $fileName = str_replace('"', '\"', $this->fileName);
+            header("Content-Disposition: inline; filename=\"$fileName\"");
+        }
+
         if (null !== $this->mimeType) {
             header("Content-type: " . $this->mimeType);
         }
+
 
     }
 

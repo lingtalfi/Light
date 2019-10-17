@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [HttpResponse::setMimeType](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L141-L144)
+See the source code for method [HttpResponse::setMimeType](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L155-L158)
 
 
 See Also
@@ -57,5 +57,5 @@ See Also
 
 The [HttpResponse](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpResponse.md) class.
 
-Previous method: [setHttpVersion](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpResponse/setHttpVersion.md)<br>Next method: [send](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpResponse/send.md)<br>
+Previous method: [setHttpVersion](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpResponse/setHttpVersion.md)<br>Next method: [setFileName](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpResponse/setFileName.md)<br>
 

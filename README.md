@@ -48,6 +48,9 @@ Summary
 History Log
 =============
 
+- 0.27.0 -- 2019-10-17
+
+    - add HttpResponse->setFileName method
 
 - 0.26.0 -- 2019-10-17
 
