@@ -36,7 +36,7 @@ Class synopsis
 abstract class <span class="pl-k">LightReverseRouterInterface</span>  {
 
 - Methods
-    - abstract public [getUrl](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ReverseRouter/LightReverseRouterInterface/getUrl.md)(string $routeName, ?array $urlParameters = [], ?bool $useAbsolute = null) : string
+    - abstract public [getUrl](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ReverseRouter/LightReverseRouterInterface/getUrl.md)(string $routeName, ?array $urlParameters = [], ?bool $useAbsolute = false) : string
 
 }
 

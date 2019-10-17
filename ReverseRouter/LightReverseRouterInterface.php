@@ -41,5 +41,5 @@ interface LightReverseRouterInterface
      * @return string
      * @throws LightException
      */
-    public function getUrl(string $routeName, array $urlParameters = [], bool $useAbsolute = null): string;
+    public function getUrl(string $routeName, array $urlParameters = [], bool $useAbsolute = false): string;
 }

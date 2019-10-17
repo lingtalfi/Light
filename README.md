@@ -49,6 +49,10 @@ History Log
 =============
 
 
+- 0.26.0 -- 2019-10-17
+
+    - update LightReverseRouterInterface->getUrl now useAbsolute defaults to false
+    
 - 0.25.1 -- 2019-10-17
 
     - add precision comment to LightReverseRouterInterface->getUrl
