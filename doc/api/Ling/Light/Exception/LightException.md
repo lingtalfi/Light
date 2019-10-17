@@ -4,7 +4,7 @@
 
 The LightException class
 ================
-2019-04-09 --> 2019-10-16
+2019-04-09 --> 2019-10-17
 
 
 
@@ -34,7 +34,7 @@ class <span class="pl-k">LightException</span> extends [\Exception](http://php.n
     - protected  [Exception::$line](#property-line) ;
 
 - Methods
-    - public [__construct](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Exception/LightException/__construct.md)($message = , string $lightErrorCode = null, $code = 0, [\Throwable](http://php.net/manual/en/class.throwable.php) $previous = null) : void
+    - public [__construct](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Exception/LightException/__construct.md)(?$message = , ?string $lightErrorCode = null, ?$code = 0, ?[\Throwable](http://php.net/manual/en/class.throwable.php) $previous = null) : void
     - public [getLightErrorCode](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Exception/LightException/getLightErrorCode.md)() : string | null
 
 }

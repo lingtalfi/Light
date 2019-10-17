@@ -49,6 +49,10 @@ History Log
 =============
 
 
+- 0.25.0 -- 2019-10-17
+
+    - add HttpResponse->setMimeType method
+    
 - 0.24.0 -- 2019-10-16
 
     - update Light->getControllerArgs, now controller can use arguments from the $_GET array

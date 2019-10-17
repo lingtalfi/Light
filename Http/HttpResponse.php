@@ -102,6 +102,15 @@ class HttpResponse implements HttpResponseInterface
 
 
     /**
+     * This property holds the mimeType for this instance.
+     * If set, the Content-type header will be sent, otherwise it won't.
+     *
+     * @var string|null
+     */
+    protected $mimeType;
+
+
+    /**
      * Builds the HttpResponse instance.
      *
      * @param string $body
@@ -112,6 +121,7 @@ class HttpResponse implements HttpResponseInterface
         $this->body = $body;
         $this->statusCode = $code;
         $this->httpVersion = "1.1";
+        $this->mimeType = null;
     }
 
     /**
@@ -121,6 +131,16 @@ class HttpResponse implements HttpResponseInterface
     public function setHttpVersion(string $version)
     {
         $this->httpVersion = $version;
+    }
+
+    /**
+     * Sets the mimeType.
+     *
+     * @param string|null $mimeType
+     */
+    public function setMimeType(?string $mimeType)
+    {
+        $this->mimeType = $mimeType;
     }
 
 
@@ -148,6 +168,11 @@ class HttpResponse implements HttpResponseInterface
             $statusText = self::$statusTexts[$this->statusCode];
         }
         header(sprintf('HTTP/%s %s %s', $this->httpVersion, $this->statusCode, $statusText), true, $this->statusCode);
+
+        if (null !== $this->mimeType) {
+            header("Content-type: " . $this->mimeType);
+        }
+
     }
 
 

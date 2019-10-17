@@ -4,7 +4,7 @@
 
 The LightRedServiceContainer class
 ================
-2019-04-09 --> 2019-10-16
+2019-04-09 --> 2019-10-17
 
 
 
@@ -30,9 +30,9 @@ class <span class="pl-k">LightRedServiceContainer</span> extends [RedOctopusServ
     - public RedOctopusServiceContainer::get(string $service) : object
     - public RedOctopusServiceContainer::has(string $service) : bool
     - public RedOctopusServiceContainer::all() : array
-    - protected RedOctopusServiceContainer::resolveCustomNotation(?$value, &$isCustomNotation = false) : mixed
+    - protected RedOctopusServiceContainer::resolveCustomNotation($value, ?&$isCustomNotation = false) : mixed
     - protected RedOctopusServiceContainer::registerServices(array $conf, array &$breadcrumb) : void
-    - protected RedOctopusServiceContainer::getServiceName(?$key, array $breadcrumb) : string
+    - protected RedOctopusServiceContainer::getServiceName($key, array $breadcrumb) : string
     - public HotServiceResolver::getService(array $sicBlock) : false | object | array
     - private HotServiceResolver::resolveArgs(array $args) : array
 
