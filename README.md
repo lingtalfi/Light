@@ -48,6 +48,10 @@ Summary
 History Log
 =============
 
+- 0.27.1 -- 2019-10-21
+
+    - update route documentation
+    
 - 0.27.0 -- 2019-10-17
 
     - add HttpResponse->setFileName method
