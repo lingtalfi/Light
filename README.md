@@ -48,6 +48,10 @@ Summary
 History Log
 =============
 
+- 0.27.2 -- 2019-10-23
+
+    - update LightReverseRouterInterface->getUrl.useAbsolute now is truly optional
+    
 - 0.27.1 -- 2019-10-21
 
     - update route documentation
