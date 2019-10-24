@@ -48,6 +48,10 @@ Summary
 History Log
 =============
 
+- 0.28.0 -- 2019-10-24
+
+    - add LightServiceContainerInterface->getApplicationDir method
+    
 - 0.27.2 -- 2019-10-23
 
     - update LightReverseRouterInterface->getUrl.useAbsolute now is truly optional
