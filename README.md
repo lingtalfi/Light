@@ -48,6 +48,10 @@ Summary
 History Log
 =============
 
+- 0.32.0 -- 2019-10-28
+
+    - add ControllerHelper::executeController
+    
 - 0.31.0 -- 2019-10-28
 
     - add Light->getMatchingRoute method

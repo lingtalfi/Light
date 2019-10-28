@@ -337,7 +337,6 @@ class Light
     }
 
 
-
     /**
      * Registers a error handler callback.
      *
@@ -448,30 +447,10 @@ class Light
 
                         $route = $router->match($httpRequest, $this->routes);
                         $this->matchingRoute = $route;
+
+
                         if (false !== $route) {
-
-
-                            //--------------------------------------------
-                            // NOW RESOLVING THE CONTROLLER
-                            //--------------------------------------------
-                            $controller = ControllerHelper::resolveController($route['controller'], $this);
-
-
-                            //--------------------------------------------
-                            // CALLING THE CONTROLLER
-                            //--------------------------------------------
-                            if (is_callable($controller)) {
-
-                                // we need to inject variables in the controller
-                                $controllerArgs = ControllerHelper::getControllerArgs($controller, $httpRequest, $this, $this->getContainer());
-                                $response = call_user_func_array($controller, $controllerArgs);
-
-
-                            } else {
-                                $routeName = $route['name'];
-                                $type = gettype($controller);
-                                throw new LightException("The given controller is not a callable for route $routeName, $type given.");
-                            }
+                            $response = ControllerHelper::executeController($route['controller'], $this);
                         } else {
                             throw new LightException("No route matches", "404");
                         }

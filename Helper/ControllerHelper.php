@@ -8,8 +8,7 @@ use Ling\Light\Controller\RouteAwareControllerInterface;
 use Ling\Light\Core\Light;
 use Ling\Light\Core\LightAwareInterface;
 use Ling\Light\Exception\LightException;
-use Ling\Light\Http\HttpRequestInterface;
-use Ling\Light\ServiceContainer\LightServiceContainerInterface;
+use Ling\Light\Http\HttpResponseInterface;
 
 /**
  * The ControllerHelper class.
@@ -19,13 +18,64 @@ class ControllerHelper
 
 
     /**
+     * Executes the given controller and returns the appropriate response.
+     *
+     * Note: this method is used by the Core/Light instance, and has been externalized so that plugins
+     * can call controllers by themselves, using the same technique as the Core/Light instance.
+     *
+     * Note: at this point it's assumed that the route has matched already.
+     *
+     * Note: although external plugins can use this method, the matched route can't be changed.
+     * In other words, the controllers called by the plugin using this method can use the parameters
+     * of the matching route in its arguments.
+     *
+     *
+     *
+     * @param $controller
+     * @param Light $light
+     * @return HttpResponseInterface
+     * @throws LightException
+     * @throws \ReflectionException
+     */
+    public static function executeController($controller, Light $light): HttpResponseInterface
+    {
+
+        $route = $light->getMatchingRoute();
+
+        //--------------------------------------------
+        // NOW RESOLVING THE CONTROLLER
+        //--------------------------------------------
+        $controller = ControllerHelper::resolveController($controller, $light);
+
+
+        //--------------------------------------------
+        // CALLING THE CONTROLLER
+        //--------------------------------------------
+        if (is_callable($controller)) {
+
+            // we need to inject variables in the controller
+            $controllerArgs = ControllerHelper::getControllerArgs($controller, $light);
+            $response = call_user_func_array($controller, $controllerArgs);
+            return $response;
+        } else {
+            $routeName = $route['name'];
+            $type = gettype($controller);
+            throw new LightException("The given controller is not a callable for route $routeName, $type given.");
+        }
+    }
+
+
+    /**
      * Returns a callable controller from the given controller, or null if no callable
      * controller can be extracted out of the given value.
+     *
+     * Note: at this point it's assumed that a route has matched already.
      *
      * Note: This is the method used by the Core/Light instance to create its controllers,
      * and so it contains all the string transformation logic used by the Core/Light.
      * This method has been externalized so that other plugins can execute controllers
      * the same way the Core/Light instance does.
+     *
      *
      *
      *
@@ -103,18 +153,17 @@ class ControllerHelper
      *
      *
      * @param callable $controller
-     * @param HttpRequestInterface $httpRequest
      * @param Light $light
-     * @param LightServiceContainerInterface $container
      * @return array
      * @throws LightException
      * @throws \ReflectionException
      */
-    public static function getControllerArgs(callable $controller, HttpRequestInterface $httpRequest, Light $light, LightServiceContainerInterface $container)
+    public static function getControllerArgs(callable $controller, Light $light)
     {
         $controllerArgs = [];
         $route = $light->getMatchingRoute();
         $routeUrlParams = $route['url_params'];
+        $httpRequest = $light->getHttpRequest();
         $requestArgs = $httpRequest->getGet();
         $controllerArgsInfo = ControllerHelper::getControllerArgsInfo($controller);
         foreach ($controllerArgsInfo as $argName => $info) {
@@ -153,7 +202,7 @@ class ControllerHelper
                     } elseif ("Ling\Light\Http\HttpRequestInterface" === $hintType) {
                         $controllerArgs[] = $httpRequest;
                     } elseif ("Ling\Light\ServiceContainer\LightServiceContainerInterface" === $hintType) {
-                        $controllerArgs[] = $container;
+                        $controllerArgs[] = $light->getContainer();
                     }
                 } else {
 

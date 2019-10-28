@@ -24,6 +24,8 @@ public static [ControllerHelper::resolveController](https://github.com/lingtalfi
 Returns a callable controller from the given controller, or null if no callable
 controller can be extracted out of the given value.
 
+Note: at this point it's assumed that a route has matched already.
+
 Note: This is the method used by the Core/Light instance to create its controllers,
 and so it contains all the string transformation logic used by the Core/Light.
 This method has been externalized so that other plugins can execute controllers
@@ -64,7 +66,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [ControllerHelper::resolveController](https://github.com/lingtalfi/Light/blob/master/Helper/ControllerHelper.php#L38-L82)
+See the source code for method [ControllerHelper::resolveController](https://github.com/lingtalfi/Light/blob/master/Helper/ControllerHelper.php#L88-L132)
 
 
 See Also
@@ -72,5 +74,5 @@ See Also
 
 The [ControllerHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper.md) class.
 
-Next method: [getControllerArgs](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper/getControllerArgs.md)<br>
+Previous method: [executeController](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper/executeController.md)<br>Next method: [getControllerArgs](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper/getControllerArgs.md)<br>
 

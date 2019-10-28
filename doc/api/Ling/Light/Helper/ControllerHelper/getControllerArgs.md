@@ -16,7 +16,7 @@ Description
 ================
 
 
-public static [ControllerHelper::getControllerArgs](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper/getControllerArgs.md)(callable $controller, [Ling\Light\Http\HttpRequestInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequestInterface.md) $httpRequest, [Ling\Light\Core\Light](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light.md) $light, [Ling\Light\ServiceContainer\LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md) $container) : array
+public static [ControllerHelper::getControllerArgs](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper/getControllerArgs.md)(callable $controller, [Ling\Light\Core\Light](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light.md) $light) : array
 
 
 
@@ -49,15 +49,7 @@ Parameters
 
     
 
-- httpRequest
-
-    
-
 - light
-
-    
-
-- container
 
     
 
@@ -83,7 +75,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [ControllerHelper::getControllerArgs](https://github.com/lingtalfi/Light/blob/master/Helper/ControllerHelper.php#L113-L172)
+See the source code for method [ControllerHelper::getControllerArgs](https://github.com/lingtalfi/Light/blob/master/Helper/ControllerHelper.php#L161-L221)
 
 
 See Also
