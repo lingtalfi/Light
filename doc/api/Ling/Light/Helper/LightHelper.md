@@ -54,4 +54,4 @@ See the source code of [Ling\Light\Helper\LightHelper](https://github.com/lingta
 
 SeeAlso
 ==============
-Previous class: [EnvironmentHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/EnvironmentHelper.md)<br>Next class: [ServiceContainerHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ServiceContainerHelper.md)<br>
+Previous class: [LightClassHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightClassHelper.md)<br>Next class: [ServiceContainerHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ServiceContainerHelper.md)<br>

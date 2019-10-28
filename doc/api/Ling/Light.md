@@ -44,6 +44,8 @@ Table of contents
 - [EnvironmentHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/EnvironmentHelper.md) &ndash; The EnvironmentHelper class.
     - [EnvironmentHelper::isDev](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/EnvironmentHelper/isDev.md) &ndash; Returns whether the current environment is dev.
     - [EnvironmentHelper::getEnvironment](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/EnvironmentHelper/getEnvironment.md) &ndash; Returns the name of the current environment.
+- [LightClassHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightClassHelper.md) &ndash; The LightClassHelper class.
+    - [LightClassHelper::getLightClassNameByFile](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightClassHelper/getLightClassNameByFile.md) &ndash; Returns the class name of the light class contained in the given file.
 - [LightHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper.md) &ndash; The LightHelper class.
     - [LightHelper::createDummyRoutes](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper/createDummyRoutes.md) &ndash; Register all the routes which patterns are given.
     - [LightHelper::executeMethod](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper/executeMethod.md) &ndash; Executes a php method based on the notation described below, and returns the result.

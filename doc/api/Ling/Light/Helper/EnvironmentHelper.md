@@ -54,4 +54,4 @@ See the source code of [Ling\Light\Helper\EnvironmentHelper](https://github.com/
 
 SeeAlso
 ==============
-Previous class: [ControllerHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper.md)<br>Next class: [LightHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper.md)<br>
+Previous class: [ControllerHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper.md)<br>Next class: [LightClassHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightClassHelper.md)<br>

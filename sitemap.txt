@@ -41,6 +41,8 @@ https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/Control
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/EnvironmentHelper/getEnvironment.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/EnvironmentHelper/isDev.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/EnvironmentHelper.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightClassHelper/getLightClassNameByFile.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightClassHelper.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper/createDummyRoutes.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper/executeMethod.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper.md
