@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [Light::setApplicationDir](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L226-L229)
+See the source code for method [Light::setApplicationDir](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L225-L228)
 
 
 See Also

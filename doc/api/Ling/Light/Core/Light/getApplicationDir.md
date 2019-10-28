@@ -46,7 +46,7 @@ Returns string.
 
 Source Code
 ===========
-See the source code for method [Light::getApplicationDir](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L216-L219)
+See the source code for method [Light::getApplicationDir](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L215-L218)
 
 
 See Also

@@ -1,0 +1,75 @@
+[Back to the Ling/Light api](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light.md)<br>
+[Back to the Ling\Light\Helper\ControllerHelper class](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper.md)
+
+
+ControllerHelper::resolveController
+================
+
+
+
+ControllerHelper::resolveController — controller can be extracted out of the given value.
+
+
+
+
+Description
+================
+
+
+public static [ControllerHelper::resolveController](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper/resolveController.md)($controller, [Ling\Light\Core\Light](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light.md) $light, array $route) : callable | null
+
+
+
+
+Returns a callable controller from the given controller, or null if no callable
+controller can be extracted out of the given value.
+
+Note: This is the method used by the Core/Light instance to create its controllers,
+and so it contains all the string transformation logic used by the Core/Light.
+This method has been externalized so that other plugins can execute controllers
+the same way the Core/Light instance does.
+
+
+
+
+Parameters
+================
+
+
+- controller
+
+    
+
+- light
+
+    
+
+- route
+
+    The matching route.
+
+
+Return values
+================
+
+Returns callable | null.
+
+
+
+
+
+
+
+
+Source Code
+===========
+See the source code for method [ControllerHelper::resolveController](https://github.com/lingtalfi/Light/blob/master/Helper/ControllerHelper.php#L38-L82)
+
+
+See Also
+================
+
+The [ControllerHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper.md) class.
+
+Next method: [getControllerArgs](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper/getControllerArgs.md)<br>
+

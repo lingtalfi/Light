@@ -4,7 +4,6 @@
 namespace Ling\Light\Core;
 
 
-use Ling\Light\Controller\RouteAwareControllerInterface;
 use Ling\Light\Exception\LightException;
 use Ling\Light\Helper\ControllerHelper;
 use Ling\Light\Http\HttpRequest;
@@ -424,43 +423,7 @@ class Light
                             //--------------------------------------------
                             // NOW RESOLVING THE CONTROLLER
                             //--------------------------------------------
-                            $controller = $route['controller'];
-                            $instance = null;
-
-                            // if not a callable yet, we want to turn it into a callable
-                            if (false === is_callable($controller)) {
-                                if (is_string($controller)) {
-                                    /**
-                                     * We want to allow the following notations:
-                                     *
-                                     * - for non static method: MyVendor\Controller\MyController->myMethod
-                                     *
-                                     *
-                                     */
-                                    $p = explode('->', $controller);
-                                    if (2 === count($p)) {
-                                        $class = $p[0];
-                                        $method = $p[1];
-                                        $instance = new $class;
-                                        $controller = [$instance, $method];
-                                    }
-
-                                }
-                            }
-
-
-                            //--------------------------------------------
-                            // INJECT THINGS IN THE CONTROLLERS
-                            //--------------------------------------------
-                            if (null !== $instance) {
-                                if ($instance instanceof LightAwareInterface) {
-                                    $instance->setLight($this);
-                                }
-
-                                if ($instance instanceof RouteAwareControllerInterface) {
-                                    $instance->setRoute($route);
-                                }
-                            }
+                            $controller = ControllerHelper::resolveController($route['controller'], $this, $route);
 
 
                             //--------------------------------------------
@@ -469,7 +432,7 @@ class Light
                             if (is_callable($controller)) {
 
                                 // we need to inject variables in the controller
-                                $controllerArgs = $this->getControllerArgs($controller, $route, $httpRequest);
+                                $controllerArgs = ControllerHelper::getControllerArgs($controller, $route, $httpRequest, $this, $this->getContainer());
                                 $response = call_user_func_array($controller, $controllerArgs);
 
 
@@ -608,88 +571,5 @@ class Light
             <h1>Internal server error</h1>
             <p>The server encountered an internal error misconfiguration and was unable to complete your request.</p>", 500);
         return $response;
-    }
-
-
-    //--------------------------------------------
-    //
-    //--------------------------------------------
-    /**
-     * Returns the controller arguments to use when invoking the controller.
-     *
-     * Basically, the arguments are the variables defined in the route.vars,
-     * or if not found, the default value of the argument if any.
-     *
-     * The special hint types for the Light instance and the HttpRequestInterface can be used
-     * as an alternative to inject the light instance and the http request instance respectively.
-     *
-     *
-     *
-     *
-     * @param $controller
-     * @param array $route
-     * @param HttpRequestInterface $httpRequest
-     * @return array
-     * @throws LightException
-     * @throws \ReflectionException
-     */
-    private function getControllerArgs($controller, array $route, HttpRequestInterface $httpRequest)
-    {
-        $controllerArgs = [];
-        $routeUrlParams = $route['url_params'];
-        $requestArgs = $httpRequest->getGet();
-        $controllerArgsInfo = ControllerHelper::getControllerArgsInfo($controller);
-        foreach ($controllerArgsInfo as $argName => $info) {
-
-
-            list($hasDefaultValue, $defaultValue, $hintType) = $info;
-            if (array_key_exists($argName, $routeUrlParams)) {
-                $controllerArgs[] = $routeUrlParams[$argName];
-            } elseif (array_key_exists($argName, $requestArgs)) {
-                $controllerArgs[] = $requestArgs[$argName];
-            } elseif (true === $hasDefaultValue) {
-                $controllerArgs[] = $defaultValue;
-            } else {
-
-                /**
-                 * Special types
-                 * ----------
-                 * The following types can be injected directly by the light instance, without consulting the route system.
-                 * The user injects them by prefixing the right hint type to its argument
-                 *
-                 * - Ling\Light\Core\Light
-                 * - Ling\Light\Http\HttpRequestInterface
-                 * - Ling\Light\ServiceContainer\LightServiceContainerInterface
-                 *
-                 *
-                 *
-                 */
-                $specialTypes = [
-                    "Ling\Light\Core\Light",
-                    "Ling\Light\Http\HttpRequestInterface",
-                    "Ling\Light\ServiceContainer\LightServiceContainerInterface",
-                ];
-                if (in_array($hintType, $specialTypes, true)) {
-                    if ("Ling\Light\Core\Light" === $hintType) {
-                        $controllerArgs[] = $this;
-                    } elseif ("Ling\Light\Http\HttpRequestInterface" === $hintType) {
-                        $controllerArgs[] = $httpRequest;
-                    } elseif ("Ling\Light\ServiceContainer\LightServiceContainerInterface" === $hintType) {
-                        $controllerArgs[] = $this->getContainer();
-                    }
-                } else {
-
-                    if ('_route' === $argName) {
-                        $controllerArgs[] = $route;
-                    } else {
-                        $routeName = $route['name'];
-                        throw new LightException("The controller for route $routeName defined a mandatory argument $argName, but no value was provided by the route for this argument.");
-                    }
-                }
-            }
-
-
-        }
-        return $controllerArgs;
     }
 }

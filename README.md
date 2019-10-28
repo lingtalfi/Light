@@ -48,6 +48,10 @@ Summary
 History Log
 =============
 
+- 0.30.0 -- 2019-10-28
+
+    - add ControllerHelper::resolveController and ControllerHelper::getControllerArgs
+    
 - 0.29.0 -- 2019-10-28
 
     - add Light->getHttpRequest
