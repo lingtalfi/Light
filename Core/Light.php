@@ -521,7 +521,7 @@ class Light
                 // END ROUTINE
                 //--------------------------------------------
                 if ($this->container->has("end_routine")) {
-                    if (null === $route || false === $route) {
+                    if (null === $route) {
                         $route = [];
                     }
                     /**

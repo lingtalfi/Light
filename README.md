@@ -48,6 +48,10 @@ Summary
 History Log
 =============
 
+- 0.35.0 -- 2019-10-28
+
+    - fix Light->run triggering end routine with route=false
+    
 - 0.34.0 -- 2019-10-28
 
     - add LightRedirectException
