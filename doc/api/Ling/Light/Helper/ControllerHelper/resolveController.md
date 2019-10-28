@@ -16,7 +16,7 @@ Description
 ================
 
 
-public static [ControllerHelper::resolveController](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper/resolveController.md)($controller, [Ling\Light\Core\Light](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light.md) $light, array $route) : callable | null
+public static [ControllerHelper::resolveController](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper/resolveController.md)($controller, [Ling\Light\Core\Light](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light.md) $light) : callable | null
 
 
 
@@ -42,10 +42,6 @@ Parameters
 
 - light
 
-    
-
-- route
-
     The matching route.
 
 
@@ -54,6 +50,11 @@ Return values
 
 Returns callable | null.
 
+
+Exceptions thrown
+================
+
+- [Exception](http://php.net/manual/en/class.exception.php).&nbsp;
 
 
 

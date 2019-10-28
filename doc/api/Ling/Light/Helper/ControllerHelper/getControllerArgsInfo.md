@@ -60,7 +60,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [ControllerHelper::getControllerArgsInfo](https://github.com/lingtalfi/Light/blob/master/Helper/ControllerHelper.php#L185-L220)
+See the source code for method [ControllerHelper::getControllerArgsInfo](https://github.com/lingtalfi/Light/blob/master/Helper/ControllerHelper.php#L187-L222)
 
 
 See Also

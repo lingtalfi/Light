@@ -31,11 +31,11 @@ class ControllerHelper
      *
      * @param $controller
      * @param Light $light
-     * @param array $route
      * The matching route.
      * @return callable|null
+     * @throws \Exception
      */
-    public static function resolveController($controller, Light $light, array $route): ?callable
+    public static function resolveController($controller, Light $light): ?callable
     {
 
         //--------------------------------------------
@@ -74,7 +74,7 @@ class ControllerHelper
             }
 
             if ($instance instanceof RouteAwareControllerInterface) {
-                $instance->setRoute($route);
+                $instance->setRoute($light->getMatchingRoute());
             }
         }
 
@@ -83,7 +83,9 @@ class ControllerHelper
 
 
     /**
-     * Returns the controller arguments for the given controller and matching route.
+     * Returns the controller arguments for the given controller and light instance.
+     *
+     * Note: at this point it's assumed that a route has matched already.
      *
      *
      * Basically, the arguments are the variables defined in the route.vars,
@@ -101,7 +103,6 @@ class ControllerHelper
      *
      *
      * @param callable $controller
-     * @param array $route
      * @param HttpRequestInterface $httpRequest
      * @param Light $light
      * @param LightServiceContainerInterface $container
@@ -109,9 +110,10 @@ class ControllerHelper
      * @throws LightException
      * @throws \ReflectionException
      */
-    public static function getControllerArgs(callable $controller, array $route, HttpRequestInterface $httpRequest, Light $light, LightServiceContainerInterface $container)
+    public static function getControllerArgs(callable $controller, HttpRequestInterface $httpRequest, Light $light, LightServiceContainerInterface $container)
     {
         $controllerArgs = [];
+        $route = $light->getMatchingRoute();
         $routeUrlParams = $route['url_params'];
         $requestArgs = $httpRequest->getGet();
         $controllerArgsInfo = ControllerHelper::getControllerArgsInfo($controller);

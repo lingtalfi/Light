@@ -7,7 +7,7 @@ ControllerHelper::getControllerArgs
 
 
 
-ControllerHelper::getControllerArgs — Returns the controller arguments for the given controller and matching route.
+ControllerHelper::getControllerArgs — Returns the controller arguments for the given controller and light instance.
 
 
 
@@ -16,12 +16,14 @@ Description
 ================
 
 
-public static [ControllerHelper::getControllerArgs](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper/getControllerArgs.md)(callable $controller, array $route, [Ling\Light\Http\HttpRequestInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequestInterface.md) $httpRequest, [Ling\Light\Core\Light](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light.md) $light, [Ling\Light\ServiceContainer\LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md) $container) : array
+public static [ControllerHelper::getControllerArgs](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper/getControllerArgs.md)(callable $controller, [Ling\Light\Http\HttpRequestInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequestInterface.md) $httpRequest, [Ling\Light\Core\Light](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light.md) $light, [Ling\Light\ServiceContainer\LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md) $container) : array
 
 
 
 
-Returns the controller arguments for the given controller and matching route.
+Returns the controller arguments for the given controller and light instance.
+
+Note: at this point it's assumed that a route has matched already.
 
 
 Basically, the arguments are the variables defined in the route.vars,
@@ -44,10 +46,6 @@ Parameters
 
 
 - controller
-
-    
-
-- route
 
     
 
@@ -85,7 +83,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [ControllerHelper::getControllerArgs](https://github.com/lingtalfi/Light/blob/master/Helper/ControllerHelper.php#L112-L170)
+See the source code for method [ControllerHelper::getControllerArgs](https://github.com/lingtalfi/Light/blob/master/Helper/ControllerHelper.php#L113-L172)
 
 
 See Also

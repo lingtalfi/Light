@@ -141,6 +141,16 @@ class Light
 
 
     /**
+     * This property holds the matchingRoute for this instance.
+     * When not available, it's null.
+     * When available, it's either the matching route array or false (if no route matches).
+     *
+     * @var array|false|null
+     */
+    protected $matchingRoute;
+
+
+    /**
      * Builds the Light instance.
      */
     public function __construct()
@@ -159,6 +169,7 @@ class Light
         $this->errorHandlers = [];
         $this->container = null;
         $this->httpRequest = null;
+        $this->matchingRoute = null;
         $this->settings = [];
     }
 
@@ -227,6 +238,48 @@ class Light
         $this->applicationDir = $applicationDir;
     }
 
+    /**
+     * Returns the routes of this instance.
+     * It's an array of route name => route.
+     *
+     * A route is an array which structure is defined in @page(the route page).
+     *
+     *
+     * @return array
+     */
+    public function getRoutes(): array
+    {
+        return $this->routes;
+    }
+
+    /**
+     * Returns the httpRequest of this instance.
+     *
+     * @return HttpRequestInterface
+     */
+    public function getHttpRequest(): HttpRequestInterface
+    {
+        return $this->httpRequest;
+    }
+
+
+    /**
+     * Returns the matching route array, or false if no route matched.
+     * This method can only be called after the route matching test has been executed.
+     *
+     * If this method is called before the route matching test, an exception will be thrown.
+     *
+     *
+     * @return array|false
+     * @throws \Exception
+     */
+    public function getMatchingRoute()
+    {
+        if (null !== $this->matchingRoute) {
+            return $this->matchingRoute;
+        }
+        throw new LightException("The matching route is not available yet (the matching route test hasn't been executed yet).");
+    }
 
     /**
      * Registers a route item, as defined in @page(the route page).
@@ -283,29 +336,6 @@ class Light
 
     }
 
-    /**
-     * Returns the routes of this instance.
-     * It's an array of route name => route.
-     *
-     * A route is an array which structure is defined in @page(the route page).
-     *
-     *
-     * @return array
-     */
-    public function getRoutes(): array
-    {
-        return $this->routes;
-    }
-
-    /**
-     * Returns the httpRequest of this instance.
-     *
-     * @return HttpRequestInterface
-     */
-    public function getHttpRequest(): HttpRequestInterface
-    {
-        return $this->httpRequest;
-    }
 
 
     /**
@@ -417,13 +447,14 @@ class Light
 
 
                         $route = $router->match($httpRequest, $this->routes);
+                        $this->matchingRoute = $route;
                         if (false !== $route) {
 
 
                             //--------------------------------------------
                             // NOW RESOLVING THE CONTROLLER
                             //--------------------------------------------
-                            $controller = ControllerHelper::resolveController($route['controller'], $this, $route);
+                            $controller = ControllerHelper::resolveController($route['controller'], $this);
 
 
                             //--------------------------------------------
@@ -432,7 +463,7 @@ class Light
                             if (is_callable($controller)) {
 
                                 // we need to inject variables in the controller
-                                $controllerArgs = ControllerHelper::getControllerArgs($controller, $route, $httpRequest, $this, $this->getContainer());
+                                $controllerArgs = ControllerHelper::getControllerArgs($controller, $httpRequest, $this, $this->getContainer());
                                 $response = call_user_func_array($controller, $controllerArgs);
 
 
