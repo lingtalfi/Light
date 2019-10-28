@@ -48,6 +48,10 @@ Summary
 History Log
 =============
 
+- 0.29.0 -- 2019-10-28
+
+    - add Light->getHttpRequest
+    
 - 0.28.0 -- 2019-10-24
 
     - add LightServiceContainerInterface->getApplicationDir method

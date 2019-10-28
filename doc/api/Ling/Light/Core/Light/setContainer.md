@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [Light::setContainer](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L182-L185)
+See the source code for method [Light::setContainer](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L192-L195)
 
 
 See Also

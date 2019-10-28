@@ -1,6 +1,7 @@
 https://github.com/lingtalfi/Light/blob/master/README.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/LightController/__construct.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/LightController/getContainer.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/LightController/getHttpRequest.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/LightController/getLight.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/LightController/setLight.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/LightController.md
@@ -11,6 +12,7 @@ https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/__c
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/getApplicationDir.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/getContainer.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/getControllerArgs.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/getHttpRequest.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/getRoutes.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/initialize.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/isDebug.md

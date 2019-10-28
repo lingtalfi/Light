@@ -131,6 +131,15 @@ class Light
      */
     protected $settings;
 
+    /**
+     * This property holds the httpRequest for this instance.
+     *
+     * This variable is only available after the run method or initialize method is called.
+     *
+     * @var HttpRequestInterface
+     */
+    protected $httpRequest;
+
 
     /**
      * Builds the Light instance.
@@ -150,6 +159,7 @@ class Light
         $this->routes = [];
         $this->errorHandlers = [];
         $this->container = null;
+        $this->httpRequest = null;
         $this->settings = [];
     }
 
@@ -288,6 +298,16 @@ class Light
         return $this->routes;
     }
 
+    /**
+     * Returns the httpRequest of this instance.
+     *
+     * @return HttpRequestInterface
+     */
+    public function getHttpRequest(): HttpRequestInterface
+    {
+        return $this->httpRequest;
+    }
+
 
     /**
      * Registers a error handler callback.
@@ -328,11 +348,14 @@ class Light
      */
     public function initialize(HttpRequestInterface $httpRequest = null)
     {
+        if (null === $httpRequest) {
+            $httpRequest = HttpRequest::createFromEnv();
+        }
+        $this->httpRequest = $httpRequest;
+
+
         if ($this->container->has("initializer")) {
             $initializer = $this->container->get("initializer");
-            if (null === $httpRequest) {
-                $httpRequest = HttpRequest::createFromEnv();
-            }
             $initializer->initialize($this, $httpRequest);
         }
     }
@@ -345,6 +368,7 @@ class Light
     {
 
         $httpRequest = HttpRequest::createFromEnv();
+        $this->httpRequest = $httpRequest;
         $response = null;
         $route = null;
 
