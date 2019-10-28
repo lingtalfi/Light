@@ -36,3 +36,4 @@ A route is in fact a simple array with the following structure:
         If your route is called via ajax, you should set this property to true, otherwise certain services might not work as expected.
         Those services include:
             - Light_EndRoutine_CsrfPageCleaner
+- ...(open to new ideas)            

@@ -63,7 +63,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [Light::registerErrorHandler](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L363-L366)
+See the source code for method [Light::registerErrorHandler](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L366-L369)
 
 
 See Also

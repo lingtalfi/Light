@@ -5,11 +5,14 @@ namespace Ling\Light\Core;
 
 
 use Ling\Light\Exception\LightException;
+use Ling\Light\Exception\LightRedirectException;
 use Ling\Light\Helper\ControllerHelper;
+use Ling\Light\Http\HttpRedirectResponse;
 use Ling\Light\Http\HttpRequest;
 use Ling\Light\Http\HttpRequestInterface;
 use Ling\Light\Http\HttpResponse;
 use Ling\Light\Http\HttpResponseInterface;
+use Ling\Light\ReverseRouter\LightReverseRouterInterface;
 use Ling\Light\Router\LightRouter;
 use Ling\Light\ServiceContainer\LightDummyServiceContainer;
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
@@ -402,7 +405,6 @@ class Light
 
 
         if (null !== $this->container) {
-
             //--------------------------------------------
             // INITIALIZE PHASE
             //--------------------------------------------
@@ -465,30 +467,40 @@ class Light
             } catch (\Exception $e) {
 
 
-                $lightErrorCode = null;
-                if ($e instanceof LightException) {
-                    $lightErrorCode = $e->getLightErrorCode();
-                }
+                if ($e instanceof LightRedirectException && $this->getContainer()->has('reverse_router')) {
+                    /**
+                     * @var $revRouter LightReverseRouterInterface
+                     */
+                    $revRouter = $this->getContainer()->get('reverse_router');
+                    $url = $revRouter->getUrl($e->getRedirectRoute(), [], true);
+                    $response = HttpRedirectResponse::create($url);
+                } else {
 
 
-                $washHandled = false;
-                foreach ($this->errorHandlers as $errorHandler) {
-                    if (null === $response) {
-                        call_user_func_array($errorHandler, [$lightErrorCode, $e, &$response]);
-                        if (null !== $response) {
-                            $washHandled = true;
-                            break;
+                    $lightErrorCode = null;
+                    if ($e instanceof LightException) {
+                        $lightErrorCode = $e->getLightErrorCode();
+                    }
+
+
+                    $washHandled = false;
+                    foreach ($this->errorHandlers as $errorHandler) {
+                        if (null === $response) {
+                            call_user_func_array($errorHandler, [$lightErrorCode, $e, &$response]);
+                            if (null !== $response) {
+                                $washHandled = true;
+                                break;
+                            }
                         }
                     }
-                }
 
+                    if (false === $washHandled) {
+                        if (false === $this->debug) {
+                            $response = $this->renderInternalServerErrorPage();
 
-                if (false === $washHandled) {
-                    if (false === $this->debug) {
-                        $response = $this->renderInternalServerErrorPage();
-
-                    } else {
-                        $response = $this->renderDebugPage($e);
+                        } else {
+                            $response = $this->renderDebugPage($e);
+                        }
                     }
                 }
             }
@@ -509,7 +521,7 @@ class Light
                 // END ROUTINE
                 //--------------------------------------------
                 if ($this->container->has("end_routine")) {
-                    if (null === $route) {
+                    if (null === $route || false === $route) {
                         $route = [];
                     }
                     /**

@@ -48,6 +48,10 @@ Summary
 History Log
 =============
 
+- 0.34.0 -- 2019-10-28
+
+    - add LightRedirectException
+    
 - 0.33.0 -- 2019-10-28
 
     - add LightClassHelper

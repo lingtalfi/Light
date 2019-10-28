@@ -33,6 +33,15 @@ Table of contents
     - [LightAwareInterface::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/LightAwareInterface/setLight.md) &ndash; Sets the light instance.
 - [LightException](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Exception/LightException.md) &ndash; The LightException class.
     - [LightException::__construct](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Exception/LightException/__construct.md) &ndash; Builds the LightException instance.
+    - [LightException::create](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Exception/LightException/create.md) &ndash; Returns a static instance.
+    - [LightException::setLightErrorCode](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Exception/LightException/setLightErrorCode.md) &ndash; Sets the lightErrorCode.
+    - [LightException::getLightErrorCode](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Exception/LightException/getLightErrorCode.md) &ndash; Returns the light error code, or null if not set.
+- [LightRedirectException](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Exception/LightRedirectException.md) &ndash; The LightRedirectException class.
+    - [LightRedirectException::__construct](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Exception/LightRedirectException/__construct.md) &ndash; Builds the LightException instance.
+    - [LightRedirectException::setRedirectRoute](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Exception/LightRedirectException/setRedirectRoute.md) &ndash; Sets the redirectRoute.
+    - [LightRedirectException::getRedirectRoute](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Exception/LightRedirectException/getRedirectRoute.md) &ndash; Returns the redirectRoute of this instance.
+    - [LightException::create](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Exception/LightException/create.md) &ndash; Returns a static instance.
+    - [LightException::setLightErrorCode](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Exception/LightException/setLightErrorCode.md) &ndash; Sets the lightErrorCode.
     - [LightException::getLightErrorCode](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Exception/LightException/getLightErrorCode.md) &ndash; Returns the light error code, or null if not set.
 - [ConfigurationHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ConfigurationHelper.md) &ndash; The ConfigurationHelper class.
     - [ConfigurationHelper::getCombinedConf](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ConfigurationHelper/getCombinedConf.md) &ndash; Returns the merged configuration of all [BabyYaml](https://github.com/lingtalfi/BabyYaml) configuration files found in the given directory.

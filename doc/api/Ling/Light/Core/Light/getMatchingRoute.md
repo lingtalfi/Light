@@ -54,7 +54,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [Light::getMatchingRoute](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L276-L282)
+See the source code for method [Light::getMatchingRoute](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L279-L285)
 
 
 See Also
