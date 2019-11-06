@@ -17,6 +17,7 @@ use Ling\Light\Router\LightRouter;
 use Ling\Light\ServiceContainer\LightDummyServiceContainer;
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
 use Ling\Light_EndRoutine\Service\Light_EndRoutineService;
+use Ling\Light_Events\Service\LightEventsService;
 
 /**
  * The Light class.
@@ -452,6 +453,16 @@ class Light
 
 
                         if (false !== $route) {
+
+                            if(null !== $this->container){
+                                /**
+                                 * @var $events LightEventsService
+                                 */
+                                $events = $this->container->get('events');
+                                $events->dispatch('Light.on_route_found', [$route]);
+                            }
+
+
                             $response = ControllerHelper::executeController($route['controller'], $this);
                         } else {
                             throw new LightException("No route matches", "404");
@@ -472,7 +483,8 @@ class Light
                      * @var $revRouter LightReverseRouterInterface
                      */
                     $revRouter = $this->getContainer()->get('reverse_router');
-                    $url = $revRouter->getUrl($e->getRedirectRoute(), [], true);
+                    $urlParams = $_GET;
+                    $url = $revRouter->getUrl($e->getRedirectRoute(), $urlParams, true);
                     $response = HttpRedirectResponse::create($url);
                 } else {
 

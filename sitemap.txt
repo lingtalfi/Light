@@ -152,6 +152,7 @@ https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Tool/LightTool
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Tool/LightTool.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/diary.md
+https://github.com/lingtalfi/Light/blob/master/doc/pages/events.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/light-application-recommended-structure.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/light-general-philosophy.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/light-service-container.md

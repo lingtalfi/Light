@@ -77,7 +77,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [Light::registerRoute](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L325-L340)
+See the source code for method [Light::registerRoute](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L326-L341)
 
 
 See Also

@@ -1,6 +1,7 @@
 dependencies: 
     Ling: 
         - Light_EndRoutine
+        - Light_Events
         - SicTools
         - Bat
         - DirScanner

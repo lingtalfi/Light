@@ -33,6 +33,7 @@ Summary
 - [Light api](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light.md) (generated with [DocTools](https://github.com/lingtalfi/DocTools))
 - Pages
     - [Diary](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/diary.md)
+    - [Events](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/events.md)
     - [Plugin](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/plugin.md)
     - [Rights](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/rights.md)
     - [Route](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/route.md)
@@ -48,6 +49,10 @@ Summary
 History Log
 =============
 
+- 0.36.0 -- 2019-11-06
+
+    - update Core/Light, now dispatches the Light.on_route_found event
+    
 - 0.35.0 -- 2019-10-28
 
     - fix Light->run triggering end routine with route=false
