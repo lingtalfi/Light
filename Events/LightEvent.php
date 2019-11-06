@@ -6,6 +6,7 @@ namespace Ling\Light\Events;
 use Ling\Light\Core\Light;
 use Ling\Light\Exception\LightException;
 use Ling\Light\Http\HttpRequestInterface;
+use Ling\Light\ServiceContainer\LightServiceContainerInterface;
 
 /**
  * The LightEvent class.
@@ -124,6 +125,15 @@ class LightEvent
     public function setHttpRequest(HttpRequestInterface $httpRequest)
     {
         $this->httpRequest = $httpRequest;
+    }
+
+    /**
+     * Returns the current service container instance.
+     * @return LightServiceContainerInterface
+     */
+    public function getContainer(): LightServiceContainerInterface
+    {
+        return $this->light->getContainer();
     }
 
 

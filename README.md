@@ -49,9 +49,13 @@ Summary
 History Log
 =============
 
+- 0.38.0 -- 2019-11-06
+
+    - add LightEvent->getContainer method
+    
 - 0.37.0 -- 2019-11-06
 
-    - add Light_Event
+    - add LightEvent
     
 - 0.36.0 -- 2019-11-06
 

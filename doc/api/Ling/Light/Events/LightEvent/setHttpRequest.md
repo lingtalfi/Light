@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightEvent::setHttpRequest](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L124-L127)
+See the source code for method [LightEvent::setHttpRequest](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L125-L128)
 
 
 See Also
@@ -57,5 +57,5 @@ See Also
 
 The [LightEvent](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) class.
 
-Previous method: [getHttpRequest](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/getHttpRequest.md)<br>
+Previous method: [getHttpRequest](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/getHttpRequest.md)<br>Next method: [getContainer](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/getContainer.md)<br>
 

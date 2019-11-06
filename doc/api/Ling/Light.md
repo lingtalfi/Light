@@ -39,6 +39,7 @@ Table of contents
     - [LightEvent::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/setLight.md) &ndash; Sets the light.
     - [LightEvent::getHttpRequest](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/getHttpRequest.md) &ndash; Returns the httpRequest of this instance.
     - [LightEvent::setHttpRequest](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/setHttpRequest.md) &ndash; Sets the httpRequest.
+    - [LightEvent::getContainer](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/getContainer.md) &ndash; Returns the current service container instance.
 - [LightException](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Exception/LightException.md) &ndash; The LightException class.
     - [LightException::__construct](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Exception/LightException/__construct.md) &ndash; Builds the LightException instance.
     - [LightException::create](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Exception/LightException/create.md) &ndash; Returns a static instance.

@@ -46,7 +46,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightEvent::__construct](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L43-L48)
+See the source code for method [LightEvent::__construct](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L44-L49)
 
 
 See Also

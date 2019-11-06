@@ -53,7 +53,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightEvent::setVar](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L57-L60)
+See the source code for method [LightEvent::setVar](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L58-L61)
 
 
 See Also
