@@ -49,6 +49,10 @@ Summary
 History Log
 =============
 
+- 0.37.0 -- 2019-11-06
+
+    - add Light_Event
+    
 - 0.36.0 -- 2019-11-06
 
     - update Core/Light, now dispatches the Light.on_route_found event

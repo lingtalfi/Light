@@ -4,6 +4,7 @@
 namespace Ling\Light\Core;
 
 
+use Ling\Light\Events\LightEvent;
 use Ling\Light\Exception\LightException;
 use Ling\Light\Exception\LightRedirectException;
 use Ling\Light\Helper\ControllerHelper;
@@ -459,7 +460,11 @@ class Light
                                  * @var $events LightEventsService
                                  */
                                 $events = $this->container->get('events');
-                                $events->dispatch('Light.on_route_found', [$route]);
+                                $event = new LightEvent();
+                                $event->setHttpRequest($httpRequest);
+                                $event->setLight($this);
+                                $event->setVar("route", $route);
+                                $events->dispatch('Light.on_route_found', $event);
                             }
 
 

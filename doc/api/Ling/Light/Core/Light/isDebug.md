@@ -46,7 +46,7 @@ Returns bool.
 
 Source Code
 ===========
-See the source code for method [Light::isDebug](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L195-L198)
+See the source code for method [Light::isDebug](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L196-L199)
 
 
 See Also

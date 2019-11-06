@@ -28,6 +28,14 @@ https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/set
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/LightAwareInterface/setLight.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/LightAwareInterface.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/__construct.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/getHttpRequest.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/getLight.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/getVar.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/setHttpRequest.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/setLight.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/setVar.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Exception/LightException/__construct.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Exception/LightException/create.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Exception/LightException/getLightErrorCode.md
