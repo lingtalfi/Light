@@ -455,7 +455,7 @@ class Light
 
                         if (false !== $route) {
 
-                            if(null !== $this->container){
+                            if (null !== $this->container) {
                                 /**
                                  * @var $events LightEventsService
                                  */
@@ -538,7 +538,7 @@ class Light
                 // END ROUTINE
                 //--------------------------------------------
                 if ($this->container->has("end_routine")) {
-                    if (null === $route) {
+                    if (null === $route || false === $route) {
                         $route = [];
                     }
                     /**
