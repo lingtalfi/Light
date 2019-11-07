@@ -49,6 +49,10 @@ Summary
 History Log
 =============
 
+- 0.40.1 -- 2019-11-07
+
+    - add events naming convention 
+    
 - 0.40.0 -- 2019-11-07
 
     - fix ControllerHelper::executeController throwing exception when the response is a string 
