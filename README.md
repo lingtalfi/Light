@@ -49,6 +49,10 @@ Summary
 History Log
 =============
 
+- 0.40.0 -- 2019-11-07
+
+    - fix ControllerHelper::executeController throwing exception when the response is a string 
+    
 - 0.39.0 -- 2019-11-07
 
     - fix Core/Light not handling no route match exception properly
