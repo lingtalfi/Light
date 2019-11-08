@@ -49,6 +49,10 @@ Summary
 History Log
 =============
 
+- 0.41.0 -- 2019-11-08
+
+    - add LightEvent::createByContainer 
+    
 - 0.40.1 -- 2019-11-07
 
     - add events naming convention 

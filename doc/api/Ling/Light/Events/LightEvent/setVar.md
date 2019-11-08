@@ -16,7 +16,7 @@ Description
 ================
 
 
-public [LightEvent::setVar](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/setVar.md)(string $key, $value) : void
+public [LightEvent::setVar](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/setVar.md)(string $key, $value) : self
 
 
 
@@ -42,7 +42,7 @@ Parameters
 Return values
 ================
 
-Returns void.
+Returns self.
 
 
 
@@ -53,7 +53,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightEvent::setVar](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L58-L61)
+See the source code for method [LightEvent::setVar](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L81-L85)
 
 
 See Also
@@ -61,5 +61,5 @@ See Also
 
 The [LightEvent](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) class.
 
-Previous method: [__construct](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/__construct.md)<br>Next method: [getVar](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/getVar.md)<br>
+Previous method: [createByContainer](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/createByContainer.md)<br>Next method: [getVar](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/getVar.md)<br>
 

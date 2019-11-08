@@ -4,7 +4,7 @@
 
 The LightEvent class
 ================
-2019-04-09 --> 2019-11-07
+2019-04-09 --> 2019-11-08
 
 
 
@@ -33,7 +33,8 @@ class <span class="pl-k">LightEvent</span>  {
 
 - Methods
     - public [__construct](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/__construct.md)() : void
-    - public [setVar](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/setVar.md)(string $key, $value) : void
+    - public static [createByContainer](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/createByContainer.md)([Ling\Light\ServiceContainer\LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md) $container) : [LightEvent](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md)
+    - public [setVar](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/setVar.md)(string $key, $value) : self
     - public [getVar](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/getVar.md)(string $key, ?$default = null, ?bool $throwEx = false) : mixed
     - public [getLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/getLight.md)() : [Light](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light.md)
     - public [setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/setLight.md)([Ling\Light\Core\Light](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light.md) $light) : void
@@ -74,6 +75,7 @@ Methods
 ==============
 
 - [LightEvent::__construct](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/__construct.md) &ndash; Builds the LightEvent instance.
+- [LightEvent::createByContainer](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/createByContainer.md) &ndash; Returns a basic LightEvent instance with the light instance and the http request instance set.
 - [LightEvent::setVar](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/setVar.md) &ndash; Sets a variable.
 - [LightEvent::getVar](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/getVar.md) &ndash; Returns the variable value associated with the given variable key.
 - [LightEvent::getLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/getLight.md) &ndash; Returns the light of this instance.

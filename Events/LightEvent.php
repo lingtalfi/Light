@@ -7,6 +7,7 @@ use Ling\Light\Core\Light;
 use Ling\Light\Exception\LightException;
 use Ling\Light\Http\HttpRequestInterface;
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
+use Ling\Light_LightInstance\Service\LightLightInstanceService;
 
 /**
  * The LightEvent class.
@@ -50,14 +51,37 @@ class LightEvent
 
 
     /**
+     * Returns a basic LightEvent instance with the light instance and the http request instance set.
+     * Note: it requires the @page(light_instance service).
+     *
+     * @param LightServiceContainerInterface $container
+     * @return LightEvent
+     * @throws \Exception
+     */
+    public static function createByContainer(LightServiceContainerInterface $container): LightEvent
+    {
+        $o = new self();
+        /**
+         * @var $lightInstance LightLightInstanceService
+         */
+        $lightInstance = $container->get("light_instance");
+        $o->setLight($lightInstance->getLight());
+        $o->setHttpRequest($lightInstance->getHttpRequest());
+        return $o;
+    }
+
+
+    /**
      * Sets a variable.
      *
      * @param string $key
      * @param $value
+     * @return self
      */
-    public function setVar(string $key, $value)
+    public function setVar(string $key, $value): self
     {
         $this->vars[$key] = $value;
+        return $this;
     }
 
     /**

@@ -1,6 +1,6 @@
 Ling/Light
 ================
-2019-04-09 --> 2019-11-07
+2019-04-09 --> 2019-11-08
 
 
 
@@ -33,6 +33,7 @@ Table of contents
     - [LightAwareInterface::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/LightAwareInterface/setLight.md) &ndash; Sets the light instance.
 - [LightEvent](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) &ndash; The LightEvent class.
     - [LightEvent::__construct](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/__construct.md) &ndash; Builds the LightEvent instance.
+    - [LightEvent::createByContainer](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/createByContainer.md) &ndash; Returns a basic LightEvent instance with the light instance and the http request instance set.
     - [LightEvent::setVar](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/setVar.md) &ndash; Sets a variable.
     - [LightEvent::getVar](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/getVar.md) &ndash; Returns the variable value associated with the given variable key.
     - [LightEvent::getLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/getLight.md) &ndash; Returns the light of this instance.
@@ -183,6 +184,7 @@ Dependencies
 ============
 - [Light_EndRoutine](https://github.com/lingtalfi/Light_EndRoutine)
 - [Light_Events](https://github.com/lingtalfi/Light_Events)
+- [Light_LightInstance](https://github.com/lingtalfi/Light_LightInstance)
 - [SicTools](https://github.com/lingtalfi/SicTools)
 - [Bat](https://github.com/lingtalfi/Bat)
 - [DirScanner](https://github.com/lingtalfi/DirScanner)

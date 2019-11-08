@@ -46,7 +46,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightEvent::__construct](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L44-L49)
+See the source code for method [LightEvent::__construct](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L45-L50)
 
 
 See Also
@@ -54,5 +54,5 @@ See Also
 
 The [LightEvent](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) class.
 
-Next method: [setVar](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/setVar.md)<br>
+Next method: [createByContainer](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent/createByContainer.md)<br>
 
