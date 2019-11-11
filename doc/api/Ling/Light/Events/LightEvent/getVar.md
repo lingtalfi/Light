@@ -64,7 +64,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightEvent::getVar](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L98-L107)
+See the source code for method [LightEvent::getVar](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L99-L108)
 
 
 See Also

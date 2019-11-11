@@ -1,6 +1,6 @@
 Ling/Light
 ================
-2019-04-09 --> 2019-11-08
+2019-04-09 --> 2019-11-11
 
 
 
@@ -26,7 +26,6 @@ Table of contents
     - [Light::getHttpRequest](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/getHttpRequest.md) &ndash; Returns the httpRequest of this instance.
     - [Light::getMatchingRoute](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/getMatchingRoute.md) &ndash; Returns the matching route array, or false if no route matched.
     - [Light::registerRoute](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/registerRoute.md) &ndash; Registers a route item, as defined in [the route page](https://github.com/lingtalfi/Light/blob/master/doc/pages/route.md).
-    - [Light::registerErrorHandler](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/registerErrorHandler.md) &ndash; Registers a error handler callback.
     - [Light::initialize](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/initialize.md) &ndash; Triggers the initialize phase if set in the service container.
     - [Light::run](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/run.md) &ndash; Runs the Light web application.
 - [LightAwareInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/LightAwareInterface.md) &ndash; The LightAwareInterface interface.

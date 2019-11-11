@@ -31,6 +31,7 @@ class LightEvent
      */
     protected $httpRequest;
 
+
     /**
      * This property holds the vars for this instance.
      * It's an array of key/value pairs.

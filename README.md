@@ -49,6 +49,10 @@ Summary
 History Log
 =============
 
+- 0.42.0 -- 2019-11-11
+
+    - update Core/Light: new exception handling system
+    
 - 0.41.0 -- 2019-11-08
 
     - add LightEvent::createByContainer 

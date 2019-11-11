@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightEvent::setLight](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L129-L132)
+See the source code for method [LightEvent::setLight](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L130-L133)
 
 
 See Also

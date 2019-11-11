@@ -77,7 +77,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [Light::registerRoute](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L327-L342)
+See the source code for method [Light::registerRoute](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L295-L310)
 
 
 See Also
@@ -85,5 +85,5 @@ See Also
 
 The [Light](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light.md) class.
 
-Previous method: [getMatchingRoute](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/getMatchingRoute.md)<br>Next method: [registerErrorHandler](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/registerErrorHandler.md)<br>
+Previous method: [getMatchingRoute](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/getMatchingRoute.md)<br>Next method: [initialize](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/initialize.md)<br>
 

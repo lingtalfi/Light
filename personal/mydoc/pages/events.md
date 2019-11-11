@@ -9,7 +9,10 @@ Note: we use the [Light_Events](https://github.com/lingtalfi/Light_Events) servi
 The Core/Light will dispatch the following events:
 
 
-- Light.on_route_found: when a route matched. The argument is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object which has a route variable containing the matching [route](https://github.com/lingtalfi/Light/blob/master/doc/pages/route.md) array.
+- Light.on_route_found: when a route matched. The argument is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object which has a **route** variable containing the matching [route](https://github.com/lingtalfi/Light/blob/master/doc/pages/route.md) array.
+- Light.on_exception_caught: when an exception is caught. The argument is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object with an **exception** variable containing the caught exception.
+        Plugins can set a response to return to the user by setting the **httpResponse** variable (in the LightEvent instance).
+        The response must be an [HttpResponseInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpResponseInterface.md) instance.
 
  
  

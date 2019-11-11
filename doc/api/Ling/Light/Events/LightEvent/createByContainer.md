@@ -55,7 +55,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightEvent::createByContainer](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L61-L71)
+See the source code for method [LightEvent::createByContainer](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L62-L72)
 
 
 See Also

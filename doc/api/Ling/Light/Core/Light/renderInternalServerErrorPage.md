@@ -50,7 +50,7 @@ Returns string | [HttpResponseInterface](https://github.com/lingtalfi/Light/blob
 
 Source Code
 ===========
-See the source code for method [Light::renderInternalServerErrorPage](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L610-L616)
+See the source code for method [Light::renderInternalServerErrorPage](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L535-L541)
 
 
 See Also

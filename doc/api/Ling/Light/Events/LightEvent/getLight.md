@@ -46,7 +46,7 @@ Returns [Light](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Ligh
 
 Source Code
 ===========
-See the source code for method [LightEvent::getLight](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L119-L122)
+See the source code for method [LightEvent::getLight](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L120-L123)
 
 
 See Also
