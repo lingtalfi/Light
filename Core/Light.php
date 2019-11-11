@@ -326,7 +326,7 @@ class Light
         $this->httpRequest = $httpRequest;
 
 
-        if ($this->container->has("initializer")) {
+        if ($this->getContainer()->has("initializer")) {
             $initializer = $this->container->get("initializer");
             $initializer->initialize($this, $httpRequest);
         }
@@ -338,35 +338,35 @@ class Light
      */
     public function run()
     {
+        try {
 
-        $httpRequest = HttpRequest::createFromEnv();
-        $this->httpRequest = $httpRequest;
-        $response = null;
-        $route = null;
-
-
-        if (null !== $this->container) {
-
-
-            //--------------------------------------------
-            // INITIALIZE PHASE
-            //--------------------------------------------
-            $this->initialize($httpRequest);
+            $httpRequest = HttpRequest::createFromEnv();
+            $this->httpRequest = $httpRequest;
+            $response = null;
+            $route = null;
+            $container = $this->getContainer();
 
 
-            //--------------------------------------------
-            // PRE-ROUTE PHASE
-            //--------------------------------------------
-            if ($this->container->has("preroute_hub")) {
-                $prerouteHub = $this->container->get("preroute_hub");
-                $prerouteHub->run($this, $httpRequest, $response);
+            if (null !== $this->container) {
+
+                //--------------------------------------------
+                // INITIALIZE PHASE
+                //--------------------------------------------
+                $this->initialize($httpRequest);
+
+
+                //--------------------------------------------
+                // PRE-ROUTE PHASE
+                //--------------------------------------------
+                if ($container->has("preroute_hub")) {
+                    $prerouteHub = $container->get("preroute_hub");
+                    $prerouteHub->run($this, $httpRequest, $response);
+                }
             }
-        }
 
 
-        if (null === $response) {
+            if (null === $response) {
 
-            try {
                 if (null !== $this->applicationDir) {
                     if (is_dir($this->applicationDir)) {
 
@@ -378,12 +378,12 @@ class Light
                         // SEARCHING A MATCHING ROUTE
                         //--------------------------------------------
                         $router = null;
-                        if (null !== $this->container) {
-                            if ($this->container->has("router")) {
-                                // todo: dynamic routers, see RoutineRouter...
-                                $router = $this->container->get("router");
-                            }
+
+                        if ($container->has("router")) {
+                            // todo: dynamic routers, see RoutineRouter...
+                            $router = $this->container->get("router");
                         }
+
 
                         if (null === $router) {
                             $router = new LightRouter();
@@ -396,11 +396,11 @@ class Light
 
                         if (false !== $route) {
 
-                            if (null !== $this->container) {
+                            if ($container->has("events")) {
                                 /**
                                  * @var $events LightEventsService
                                  */
-                                $events = $this->container->get('events');
+                                $events = $container->get('events');
                                 $event = new LightEvent();
                                 $event->setHttpRequest($httpRequest);
                                 $event->setLight($this);
@@ -421,35 +421,45 @@ class Light
                 } else {
                     throw new LightException("Application dir not set.");
                 }
-            } catch (\Exception $e) {
+
+            }
+
+        } catch (\Exception $e) {
 
 
-                $washHandled = false;
-                if (true === $this->getContainer()->has('events')) {
-                    /**
-                     * @var $events LightEventsService
-                     */
-                    $events = $this->getContainer()->get("events");
-                    $data = LightEvent::createByContainer($this->getContainer());
+            $washHandled = false;
+            if (true === $container->has('events')) {
+                /**
+                 * @var $events LightEventsService
+                 */
+                $events = $container->get("events");
+                $data = LightEvent::createByContainer($container);
+                $data->setVar('exception', $e);
+                $events->dispatch("Light.on_exception_caught", $data);
+
+
+                $httpResponse = $data->getVar('httpResponse');
+                if ($httpResponse instanceof HttpResponseInterface) {
+                    $washHandled = true;
+                    $response = $httpResponse;
+                }
+            }
+
+
+            if (false === $washHandled) {
+
+                if (true === $container->has('events')) {
+                    $data = LightEvent::createByContainer($container);
                     $data->setVar('exception', $e);
-                    $events->dispatch("Light.on_exception_caught", $data);
-
-
-                    $httpResponse = $data->getVar('httpResponse');
-                    if ($httpResponse instanceof HttpResponseInterface || is_string($httpResponse)) {
-                        $washHandled = true;
-                        $response = $httpResponse;
-                    }
+                    $events->dispatch("Light.on_unhandled_exception_caught", $data);
                 }
 
 
-                if (false === $washHandled) {
-                    if (false === $this->debug) {
-                        $response = $this->renderInternalServerErrorPage();
+                if (false === $this->debug) {
+                    $response = $this->renderInternalServerErrorPage();
 
-                    } else {
-                        $response = $this->renderDebugPage($e);
-                    }
+                } else {
+                    $response = $this->renderDebugPage($e);
                 }
             }
         }
@@ -464,20 +474,18 @@ class Light
             }
 
 
-            if (null !== $this->container) {
-                //--------------------------------------------
-                // END ROUTINE
-                //--------------------------------------------
-                if ($this->container->has("end_routine")) {
-                    if (null === $route || false === $route) {
-                        $route = [];
-                    }
-                    /**
-                     * @var $endRoutine Light_EndRoutineService
-                     */
-                    $endRoutine = $this->container->get('end_routine');
-                    $endRoutine->executeEndRoutines($route);
+            //--------------------------------------------
+            // END ROUTINE
+            //--------------------------------------------
+            if ($container->has("end_routine")) {
+                if (null === $route || false === $route) {
+                    $route = [];
                 }
+                /**
+                 * @var $endRoutine Light_EndRoutineService
+                 */
+                $endRoutine = $container->get('end_routine');
+                $endRoutine->executeEndRoutines($route);
             }
 
 

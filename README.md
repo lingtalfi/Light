@@ -49,6 +49,10 @@ Summary
 History Log
 =============
 
+- 0.43.0 -- 2019-11-11
+
+    - add Light.on_unhandled_exception_caught event
+    
 - 0.42.0 -- 2019-11-11
 
     - update Core/Light: new exception handling system

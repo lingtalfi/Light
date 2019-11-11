@@ -13,6 +13,8 @@ The Core/Light will dispatch the following events:
 - Light.on_exception_caught: when an exception is caught. The argument is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object with an **exception** variable containing the caught exception.
         Plugins can set a response to return to the user by setting the **httpResponse** variable (in the LightEvent instance).
         The response must be an [HttpResponseInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpResponseInterface.md) instance.
+- Light.on_unhandled_exception_caught: triggered when an exception is caught but not handled by a third party plugin. 
+        This event can be used to log the unhandled exceptions for instance.
 
  
  
