@@ -49,6 +49,10 @@ Summary
 History Log
 =============
 
+- 0.44.0 -- 2019-11-11
+
+    - fix Light->run functional typo
+    
 - 0.43.0 -- 2019-11-11
 
     - add Light.on_unhandled_exception_caught event

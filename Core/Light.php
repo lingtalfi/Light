@@ -338,30 +338,28 @@ class Light
      */
     public function run()
     {
+        $container = $this->getContainer();
         try {
+
 
             $httpRequest = HttpRequest::createFromEnv();
             $this->httpRequest = $httpRequest;
             $response = null;
             $route = null;
-            $container = $this->getContainer();
 
 
-            if (null !== $this->container) {
-
-                //--------------------------------------------
-                // INITIALIZE PHASE
-                //--------------------------------------------
-                $this->initialize($httpRequest);
+            //--------------------------------------------
+            // INITIALIZE PHASE
+            //--------------------------------------------
+            $this->initialize($httpRequest);
 
 
-                //--------------------------------------------
-                // PRE-ROUTE PHASE
-                //--------------------------------------------
-                if ($container->has("preroute_hub")) {
-                    $prerouteHub = $container->get("preroute_hub");
-                    $prerouteHub->run($this, $httpRequest, $response);
-                }
+            //--------------------------------------------
+            // PRE-ROUTE PHASE
+            //--------------------------------------------
+            if ($container->has("preroute_hub")) {
+                $prerouteHub = $container->get("preroute_hub");
+                $prerouteHub->run($this, $httpRequest, $response);
             }
 
 
