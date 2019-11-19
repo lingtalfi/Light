@@ -49,6 +49,10 @@ Summary
 History Log
 =============
 
+- 0.46.0 -- 2019-11-19
+
+    - fix Light->run functional typo
+    
 - 0.45.0 -- 2019-11-19
 
     - update Light->run, now handles the LightRedirectException directly (i.e. no 3rd party handling)

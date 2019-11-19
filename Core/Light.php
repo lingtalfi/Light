@@ -13,13 +13,12 @@ use Ling\Light\Http\HttpRequest;
 use Ling\Light\Http\HttpRequestInterface;
 use Ling\Light\Http\HttpResponse;
 use Ling\Light\Http\HttpResponseInterface;
-use Ling\Light\ReverseRouter\LightReverseRouterInterface;
 use Ling\Light\Router\LightRouter;
 use Ling\Light\ServiceContainer\LightDummyServiceContainer;
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
 use Ling\Light_EndRoutine\Service\Light_EndRoutineService;
 use Ling\Light_Events\Service\LightEventsService;
-use Ling\Light_ReverseRouter\LightReverseRouterService;
+use Ling\Light_ReverseRouter\Service\LightReverseRouterService;
 
 /**
  * The Light class.

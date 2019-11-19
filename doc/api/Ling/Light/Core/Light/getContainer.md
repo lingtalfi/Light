@@ -47,7 +47,7 @@ Returns [LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob
 
 Source Code
 ===========
-See the source code for method [Light::getContainer](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L190-L196)
+See the source code for method [Light::getContainer](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L189-L195)
 
 
 See Also
