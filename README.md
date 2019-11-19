@@ -49,6 +49,11 @@ Summary
 History Log
 =============
 
+- 0.45.0 -- 2019-11-19
+
+    - update Light->run, now handles the LightRedirectException directly (i.e. no 3rd party handling)
+    - removed LightReverseRouterInterface
+    
 - 0.44.0 -- 2019-11-11
 
     - fix Light->run functional typo
