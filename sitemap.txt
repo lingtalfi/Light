@@ -170,4 +170,5 @@ https://github.com/lingtalfi/Light/blob/master/doc/pages/my-snippets.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/plugin.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/rights.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/route.md
+https://github.com/lingtalfi/Light/blob/master/doc/pages/security.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/sic-cheatsheet.md

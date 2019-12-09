@@ -40,6 +40,7 @@ Summary
     - [Service container](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/light-service-container.md)
     - [General philosophy](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/light-general-philosophy.md)
     - [Application recommended structure](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/light-application-recommended-structure.md)
+    - [Security](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/security.md)
 
 
 
@@ -49,6 +50,10 @@ Summary
 History Log
 =============
 
+- 0.47.0 -- 2019-12-09
+
+    - add security document
+    
 - 0.46.0 -- 2019-11-19
 
     - fix Light->run functional typo
