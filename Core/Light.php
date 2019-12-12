@@ -412,7 +412,7 @@ class Light
 
                             $response = ControllerHelper::executeController($route['controller'], $this);
                         } else {
-                            throw new LightException("No route matches", "404");
+                            throw LightException::create("No route matches", "404");
                         }
 
 
@@ -467,6 +467,7 @@ class Light
 
 
                 if (false === $washHandled) {
+
 
                     if (true === $container->has('events')) {
                         /**

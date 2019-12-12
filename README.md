@@ -49,7 +49,11 @@ Summary
 
 History Log
 =============
+    
+- 0.48.0 -- 2019-12-12
 
+    - update LightException::create, can now pass the light error code directly as an argument
+    
 - 0.47.0 -- 2019-12-09
 
     - add security document
