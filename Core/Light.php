@@ -344,7 +344,6 @@ class Light
         $container = $this->getContainer();
         try {
 
-
             $httpRequest = HttpRequest::createFromEnv();
             $this->httpRequest = $httpRequest;
             $response = null;
@@ -355,6 +354,7 @@ class Light
             // INITIALIZE PHASE
             //--------------------------------------------
             $this->initialize($httpRequest);
+
 
 
             //--------------------------------------------

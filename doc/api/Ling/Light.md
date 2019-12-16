@@ -1,6 +1,6 @@
 Ling/Light
 ================
-2019-04-09 --> 2019-12-12
+2019-04-09 --> 2019-12-16
 
 
 
@@ -145,21 +145,28 @@ Table of contents
 - [LightBlueServiceContainer](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer.md) &ndash; The LightBlueServiceContainer class.
     - [LightBlueServiceContainer::__construct](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/__construct.md) &ndash; Builds the LightRedServiceContainer instance.
     - [LightBlueServiceContainer::getApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/getApplicationDir.md) &ndash; Returns the application directory.
+    - [LightBlueServiceContainer::getLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/getLight.md) &ndash; Returns the light instance of the application using this container.
     - [LightBlueServiceContainer::setApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/setApplicationDir.md) &ndash; Sets the application directory.
+    - [LightBlueServiceContainer::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/setLight.md) &ndash; Sets the light.
     - BlueOctopusServiceContainer::get &ndash; Returns the service which name is given.
     - BlueOctopusServiceContainer::has &ndash; The has method
     - BlueOctopusServiceContainer::all &ndash; Returns the list of all service names for this instance.
     - BlueOctopusServiceContainer::getMethodName &ndash; Converts the given service name into a method name (the name of the method in charge of returning the service).
     - BlueOctopusServiceContainer::getServiceName &ndash; Returns the service name from the given method name.
 - [LightDummyServiceContainer](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightDummyServiceContainer.md) &ndash; The LightDummyServiceContainer class.
+    - [LightDummyServiceContainer::__construct](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightDummyServiceContainer/__construct.md) &ndash; Builds the LightDummyServiceContainer instance.
     - [LightDummyServiceContainer::get](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightDummyServiceContainer/get.md) &ndash; Returns the service which name is given.
     - [LightDummyServiceContainer::has](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightDummyServiceContainer/has.md) &ndash; The has method
     - [LightDummyServiceContainer::all](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightDummyServiceContainer/all.md) &ndash; Returns the list of all service names for this instance.
     - [LightDummyServiceContainer::getApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightDummyServiceContainer/getApplicationDir.md) &ndash; Returns the application directory.
+    - [LightDummyServiceContainer::getLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightDummyServiceContainer/getLight.md) &ndash; Returns the light instance of the application using this container.
+    - [LightDummyServiceContainer::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightDummyServiceContainer/setLight.md) &ndash; Sets the light.
 - [LightRedServiceContainer](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer.md) &ndash; The LightRedServiceContainer class.
     - [LightRedServiceContainer::__construct](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer/__construct.md) &ndash; Builds the LightRedServiceContainer instance.
     - [LightRedServiceContainer::getApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer/getApplicationDir.md) &ndash; Returns the application directory.
+    - [LightRedServiceContainer::getLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer/getLight.md) &ndash; Returns the light instance of the application using this container.
     - [LightRedServiceContainer::setApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer/setApplicationDir.md) &ndash; Sets the application directory.
+    - [LightRedServiceContainer::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer/setLight.md) &ndash; Sets the light.
     - RedOctopusServiceContainer::build &ndash; found in the given (sic) config.
     - RedOctopusServiceContainer::get &ndash; Returns the service (class instance) which name is given.
     - RedOctopusServiceContainer::has &ndash; The has method
@@ -169,6 +176,7 @@ Table of contents
     - [LightServiceContainerAwareInterface::setContainer](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerAwareInterface/setContainer.md) &ndash; Sets the light service container interface.
 - [LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md) &ndash; The LightServiceContainerInterface interface.
     - [LightServiceContainerInterface::getApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface/getApplicationDir.md) &ndash; Returns the application directory.
+    - [LightServiceContainerInterface::getLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface/getLight.md) &ndash; Returns the light instance of the application using this container.
     - OctopusServiceContainerInterface::get &ndash; Returns the service which name is given.
     - OctopusServiceContainerInterface::has &ndash; The has method
     - OctopusServiceContainerInterface::all &ndash; Returns the list of all service names for this instance.

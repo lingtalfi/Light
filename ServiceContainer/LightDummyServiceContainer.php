@@ -3,6 +3,7 @@
 namespace Ling\Light\ServiceContainer;
 
 
+use Ling\Light\Core\Light;
 use Ling\Light\Exception\LightException;
 
 /**
@@ -10,6 +11,21 @@ use Ling\Light\Exception\LightException;
  */
 class LightDummyServiceContainer implements LightServiceContainerInterface
 {
+
+    /**
+     * This property holds the light for this instance.
+     * @var Light
+     */
+    protected $light;
+
+
+    /**
+     * Builds the LightDummyServiceContainer instance.
+     */
+    public function __construct()
+    {
+        $this->light = null;
+    }
 
 
     /**
@@ -42,6 +58,27 @@ class LightDummyServiceContainer implements LightServiceContainerInterface
     public function getApplicationDir(): string
     {
         return '/dummy-app';
+    }
+
+    /**
+     * @implementation
+     */
+    public function getLight(): Light
+    {
+        return $this->light;
+    }
+
+    //--------------------------------------------
+    //
+    //--------------------------------------------
+    /**
+     * Sets the light.
+     *
+     * @param Light $light
+     */
+    public function setLight(Light $light)
+    {
+        $this->light = $light;
     }
 
 

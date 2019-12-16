@@ -4,7 +4,7 @@
 
 The LightRedServiceContainer class
 ================
-2019-04-09 --> 2019-12-12
+2019-04-09 --> 2019-12-16
 
 
 
@@ -26,11 +26,14 @@ class <span class="pl-k">LightRedServiceContainer</span> extends [RedOctopusServ
 
 - Properties
     - protected string [$appDir](#property-appDir) ;
+    - protected [Ling\Light\Core\Light](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light.md) [$light](#property-light) ;
 
 - Methods
     - public [__construct](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer/__construct.md)() : void
     - public [getApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer/getApplicationDir.md)() : string
+    - public [getLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer/getLight.md)() : [Light](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light.md)
     - public [setApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer/setApplicationDir.md)(string $appDir) : void
+    - public [setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer/setLight.md)([Ling\Light\Core\Light](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light.md) $light) : void
 
 - Inherited methods
     - public RedOctopusServiceContainer::build(array $config) : void
@@ -57,6 +60,12 @@ Properties
     
     
 
+- <span id="property-light"><b>light</b></span>
+
+    This property holds the light for this instance.
+    
+    
+
 
 
 Methods
@@ -64,7 +73,9 @@ Methods
 
 - [LightRedServiceContainer::__construct](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer/__construct.md) &ndash; Builds the LightRedServiceContainer instance.
 - [LightRedServiceContainer::getApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer/getApplicationDir.md) &ndash; Returns the application directory.
+- [LightRedServiceContainer::getLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer/getLight.md) &ndash; Returns the light instance of the application using this container.
 - [LightRedServiceContainer::setApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer/setApplicationDir.md) &ndash; Sets the application directory.
+- [LightRedServiceContainer::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer/setLight.md) &ndash; Sets the light.
 - RedOctopusServiceContainer::build &ndash; found in the given (sic) config.
 - RedOctopusServiceContainer::get &ndash; Returns the service (class instance) which name is given.
 - RedOctopusServiceContainer::has &ndash; 

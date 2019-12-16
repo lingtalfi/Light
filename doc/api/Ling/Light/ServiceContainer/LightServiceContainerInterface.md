@@ -4,7 +4,7 @@
 
 The LightServiceContainerInterface class
 ================
-2019-04-09 --> 2019-12-12
+2019-04-09 --> 2019-12-16
 
 
 
@@ -26,6 +26,7 @@ abstract class <span class="pl-k">LightServiceContainerInterface</span> implemen
 
 - Methods
     - abstract public [getApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface/getApplicationDir.md)() : string
+    - abstract public [getLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface/getLight.md)() : [Light](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light.md)
 
 - Inherited methods
     - abstract public OctopusServiceContainerInterface::get(string $service) : object
@@ -43,6 +44,7 @@ Methods
 ==============
 
 - [LightServiceContainerInterface::getApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface/getApplicationDir.md) &ndash; Returns the application directory.
+- [LightServiceContainerInterface::getLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface/getLight.md) &ndash; Returns the light instance of the application using this container.
 - OctopusServiceContainerInterface::get &ndash; Returns the service which name is given.
 - OctopusServiceContainerInterface::has &ndash; 
 - OctopusServiceContainerInterface::all &ndash; Returns the list of all service names for this instance.
