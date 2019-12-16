@@ -190,7 +190,6 @@ Dependencies
 - [Light_EndRoutine](https://github.com/lingtalfi/Light_EndRoutine)
 - [Light_Events](https://github.com/lingtalfi/Light_Events)
 - [Light_ReverseRouter](https://github.com/lingtalfi/Light_ReverseRouter)
-- [Light_LightInstance](https://github.com/lingtalfi/Light_LightInstance)
 - [SicTools](https://github.com/lingtalfi/SicTools)
 - [Bat](https://github.com/lingtalfi/Bat)
 - [DirScanner](https://github.com/lingtalfi/DirScanner)

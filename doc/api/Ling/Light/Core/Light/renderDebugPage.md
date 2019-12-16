@@ -55,7 +55,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [Light::renderDebugPage](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L538-L556)
+See the source code for method [Light::renderDebugPage](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L543-L561)
 
 
 See Also

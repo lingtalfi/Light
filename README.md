@@ -50,6 +50,10 @@ Summary
 History Log
 =============
     
+- 0.50.0 -- 2019-12-16
+
+    - update Light, replaced initializer system with a new multi-level initialization system
+    
 - 0.49.0 -- 2019-12-16
 
     - add LightServiceContainerInterface->getLight method

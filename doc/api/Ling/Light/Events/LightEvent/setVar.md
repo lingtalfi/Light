@@ -53,7 +53,7 @@ Returns self.
 
 Source Code
 ===========
-See the source code for method [LightEvent::setVar](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L82-L86)
+See the source code for method [LightEvent::setVar](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L77-L81)
 
 
 See Also

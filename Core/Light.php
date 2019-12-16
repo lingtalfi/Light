@@ -348,12 +348,27 @@ class Light
             $this->httpRequest = $httpRequest;
             $response = null;
             $route = null;
+            $events = null;
 
 
             //--------------------------------------------
             // INITIALIZE PHASE
             //--------------------------------------------
-            $this->initialize($httpRequest);
+            if ($container->has("events")) {
+                /**
+                 * @var $events LightEventsService
+                 */
+                $events = $container->get('events');
+                /**
+                 * See the [events page](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/events.md) for more details.
+                 */
+                $data = LightEvent::createByContainer($container);
+                $events->dispatch('Light.initialize_1', $data);
+                $events->dispatch('Light.initialize_2', $data);
+                $events->dispatch('Light.initialize_3', $data);
+
+
+            }
 
 
 
@@ -398,13 +413,7 @@ class Light
                         if (false !== $route) {
 
                             if ($container->has("events")) {
-                                /**
-                                 * @var $events LightEventsService
-                                 */
-                                $events = $container->get('events');
-                                $event = new LightEvent();
-                                $event->setHttpRequest($httpRequest);
-                                $event->setLight($this);
+                                $event = LightEvent::createByContainer($this->container);
                                 $event->setVar("route", $route);
                                 $events->dispatch('Light.on_route_found', $event);
                             }
@@ -449,10 +458,6 @@ class Light
                 $washHandled = false;
 
                 if (true === $container->has('events')) {
-                    /**
-                     * @var $events LightEventsService
-                     */
-                    $events = $container->get("events");
                     $data = LightEvent::createByContainer($container);
                     $data->setVar('exception', $e);
                     $events->dispatch("Light.on_exception_caught", $data);

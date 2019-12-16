@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightEvent::setHttpRequest](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L150-L153)
+See the source code for method [LightEvent::setHttpRequest](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L145-L148)
 
 
 See Also

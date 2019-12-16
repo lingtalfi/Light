@@ -3,7 +3,6 @@ dependencies:
         - Light_EndRoutine
         - Light_Events
         - Light_ReverseRouter
-        - Light_LightInstance
         - SicTools
         - Bat
         - DirScanner

@@ -22,7 +22,6 @@ public static [LightEvent::createByContainer](https://github.com/lingtalfi/Light
 
 
 Returns a basic LightEvent instance with the light instance and the http request instance set.
-Note: it requires the [light_instance service](https://github.com/lingtalfi/Light_LightInstance).
 
 
 
@@ -55,7 +54,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightEvent::createByContainer](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L62-L72)
+See the source code for method [LightEvent::createByContainer](https://github.com/lingtalfi/Light/blob/master/Events/LightEvent.php#L60-L67)
 
 
 See Also
