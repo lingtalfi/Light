@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05
+2019-04-05 -> 2019-12-19
 
 
 
@@ -49,6 +49,14 @@ Summary
 
 History Log
 =============
+    
+- 0.52.0 -- 2019-12-19
+
+    - update Light, now dispatches Light.end_routine event instead of using the end_routine service
+    
+- 0.51.0 -- 2019-12-17
+
+    - update Light, replaced initializer system with a new multi-level initialization system
     
 - 0.50.0 -- 2019-12-16
 

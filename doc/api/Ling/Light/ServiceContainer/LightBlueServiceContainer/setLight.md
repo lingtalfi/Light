@@ -7,7 +7,7 @@ LightBlueServiceContainer::setLight
 
 
 
-LightBlueServiceContainer::setLight — Sets the light.
+LightBlueServiceContainer::setLight — Sets the light instance.
 
 
 
@@ -16,12 +16,12 @@ Description
 ================
 
 
-public [LightBlueServiceContainer::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/setLight.md)([Ling\Light\Core\Light](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light.md) $light) : void
+public [LightBlueServiceContainer::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/setLight.md)([Ling\Light\Core\Light](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light.md) $light) : mixed
 
 
 
 
-Sets the light.
+Sets the light instance.
 
 
 
@@ -38,7 +38,7 @@ Parameters
 Return values
 ================
 
-Returns void.
+Returns mixed.
 
 
 
@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightBlueServiceContainer::setLight](https://github.com/lingtalfi/Light/blob/master/ServiceContainer/LightBlueServiceContainer.php#L71-L74)
+See the source code for method [LightBlueServiceContainer::setLight](https://github.com/lingtalfi/Light/blob/master/ServiceContainer/LightBlueServiceContainer.php#L56-L59)
 
 
 See Also
@@ -57,5 +57,5 @@ See Also
 
 The [LightBlueServiceContainer](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer.md) class.
 
-Previous method: [setApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/setApplicationDir.md)<br>
+Previous method: [getLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/getLight.md)<br>Next method: [setApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/setApplicationDir.md)<br>
 

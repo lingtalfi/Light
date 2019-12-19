@@ -68,18 +68,12 @@ class LightDummyServiceContainer implements LightServiceContainerInterface
         return $this->light;
     }
 
-    //--------------------------------------------
-    //
-    //--------------------------------------------
     /**
-     * Sets the light.
-     *
-     * @param Light $light
+     * @implementation
      */
     public function setLight(Light $light)
     {
         $this->light = $light;
     }
-
 
 }

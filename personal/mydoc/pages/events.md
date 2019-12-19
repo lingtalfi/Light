@@ -1,6 +1,6 @@
 Light events
 =============
-2019-11-06
+2019-11-06 -> 2019-12-19
 
 
 Note: we use the [Light_Events](https://github.com/lingtalfi/Light_Events) service under the hood.
@@ -9,19 +9,36 @@ Note: we use the [Light_Events](https://github.com/lingtalfi/Light_Events) servi
 The Core/Light will dispatch the following events:
 
 
-- Light.on_route_found: when a route matched. The argument is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object which has a **route** variable containing the matching [route](https://github.com/lingtalfi/Light/blob/master/doc/pages/route.md) array.
-- Light.on_exception_caught: when an exception is caught. The argument is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object with an **exception** variable containing the caught exception.
-        Plugins can set a response to return to the user by setting the **httpResponse** variable (in the LightEvent instance).
-        The response must be an [HttpResponseInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpResponseInterface.md) instance.
-        <br>We recommend that plugins that handle generic exceptions have a lower priority, and plugins that handle
-        more specific exceptions have a higher priority by contrast.
+- Light.on_route_found: when a route matched. 
+    The argument is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object 
+    with the following variables:
+    - **route**: the matching [route](https://github.com/lingtalfi/Light/blob/master/doc/pages/route.md) array
+    
+- Light.on_exception_caught: when an exception is caught. The argument is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object
+    with the following variables:
+    - **exception**: the caught exception.
+
+    Plugins can set a response to return to the user by setting the **httpResponse** variable (in the LightEvent instance).
+    The response must be an [HttpResponseInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpResponseInterface.md) instance.
+    <br>We recommend that plugins that handle generic exceptions have a lower priority, and plugins that handle
+    more specific exceptions have a higher priority by contrast.
         
 - Light.on_unhandled_exception_caught: triggered when an exception is caught but not handled by a third party plugin. 
-        This event can be used to log the unhandled exceptions for instance.
+    This event can be used to log the unhandled exceptions for instance.
+    The data is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object
+    with the following variables:
+    - **exception**: the caught exception.
         
 - Light.initialize_1: triggered at the beginning of the run method. The goal is to allow plugins to trigger their initialization routine (see the multi-level initialization section below for more details).
+    The data is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object with no particular variables attached to it.
 - Light.initialize_2: triggered at the beginning of the run method. The goal is to allow plugins to trigger their initialization routine (see the multi-level initialization section below for more details).
+    The data is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object with no particular variables attached to it.
 - Light.initialize_3: triggered at the beginning of the run method. The goal is to allow plugins to trigger their initialization routine (see the multi-level initialization section below for more details).
+    The data is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object with no particular variables attached to it.
+- Light.end_routine: triggered at the end of the run method. The goal is to allow plugins to trigger their end routine.
+    The data is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object 
+    with the following variables:
+    - **route**: array|false, the matching [route](https://github.com/lingtalfi/Light/blob/master/doc/pages/route.md) array, or false if no route matched      
 
  
  

@@ -1,6 +1,6 @@
 Ling/Light
 ================
-2019-04-09 --> 2019-12-16
+2019-04-09 --> 2019-12-19
 
 
 
@@ -24,6 +24,7 @@ Table of contents
     - [Light::setApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/setApplicationDir.md) &ndash; Sets the applicationDir.
     - [Light::getRoutes](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/getRoutes.md) &ndash; Returns the routes of this instance.
     - [Light::getHttpRequest](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/getHttpRequest.md) &ndash; Returns the httpRequest of this instance.
+    - [Light::setHttpRequest](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/setHttpRequest.md) &ndash; Sets the httpRequest.
     - [Light::getMatchingRoute](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/getMatchingRoute.md) &ndash; Returns the matching route array, or false if no route matched.
     - [Light::registerRoute](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/registerRoute.md) &ndash; Registers a route item, as defined in [the route page](https://github.com/lingtalfi/Light/blob/master/doc/pages/route.md).
     - [Light::initialize](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/initialize.md) &ndash; Triggers the initialize phase if set in the service container.
@@ -146,8 +147,8 @@ Table of contents
     - [LightBlueServiceContainer::__construct](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/__construct.md) &ndash; Builds the LightRedServiceContainer instance.
     - [LightBlueServiceContainer::getApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/getApplicationDir.md) &ndash; Returns the application directory.
     - [LightBlueServiceContainer::getLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/getLight.md) &ndash; Returns the light instance of the application using this container.
+    - [LightBlueServiceContainer::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/setLight.md) &ndash; Sets the light instance.
     - [LightBlueServiceContainer::setApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/setApplicationDir.md) &ndash; Sets the application directory.
-    - [LightBlueServiceContainer::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/setLight.md) &ndash; Sets the light.
     - BlueOctopusServiceContainer::get &ndash; Returns the service which name is given.
     - BlueOctopusServiceContainer::has &ndash; The has method
     - BlueOctopusServiceContainer::all &ndash; Returns the list of all service names for this instance.
@@ -160,13 +161,13 @@ Table of contents
     - [LightDummyServiceContainer::all](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightDummyServiceContainer/all.md) &ndash; Returns the list of all service names for this instance.
     - [LightDummyServiceContainer::getApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightDummyServiceContainer/getApplicationDir.md) &ndash; Returns the application directory.
     - [LightDummyServiceContainer::getLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightDummyServiceContainer/getLight.md) &ndash; Returns the light instance of the application using this container.
-    - [LightDummyServiceContainer::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightDummyServiceContainer/setLight.md) &ndash; Sets the light.
+    - [LightDummyServiceContainer::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightDummyServiceContainer/setLight.md) &ndash; Sets the light instance.
 - [LightRedServiceContainer](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer.md) &ndash; The LightRedServiceContainer class.
     - [LightRedServiceContainer::__construct](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer/__construct.md) &ndash; Builds the LightRedServiceContainer instance.
     - [LightRedServiceContainer::getApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer/getApplicationDir.md) &ndash; Returns the application directory.
     - [LightRedServiceContainer::getLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer/getLight.md) &ndash; Returns the light instance of the application using this container.
+    - [LightRedServiceContainer::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer/setLight.md) &ndash; Sets the light instance.
     - [LightRedServiceContainer::setApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer/setApplicationDir.md) &ndash; Sets the application directory.
-    - [LightRedServiceContainer::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightRedServiceContainer/setLight.md) &ndash; Sets the light.
     - RedOctopusServiceContainer::build &ndash; found in the given (sic) config.
     - RedOctopusServiceContainer::get &ndash; Returns the service (class instance) which name is given.
     - RedOctopusServiceContainer::has &ndash; The has method
@@ -177,6 +178,7 @@ Table of contents
 - [LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md) &ndash; The LightServiceContainerInterface interface.
     - [LightServiceContainerInterface::getApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface/getApplicationDir.md) &ndash; Returns the application directory.
     - [LightServiceContainerInterface::getLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface/getLight.md) &ndash; Returns the light instance of the application using this container.
+    - [LightServiceContainerInterface::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface/setLight.md) &ndash; Sets the light instance.
     - OctopusServiceContainerInterface::get &ndash; Returns the service which name is given.
     - OctopusServiceContainerInterface::has &ndash; The has method
     - OctopusServiceContainerInterface::all &ndash; Returns the list of all service names for this instance.
@@ -187,7 +189,6 @@ Table of contents
 
 Dependencies
 ============
-- [Light_EndRoutine](https://github.com/lingtalfi/Light_EndRoutine)
 - [Light_Events](https://github.com/lingtalfi/Light_Events)
 - [Light_ReverseRouter](https://github.com/lingtalfi/Light_ReverseRouter)
 - [SicTools](https://github.com/lingtalfi/SicTools)

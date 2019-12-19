@@ -50,6 +50,13 @@ class LightBlueServiceContainer extends BlueOctopusServiceContainer implements L
         return $this->light;
     }
 
+    /**
+     * @implementation
+     */
+    public function setLight(Light $light)
+    {
+        $this->light = $light;
+    }
 
     //--------------------------------------------
     //
@@ -63,13 +70,5 @@ class LightBlueServiceContainer extends BlueOctopusServiceContainer implements L
         $this->appDir = $appDir;
     }
 
-    /**
-     * Sets the light.
-     *
-     * @param Light $light
-     */
-    public function setLight(Light $light)
-    {
-        $this->light = $light;
-    }
+
 }

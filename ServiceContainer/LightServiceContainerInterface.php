@@ -24,4 +24,12 @@ interface LightServiceContainerInterface extends OctopusServiceContainerInterfac
      * @return Light
      */
     public function getLight(): Light;
+
+    /**
+     * Sets the light instance.
+     *
+     * @param Light $light
+     * @return mixed
+     */
+    public function setLight(Light $light);
 }

@@ -7,7 +7,7 @@ LightDummyServiceContainer::setLight
 
 
 
-LightDummyServiceContainer::setLight — Sets the light.
+LightDummyServiceContainer::setLight — Sets the light instance.
 
 
 
@@ -16,12 +16,12 @@ Description
 ================
 
 
-public [LightDummyServiceContainer::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightDummyServiceContainer/setLight.md)([Ling\Light\Core\Light](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light.md) $light) : void
+public [LightDummyServiceContainer::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightDummyServiceContainer/setLight.md)([Ling\Light\Core\Light](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light.md) $light) : mixed
 
 
 
 
-Sets the light.
+Sets the light instance.
 
 
 
@@ -38,7 +38,7 @@ Parameters
 Return values
 ================
 
-Returns void.
+Returns mixed.
 
 
 
@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightDummyServiceContainer::setLight](https://github.com/lingtalfi/Light/blob/master/ServiceContainer/LightDummyServiceContainer.php#L79-L82)
+See the source code for method [LightDummyServiceContainer::setLight](https://github.com/lingtalfi/Light/blob/master/ServiceContainer/LightDummyServiceContainer.php#L74-L77)
 
 
 See Also

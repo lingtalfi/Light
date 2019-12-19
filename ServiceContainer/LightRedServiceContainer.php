@@ -53,7 +53,13 @@ class LightRedServiceContainer extends RedOctopusServiceContainer implements Lig
         return $this->light;
     }
 
-
+    /**
+     * @implementation
+     */
+    public function setLight(Light $light)
+    {
+        $this->light = $light;
+    }
 
 
     //--------------------------------------------
@@ -68,15 +74,6 @@ class LightRedServiceContainer extends RedOctopusServiceContainer implements Lig
         $this->appDir = $appDir;
     }
 
-    /**
-     * Sets the light.
-     *
-     * @param Light $light
-     */
-    public function setLight(Light $light)
-    {
-        $this->light = $light;
-    }
 
 
 }

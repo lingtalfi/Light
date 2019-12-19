@@ -16,7 +16,6 @@ use Ling\Light\Http\HttpResponseInterface;
 use Ling\Light\Router\LightRouter;
 use Ling\Light\ServiceContainer\LightDummyServiceContainer;
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
-use Ling\Light_EndRoutine\Service\Light_EndRoutineService;
 use Ling\Light_Events\Service\LightEventsService;
 use Ling\Light_ReverseRouter\Service\LightReverseRouterService;
 
@@ -128,6 +127,13 @@ class Light
 
 
     /**
+     * This property holds the isInitialized for this instance.
+     * @var bool=false
+     */
+    private $isInitialized;
+
+
+    /**
      * Builds the Light instance.
      */
     public function __construct()
@@ -147,6 +153,7 @@ class Light
         $this->httpRequest = null;
         $this->matchingRoute = null;
         $this->settings = [];
+        $this->isInitialized = false;
     }
 
     /**
@@ -236,6 +243,17 @@ class Light
     public function getHttpRequest(): HttpRequestInterface
     {
         return $this->httpRequest;
+    }
+
+    /**
+     * Sets the httpRequest.
+     * This was created for debugging purpose only, you should generally not use this method.
+     *
+     * @param HttpRequestInterface $httpRequest
+     */
+    public function setHttpRequest(HttpRequestInterface $httpRequest)
+    {
+        $this->httpRequest = $httpRequest;
     }
 
 
@@ -328,10 +346,21 @@ class Light
         }
         $this->httpRequest = $httpRequest;
 
+        $container = $this->getContainer();
+        $container->setLight($this);
 
-        if ($this->getContainer()->has("initializer")) {
-            $initializer = $this->container->get("initializer");
-            $initializer->initialize($this, $httpRequest);
+        if ($container->has("events")) {
+            /**
+             * @var $events LightEventsService
+             */
+            $events = $container->get('events');
+            /**
+             * See the [events page](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/events.md) for more details.
+             */
+            $data = LightEvent::createByContainer($container);
+            $events->dispatch('Light.initialize_1', $data);
+            $events->dispatch('Light.initialize_2', $data);
+            $events->dispatch('Light.initialize_3', $data);
         }
     }
 
@@ -342,34 +371,30 @@ class Light
     public function run()
     {
         $container = $this->getContainer();
+
+
         try {
 
-            $httpRequest = HttpRequest::createFromEnv();
-            $this->httpRequest = $httpRequest;
             $response = null;
             $route = null;
             $events = null;
-
-
-            //--------------------------------------------
-            // INITIALIZE PHASE
-            //--------------------------------------------
             if ($container->has("events")) {
                 /**
                  * @var $events LightEventsService
                  */
                 $events = $container->get('events');
-                /**
-                 * See the [events page](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/events.md) for more details.
-                 */
-                $data = LightEvent::createByContainer($container);
-                $events->dispatch('Light.initialize_1', $data);
-                $events->dispatch('Light.initialize_2', $data);
-                $events->dispatch('Light.initialize_3', $data);
-
-
             }
 
+
+            //--------------------------------------------
+            // INITIALIZE PHASE
+            //--------------------------------------------
+            if (false === $this->isInitialized) {
+                $httpRequest = HttpRequest::createFromEnv();
+                $this->httpRequest = $httpRequest;
+                $this->initialize($httpRequest);
+            }
+            $httpRequest = $this->httpRequest;
 
 
             //--------------------------------------------
@@ -507,16 +532,17 @@ class Light
             //--------------------------------------------
             // END ROUTINE
             //--------------------------------------------
-            if ($container->has("end_routine")) {
+            if ($container->has("events")) {
                 if (null === $route || false === $route) {
-                    $route = [];
+                    $route = false;
                 }
-                /**
-                 * @var $endRoutine Light_EndRoutineService
-                 */
-                $endRoutine = $container->get('end_routine');
-                $endRoutine->executeEndRoutines($route);
+                $data = LightEvent::createByContainer($container);
+                $data->setVar('route', $route);
+                $events->dispatch("Light.end_routine", $data);
             }
+
+
+
 
 
             if ($response instanceof HttpResponseInterface) {

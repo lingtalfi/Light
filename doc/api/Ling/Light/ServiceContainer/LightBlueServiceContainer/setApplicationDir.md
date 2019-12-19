@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightBlueServiceContainer::setApplicationDir](https://github.com/lingtalfi/Light/blob/master/ServiceContainer/LightBlueServiceContainer.php#L61-L64)
+See the source code for method [LightBlueServiceContainer::setApplicationDir](https://github.com/lingtalfi/Light/blob/master/ServiceContainer/LightBlueServiceContainer.php#L68-L71)
 
 
 See Also
@@ -57,5 +57,5 @@ See Also
 
 The [LightBlueServiceContainer](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer.md) class.
 
-Previous method: [getLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/getLight.md)<br>Next method: [setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/setLight.md)<br>
+Previous method: [setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/setLight.md)<br>
 
