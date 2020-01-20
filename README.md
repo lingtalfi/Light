@@ -41,7 +41,7 @@ Summary
     - [General philosophy](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/light-general-philosophy.md)
     - [Application recommended structure](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/light-application-recommended-structure.md)
     - [Security](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/security.md)
-
+- [License](https://lingtalfi.com/no-license)
 
 
 
@@ -49,6 +49,10 @@ Summary
 
 History Log
 =============
+    
+- 0.53.0 -- 2020-01-20
+
+    - add the license link to the README.md
     
 - 0.52.0 -- 2019-12-19
 
