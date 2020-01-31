@@ -50,6 +50,10 @@ Summary
 History Log
 =============
     
+- 0.54.0 -- 2020-01-31
+
+    - update Light.initialize_X events data, now passes the level with the event
+    
 - 0.53.0 -- 2020-01-20
 
     - add the license link to the README.md
