@@ -30,11 +30,11 @@ The Core/Light will dispatch the following events:
     - **exception**: the caught exception.
         
 - Light.initialize_1: triggered at the beginning of the run method. The goal is to allow plugins to trigger their initialization routine (see the multi-level initialization section below for more details).
-    The data is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object with variable level set to 1.
+    The data is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object with no particular variables attached to it.
 - Light.initialize_2: triggered at the beginning of the run method. The goal is to allow plugins to trigger their initialization routine (see the multi-level initialization section below for more details).
-    The data is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object with variable level set to 2.
+    The data is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object with no particular variables attached to it.
 - Light.initialize_3: triggered at the beginning of the run method. The goal is to allow plugins to trigger their initialization routine (see the multi-level initialization section below for more details).
-    The data is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object with variable level set to 3.
+    The data is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object with no particular variables attached to it.
 - Light.end_routine: triggered at the end of the run method. The goal is to allow plugins to trigger their end routine.
     The data is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object 
     with the following variables:

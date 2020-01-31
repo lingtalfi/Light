@@ -357,17 +357,12 @@ class Light
             /**
              * See the [events page](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/events.md) for more details.
              */
-            $data1 = LightEvent::createByContainer($container);
-            $data1->setVar("level", 1);
-            $data2 = LightEvent::createByContainer($container);
-            $data2->setVar("level", 2);
-            $data3 = LightEvent::createByContainer($container);
-            $data3->setVar("level", 3);
+            $data = LightEvent::createByContainer($container);
 
 
-            $events->dispatch('Light.initialize_1', $data1);
-            $events->dispatch('Light.initialize_2', $data2);
-            $events->dispatch('Light.initialize_3', $data3);
+            $events->dispatch('Light.initialize_1', $data);
+            $events->dispatch('Light.initialize_2', $data);
+            $events->dispatch('Light.initialize_3', $data);
         }
     }
 

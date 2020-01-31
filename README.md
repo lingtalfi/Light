@@ -50,6 +50,10 @@ Summary
 History Log
 =============
     
+- 0.55.0 -- 2020-01-31
+
+    - update Light.initialize_X events data, removed passing the level with the event (was deemed unnecessary after all)
+    
 - 0.54.0 -- 2020-01-31
 
     - update Light.initialize_X events data, now passes the level with the event
