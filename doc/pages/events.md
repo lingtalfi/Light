@@ -1,6 +1,6 @@
 Light events
 =============
-2019-11-06 -> 2019-12-19
+2019-11-06 -> 2020-02-07
 
 
 Note: we use the [Light_Events](https://github.com/lingtalfi/Light_Events) service under the hood.
@@ -29,11 +29,7 @@ The Core/Light will dispatch the following events:
     with the following variables:
     - **exception**: the caught exception.
         
-- Light.initialize_1: triggered at the beginning of the run method. The goal is to allow plugins to trigger their initialization routine (see the multi-level initialization section below for more details).
-    The data is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object with no particular variables attached to it.
-- Light.initialize_2: triggered at the beginning of the run method. The goal is to allow plugins to trigger their initialization routine (see the multi-level initialization section below for more details).
-    The data is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object with no particular variables attached to it.
-- Light.initialize_3: triggered at the beginning of the run method. The goal is to allow plugins to trigger their initialization routine (see the multi-level initialization section below for more details).
+- Light.initialize_1: triggered at the beginning of the run method. The goal is to allow plugins to trigger their initialization routine.
     The data is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object with no particular variables attached to it.
 - Light.end_routine: triggered at the end of the run method. The goal is to allow plugins to trigger their end routine.
     The data is a [Light_Event](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) object 
@@ -56,34 +52,4 @@ With:
 
 
 
-Multi-level initialization
------------
-
-One might wonder why do we have three different initialization events.
-That's for handling dependencies between plugins.
-
-Probably the best example of the problem is: imagine an admin plugin A that creates a database with an user table.
-
-Now imagine another plugin B, which depends from plugin A and requires the user table to exist to do its things.
-
-With our multi-level system, it's easily solved: plugin A would use the **Light.initialize_1** event to install
-itself (and the user table), while plugin B would use the **Light.initialize_2** event, to be sure that plugin A's user table
-is already installed.
-
-
-So when you develop a plugin, just ask yourself this question: does my plugin depends from another one?
-If yes, then you need to install it (if it has an install) on the level that comes AFTER the level on which 
-the plugin it depends on is installed on.
-
-And so sometimes you might have a plugin which depends on a plugin which depends on another plugin, hence
-the level 3.
-
-Should we need another level, we could simply add level 4, but that hasn't occurred yet (actually I didn't even
-need level 3 so far either).
-
-
-
-Note: at first I implemented it with a dependency system where plugins named the plugin they were dependent on,
-but now I prefer this very flattened system, I believe it makes it clearer for everybody to understand what's going on
-with the code. 
 

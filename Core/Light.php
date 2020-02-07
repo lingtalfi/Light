@@ -361,8 +361,8 @@ class Light
 
 
             $events->dispatch('Light.initialize_1', $data);
-            $events->dispatch('Light.initialize_2', $data);
-            $events->dispatch('Light.initialize_3', $data);
+//            $events->dispatch('Light.initialize_2', $data);
+//            $events->dispatch('Light.initialize_3', $data);
         }
     }
 
