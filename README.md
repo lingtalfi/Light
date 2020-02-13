@@ -50,6 +50,10 @@ Summary
 History Log
 =============
     
+- 0.57.0 -- 2020-02-13
+
+    - update HttpResponse, add setHeader method
+    
 - 0.56.0 -- 2020-02-07
 
     - removed Light.initialize_2 and Light.initialize_3 events data
