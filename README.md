@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2019-12-19
+2019-04-05 -> 2020-02-24
 
 
 
@@ -41,6 +41,7 @@ Summary
     - [General philosophy](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/light-general-philosophy.md)
     - [Application recommended structure](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/light-application-recommended-structure.md)
     - [Security](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/security.md)
+    - [Efficiency tips](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/efficiency-tips.md)
 - [License](https://lingtalfi.com/no-license)
 
 
@@ -49,6 +50,10 @@ Summary
 
 History Log
 =============
+    
+- 0.57.1 -- 2020-02-24
+
+    - add efficiency tips page
     
 - 0.57.0 -- 2020-02-13
 
