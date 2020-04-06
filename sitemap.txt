@@ -127,6 +127,7 @@ https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRespo
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpResponse/setMimeType.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpResponse.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpResponseInterface/send.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpResponseInterface/setHeader.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpResponseInterface.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ReverseRouter/LightReverseRouterInterface/getUrl.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ReverseRouter/LightReverseRouterInterface.md

@@ -51,6 +51,10 @@ Summary
 History Log
 =============
     
+- 0.59.0 -- 2020-04-06
+
+    - add HttpResponseInterface->setHeader method
+    
 - 0.58.0 -- 2020-03-10
 
     - add LightController->hasService method

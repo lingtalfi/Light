@@ -1,6 +1,6 @@
 Ling/Light
 ================
-2019-04-09 --> 2020-03-10
+2019-04-09 --> 2020-04-06
 
 
 
@@ -140,6 +140,7 @@ Table of contents
     - [HttpResponse::send](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpResponse/send.md) &ndash; Sends the headers and prints the response body to the output.
 - [HttpResponseInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpResponseInterface.md) &ndash; The HttpResponseInterface interface.
     - [HttpResponseInterface::send](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpResponseInterface/send.md) &ndash; Sends the headers and prints the response body to the output.
+    - [HttpResponseInterface::setHeader](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpResponseInterface/setHeader.md) &ndash; Adds a header to this instance.
 - [LightRouter](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Router/LightRouter.md) &ndash; The LightRouter class.
     - [LightRouter::__construct](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Router/LightRouter/__construct.md) &ndash; Builds the LightRouter instance.
     - [LightRouter::match](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Router/LightRouter/match.md) &ndash; Tests the given httpRequest against the routes until one matches.
