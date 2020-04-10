@@ -3,6 +3,7 @@
 
 namespace Ling\Light\Http;
 
+use Ling\Light\Exception\LightException;
 use Ling\PhpUploadFileFix\PhpUploadFileFixTool;
 
 /**
@@ -326,6 +327,21 @@ class HttpRequest implements HttpRequestInterface
     {
         return $this->post;
     }
+
+    /**
+     * @implementation
+     */
+    public function getPostValue(string $key, bool $throwEx = true)
+    {
+        if (array_key_exists($key, $this->post)) {
+            return $this->post[$key];
+        }
+        if (true === $throwEx) {
+            throw new LightException("No value found for key \"$key\" in post.");
+        }
+        return null;
+    }
+
 
     /**
      * @implementation

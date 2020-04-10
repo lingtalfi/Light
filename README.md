@@ -51,6 +51,10 @@ Summary
 History Log
 =============
     
+- 0.61.0 -- 2020-04-10
+
+    - add HttpRequestInterface->getPostValue method 
+    
 - 0.60.0 -- 2020-04-10
 
     - Light now returns http status 404 when no route matches in debug mode 

@@ -46,7 +46,7 @@ Returns array.
 
 Source Code
 ===========
-See the source code for method [HttpRequest::getPost](https://github.com/lingtalfi/Light/blob/master/Http/HttpRequest.php#L325-L328)
+See the source code for method [HttpRequest::getPost](https://github.com/lingtalfi/Light/blob/master/Http/HttpRequest.php#L326-L329)
 
 
 See Also
@@ -54,5 +54,5 @@ See Also
 
 The [HttpRequest](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequest.md) class.
 
-Previous method: [getGet](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequest/getGet.md)<br>Next method: [getFiles](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequest/getFiles.md)<br>
+Previous method: [getGet](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequest/getGet.md)<br>Next method: [getPostValue](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequest/getPostValue.md)<br>
 

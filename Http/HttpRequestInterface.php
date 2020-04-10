@@ -135,6 +135,20 @@ interface HttpRequestInterface
      */
     public function getPost(): array;
 
+
+    /**
+     * Returns the value corresponding to the given key in the $_POST array attached with the request.
+     * If such key was not found:
+     *
+     * - if throwEx is true, an exception is thrown
+     * - if throwEx is false, null is returned
+     *
+     * @param string $key
+     * @param bool $throwEx
+     * @return mixed
+     */
+    public function getPostValue(string $key, bool $throwEx = true);
+
     /**
      * Returns the  flattened version (with dots) of the $_FILES array (see
      * https://github.com/karayabin/universe-snapshot/tree/master/planets/PhpUploadFileFix for more info).
@@ -148,6 +162,8 @@ interface HttpRequestInterface
      * @return array
      */
     public function getCookie(): array;
+
+
 }
 
 
