@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2020-03-10
+2019-04-05 -> 2020-04-10
 
 
 
@@ -50,6 +50,10 @@ Summary
 
 History Log
 =============
+    
+- 0.60.0 -- 2020-04-10
+
+    - Light now returns http status 404 when no route matches in debug mode 
     
 - 0.59.0 -- 2020-04-06
 
