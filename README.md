@@ -51,6 +51,10 @@ Summary
 History Log
 =============
     
+- 0.62.0 -- 2020-04-10
+
+    - add HttpRequestInterface->getGetValue, getFilesValue, getCookieValue methods 
+    
 - 0.61.0 -- 2020-04-10
 
     - add HttpRequestInterface->getPostValue method 

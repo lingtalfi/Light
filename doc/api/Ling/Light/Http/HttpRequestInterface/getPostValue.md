@@ -57,7 +57,7 @@ Returns mixed.
 
 Source Code
 ===========
-See the source code for method [HttpRequestInterface::getPostValue](https://github.com/lingtalfi/Light/blob/master/Http/HttpRequestInterface.php#L150-L150)
+See the source code for method [HttpRequestInterface::getPostValue](https://github.com/lingtalfi/Light/blob/master/Http/HttpRequestInterface.php#L163-L163)
 
 
 See Also
