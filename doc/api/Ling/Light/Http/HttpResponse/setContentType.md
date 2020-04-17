@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [HttpResponse::setContentType](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L301-L304)
+See the source code for method [HttpResponse::setContentType](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L304-L307)
 
 
 See Also

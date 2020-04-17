@@ -55,7 +55,7 @@ Returns [HttpResponseInterface](https://github.com/lingtalfi/Light/blob/master/d
 
 Source Code
 ===========
-See the source code for method [HttpResponse::setStatusCode](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L243-L248)
+See the source code for method [HttpResponse::setStatusCode](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L246-L251)
 
 
 See Also

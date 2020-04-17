@@ -12,6 +12,15 @@ class HttpJsonResponse extends HttpResponse
 {
 
     /**
+     * @overrides
+     */
+    public function __construct($body = "", $code = 200)
+    {
+        parent::__construct(json_encode($body), $code);
+    }
+
+
+    /**
      * Creates and returns the http json response instance.
      *
      *
@@ -28,15 +37,6 @@ class HttpJsonResponse extends HttpResponse
     public static function create($data)
     {
         return new static($data);
-    }
-
-
-    /**
-     * @overrides
-     */
-    protected function displayBody()
-    {
-        echo json_encode((string)$this->body);
     }
 
 

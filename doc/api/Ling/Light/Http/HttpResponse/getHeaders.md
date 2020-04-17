@@ -50,7 +50,7 @@ Returns array.
 
 Source Code
 ===========
-See the source code for method [HttpResponse::getHeaders](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L234-L237)
+See the source code for method [HttpResponse::getHeaders](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L237-L240)
 
 
 See Also

@@ -46,7 +46,7 @@ Returns string.
 
 Source Code
 ===========
-See the source code for method [HttpResponse::getHttpVersion](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L282-L285)
+See the source code for method [HttpResponse::getHttpVersion](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L285-L288)
 
 
 See Also

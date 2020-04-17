@@ -46,7 +46,7 @@ Returns string.
 
 Source Code
 ===========
-See the source code for method [HttpResponse::__toString](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L315-L333)
+See the source code for method [HttpResponse::__toString](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L318-L336)
 
 
 See Also

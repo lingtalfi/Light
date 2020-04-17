@@ -56,7 +56,7 @@ Returns [HttpResponseInterface](https://github.com/lingtalfi/Light/blob/master/d
 
 Source Code
 ===========
-See the source code for method [HttpResponse::setHeader](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L198-L202)
+See the source code for method [HttpResponse::setHeader](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L198-L205)
 
 
 See Also

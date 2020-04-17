@@ -52,7 +52,7 @@ Returns string.
 
 Source Code
 ===========
-See the source code for method [HttpResponse::getNormalizedKey](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L378-L381)
+See the source code for method [HttpResponse::getNormalizedKey](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L380-L383)
 
 
 See Also

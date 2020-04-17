@@ -197,6 +197,9 @@ class HttpResponse implements HttpResponseInterface
      */
     public function setHeader(string $name, $value): HttpResponseInterface
     {
+        if (false === is_array($value)) {
+            $value = [$value];
+        }
         $this->headers[$this->getNormalizedKey($name)] = $value;
         return $this;
     }
@@ -345,7 +348,6 @@ class HttpResponse implements HttpResponseInterface
         if (headers_sent()) {
             return;
         }
-
 
         foreach ($this->headers as $name => $values) {
             header($name . ": " . implode(', ', $values), false);

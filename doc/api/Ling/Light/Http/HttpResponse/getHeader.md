@@ -49,7 +49,7 @@ Returns array | null.
 
 Source Code
 ===========
-See the source code for method [HttpResponse::getHeader](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L220-L229)
+See the source code for method [HttpResponse::getHeader](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L223-L232)
 
 
 See Also

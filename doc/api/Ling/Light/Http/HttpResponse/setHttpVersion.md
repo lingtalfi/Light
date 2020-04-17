@@ -51,7 +51,7 @@ Returns [HttpResponseInterface](https://github.com/lingtalfi/Light/blob/master/d
 
 Source Code
 ===========
-See the source code for method [HttpResponse::setHttpVersion](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L273-L277)
+See the source code for method [HttpResponse::setHttpVersion](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L276-L280)
 
 
 See Also

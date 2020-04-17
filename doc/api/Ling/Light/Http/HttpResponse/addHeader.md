@@ -54,7 +54,7 @@ Returns [HttpResponseInterface](https://github.com/lingtalfi/Light/blob/master/d
 
 Source Code
 ===========
-See the source code for method [HttpResponse::addHeader](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L207-L215)
+See the source code for method [HttpResponse::addHeader](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L210-L218)
 
 
 See Also

@@ -46,7 +46,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [HttpResponse::displayBody](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L360-L363)
+See the source code for method [HttpResponse::displayBody](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L362-L365)
 
 
 See Also

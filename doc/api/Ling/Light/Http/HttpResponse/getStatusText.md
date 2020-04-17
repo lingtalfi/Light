@@ -46,7 +46,7 @@ Returns string.
 
 Source Code
 ===========
-See the source code for method [HttpResponse::getStatusText](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L261-L268)
+See the source code for method [HttpResponse::getStatusText](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L264-L271)
 
 
 See Also

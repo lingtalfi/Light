@@ -51,6 +51,10 @@ Summary
 History Log
 =============
     
+- 0.63.1 -- 2020-04-17
+
+    - fix HttpResponse->addHeader not handling strings correctly
+    
 - 0.63.0 -- 2020-04-17
 
     - update HttpResponseInterface

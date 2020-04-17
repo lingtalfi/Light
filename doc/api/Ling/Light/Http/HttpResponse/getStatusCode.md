@@ -46,7 +46,7 @@ Returns int.
 
 Source Code
 ===========
-See the source code for method [HttpResponse::getStatusCode](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L253-L256)
+See the source code for method [HttpResponse::getStatusCode](https://github.com/lingtalfi/Light/blob/master/Http/HttpResponse.php#L256-L259)
 
 
 See Also
