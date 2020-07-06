@@ -1,6 +1,6 @@
 Light events
 =============
-2019-11-06 -> 2020-06-01
+2019-11-06 -> 2020-06-11
 
 
 Note: we use the [Light_Events](https://github.com/lingtalfi/Light_Events) service under the hood.
@@ -49,6 +49,32 @@ use the following naming convention for naming events:
 With:
 - {pluginName}: the plugin name in [pascal case](https://github.com/lingtalfi/ConventionGuy/blob/master/nomenclature.stringCases.eng.md#pascalcase) 
 - {event_name}: the event name in [snake case](https://github.com/lingtalfi/ConventionGuy/blob/master/nomenclature.stringCases.eng.md#snakecase) 
+
+
+
+
+
+
+How to debug events
+------------
+2020-06-11
+
+
+The Light instance uses the [Light_Events](https://github.com/lingtalfi/Light_Events) plugin,
+which provides a debug version of its main class.
+
+In the service configuration for the **Light_Events** plugin, use the debug class (**DebugLightEventsService**)
+instead of the regular one.
+
+Now you should be able to see all the listeners called by the **Light_Events** plugin in your debug log 
+(**app/log/light_log.log** by default).
+
+
+
+
+
+
+
 
 
 
