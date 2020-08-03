@@ -1,10 +1,10 @@
 Light
 ===========
-2019-04-05 -> 2020-07-27
+2019-04-05 -> 2020-08-03
 
 
 
-WORK IN PROGRESS, COME BACK IN A FEW MONTHS...
+WORK IN PROGRESS, COME BACK IN A FEW MONTHS..., OR USE IT NOW AT YOUR OWN RISKS
 
 
 A light framework for creating web apps.
@@ -43,6 +43,8 @@ Summary
     - [Security](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/security.md)
     - [Efficiency tips](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/efficiency-tips.md)
     - [how to debug](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/how-to-debug.md)
+    - Design
+        - [late service registration](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/design/late-service-registration.md)
 - [License](https://lingtalfi.com/no-license)
 
 
@@ -51,6 +53,10 @@ Summary
 
 History Log
 =============
+    
+- 0.66.1 -- 2020-08-03
+
+    - add late service registration document
     
 - 0.66.0 -- 2020-07-27
 
