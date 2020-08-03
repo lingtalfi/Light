@@ -54,6 +54,10 @@ Summary
 History Log
 =============
     
+- 0.66.2 -- 2020-08-03
+
+    - update late service registration document
+    
 - 0.66.1 -- 2020-08-03
 
     - add late service registration document

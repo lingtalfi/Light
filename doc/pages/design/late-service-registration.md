@@ -22,8 +22,8 @@ It's also perhaps simpler to visualize the registration tree/status, since every
 With **dynamic registration**, we can optimize performances a bit: the idea being that we only instantiate what we really use.
 
 
-For instance, consider a service like [Light_Realist](https://github.com/lingtalfi/Light_Realist/), which basically displays list.
-Third party plugins can register to **Light_Realist** and provide **list ids**.
+For instance, consider a service which basically displays list.
+Third party plugins can register to it and provide **list ids**.
 If we do this statically, then when we call the service via the **service container**, all the registration dependencies are resolved upon the call,
 but usually only one is used.
 With **dynamic registration**, we can register the **list id** only when we know for sure that it's going to be used (probably inside a controller), and therefore alleviate 
