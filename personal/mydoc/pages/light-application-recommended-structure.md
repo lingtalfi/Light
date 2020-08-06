@@ -23,7 +23,7 @@ Here are the potential directories of my ideal light web app:
             - Light_MyPlugin.byml           # an example config file
         /data:                              # is reserved for plugins which needs to store their configuration in files. 
             /Light_MyPlugin:                # an example of configuration data directory for a plugin named Light_MyPlugin
-        /com:                               # is reserved for plugins intercommunication 
+        /dynamic:                           # is reserved for dynamic plugins intercommunication 
             /Light_MyPlugin:                # this directory will contain all messages destined to the Light_MyPlugin plugin
                 - ...            
     
@@ -47,7 +47,7 @@ Here are the potential directories of my ideal light web app:
 The configuration of a plugin is divided in 3 parts:
 - services 
 - data 
-- com
+- dynamic
 
 
 The **services** part contains the static configuration as written by the plugin author,
@@ -68,13 +68,13 @@ So for instance, if plugin AAA subscribes to plugin Apple and plugin Banana, we 
                     - some-banana-conf.byml
 ``` 
 
-The **com** is fairly new, it's similar to the **data** part as a plugin AAA can send configuration bits to a "recipient" service such
+The **dynamic** is fairly new, it's similar to the **data** part as a plugin AAA can send configuration bits to a "recipient" service such
 as Apple or Banana for instance. 
 
 The difference is that the recipient plugins will fetch that configuration only when needed (i.e. lazy fetching) rather than
 on the app initialization.
 
-Basically, with the **com** directory our idea is to implement the [late service registration system](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/design/late-service-registration.md). 
+Basically, with the **dynamic** directory our idea is to implement the [late service registration system](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/design/late-service-registration.md). 
 
 
 

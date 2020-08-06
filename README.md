@@ -54,6 +54,10 @@ Summary
 History Log
 =============
     
+- 0.66.4 -- 2020-08-06
+
+    - update "Light application recommended structure" document, com -> dynamic
+    
 - 0.66.3 -- 2020-08-06
 
     - update "Light application recommended structure" document
