@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2020-08-03
+2019-04-05 -> 2020-08-06
 
 
 
@@ -53,6 +53,10 @@ Summary
 
 History Log
 =============
+    
+- 0.66.3 -- 2020-08-06
+
+    - update "Light application recommended structure" document
     
 - 0.66.2 -- 2020-08-03
 

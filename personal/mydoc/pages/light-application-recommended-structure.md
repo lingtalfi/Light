@@ -1,6 +1,6 @@
 Light application recommended structure
 =============
-2019-04-09 -> 2020-05-28
+2019-04-09 -> 2020-06-08
 
 
 
@@ -23,6 +23,8 @@ Here are the potential directories of my ideal light web app:
             - Light_MyPlugin.byml           # an example config file
         /data:                              # is reserved for plugins which needs to store their configuration in files. 
             /Light_MyPlugin:                # an example of configuration data directory for a plugin named Light_MyPlugin
+        /com:                               # is reserved for plugins intercommunication 
+            /Light_MyPlugin:                # this directory will contain all messages destined to the Light_MyPlugin plugin
                 - ...            
     
     /templates:                             # a directory containing templates of the light plugins, and/or templates in general 
@@ -38,6 +40,54 @@ Here are the potential directories of my ideal light web app:
             /$userId:                       # anything created by user with identifier $userId should be in this directory
                                             # This include uploaded files, created website roots (www-one, www-two, ...), anything really.                                       
 ```
+
+
+
+
+The configuration of a plugin is divided in 3 parts:
+- services 
+- data 
+- com
+
+
+The **services** part contains the static configuration as written by the plugin author,
+and which might be changed from time to time by the application maintainer.
+
+Practice revealed that the **data** part contains the configuration of plugins a particular plugin subscribes to.
+So for instance, if plugin AAA subscribes to plugin Apple and plugin Banana, we will have a structure that looks like this:
+
+
+```yaml
+/app:
+    /config:
+        /data:
+            /AAA:
+                /Apple:
+                    - my-apple-conf.byml
+                /Banana:
+                    - some-banana-conf.byml
+``` 
+
+The **com** is fairly new, it's similar to the **data** part as a plugin AAA can send configuration bits to a "recipient" service such
+as Apple or Banana for instance. 
+
+The difference is that the recipient plugins will fetch that configuration only when needed (i.e. lazy fetching) rather than
+on the app initialization.
+
+Basically, with the **com** directory our idea is to implement the [late service registration system](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/design/late-service-registration.md). 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
