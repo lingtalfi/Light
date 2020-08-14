@@ -56,6 +56,10 @@ Summary
 History Log
 =============
     
+- 0.69.0 -- 2020-08-14
+
+    - update LightHelper::executeMethod, removed options
+    
 - 0.68.0 -- 2020-08-14
 
     - update LightHelper::executeMethod, add prependArgs option

@@ -55,38 +55,15 @@ class LightHelper
      *
      *
      *
-     * Available options are:
-     * - onCallBefore: a callable to execute just before the actual method is executed.
-     *      The callable has the following signature:
-     *      - fn ( type, classOrService, method, args ): void
-     *
-     *      With:
-     *      - type: string, the type of call being executed, can be one of:
-     *          - static, for static calls
-     *          - instance, for calls on a new class instance
-     *          - service, for service calls
-     *      - classOrService: string, the name of the class or service being called
-     *      - method: string, the name of the method being called
-     *      - args: array, the array of arguments passed to the called method
-     * - prependArgs: an array of arguments to prepend to the arguments list
-     *
-     *
-     *
-     *
-     *
-     *
      *
      * @param string $expr
      * @param LightServiceContainerInterface $container
-     * @param array $options
      * @return mixed
      * @throws \Exception
      */
-    public static function executeMethod(string $expr, LightServiceContainerInterface $container, array $options = [])
+    public static function executeMethod(string $expr, LightServiceContainerInterface $container)
     {
 
-        $onCallBefore = $options['onCallBefore'] ?? null;
-        $prependArgs = $options['prependArgs'] ?? [];
         if (preg_match('!
         (?<class>[@a-zA-Z0-9_\\\\]*)
         (?<sep>::|->)
@@ -107,35 +84,21 @@ class LightHelper
                 $args = SmartCodeTool::parse("[" . substr($match['args'], 1, -1) . ']');
             }
 
-            $args = array_merge($prependArgs, $args);
-
 
             $ret = null;
             if ('::' === $sep) {
                 if (null === $service) {
 //                $ret = $class::$method($args);
-                    if (is_callable($onCallBefore)) {
-                        $onCallBefore('static', $class, $method, $args);
-                    }
                     $ret = call_user_func_array([$class, $method], $args);
                 } else {
-                    if (is_callable($onCallBefore)) {
-                        $onCallBefore('service', $service, $method, $args);
-                    }
                     $ret = call_user_func_array([$container->get($service), $method], $args);
                 }
             } else {
 
                 if (null === $service) {
                     $instance = new $class;
-                    if (is_callable($onCallBefore)) {
-                        $onCallBefore('instance', $class, $method, $args);
-                    }
                 } else {
                     $instance = $container->get($service);
-                    if (is_callable($onCallBefore)) {
-                        $onCallBefore('service', $service, $method, $args);
-                    }
                 }
                 $ret = call_user_func_array([$instance, $method], $args);
             }

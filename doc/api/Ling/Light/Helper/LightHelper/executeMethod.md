@@ -16,7 +16,7 @@ Description
 ================
 
 
-public static [LightHelper::executeMethod](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper/executeMethod.md)(string $expr, [Ling\Light\ServiceContainer\LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md) $container, ?array $options = []) : mixed
+public static [LightHelper::executeMethod](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper/executeMethod.md)(string $expr, [Ling\Light\ServiceContainer\LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md) $container) : mixed
 
 
 
@@ -36,23 +36,6 @@ See the [examples here](https://github.com/lingtalfi/Bat/blob/master/ClassTool.m
 
 
 
-Available options are:
-- onCallBefore: a callable to execute just before the actual method is executed.
-     The callable has the following signature:
-     - fn ( type, classOrService, method, args ): void
-
-     With:
-     - type: string, the type of call being executed, can be one of:
-         - static, for static calls
-         - instance, for calls on a new class instance
-         - service, for service calls
-     - classOrService: string, the name of the class or service being called
-     - method: string, the name of the method being called
-     - args: array, the array of arguments passed to the called method
-- prependArgs: an array of arguments to prepend to the arguments list
-
-
-
 
 Parameters
 ================
@@ -63,10 +46,6 @@ Parameters
     
 
 - container
-
-    
-
-- options
 
     
 
@@ -90,7 +69,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightHelper::executeMethod](https://github.com/lingtalfi/Light/blob/master/Helper/LightHelper.php#L85-L145)
+See the source code for method [LightHelper::executeMethod](https://github.com/lingtalfi/Light/blob/master/Helper/LightHelper.php#L64-L108)
 
 
 See Also
