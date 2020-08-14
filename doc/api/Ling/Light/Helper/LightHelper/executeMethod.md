@@ -49,6 +49,7 @@ Available options are:
      - classOrService: string, the name of the class or service being called
      - method: string, the name of the method being called
      - args: array, the array of arguments passed to the called method
+- prependArgs: an array of arguments to prepend to the arguments list
 
 
 
@@ -89,7 +90,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightHelper::executeMethod](https://github.com/lingtalfi/Light/blob/master/Helper/LightHelper.php#L84-L140)
+See the source code for method [LightHelper::executeMethod](https://github.com/lingtalfi/Light/blob/master/Helper/LightHelper.php#L85-L145)
 
 
 See Also

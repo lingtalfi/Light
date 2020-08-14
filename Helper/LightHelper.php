@@ -68,6 +68,7 @@ class LightHelper
      *      - classOrService: string, the name of the class or service being called
      *      - method: string, the name of the method being called
      *      - args: array, the array of arguments passed to the called method
+     * - prependArgs: an array of arguments to prepend to the arguments list
      *
      *
      *
@@ -85,6 +86,7 @@ class LightHelper
     {
 
         $onCallBefore = $options['onCallBefore'] ?? null;
+        $prependArgs = $options['prependArgs'] ?? [];
         if (preg_match('!
         (?<class>[@a-zA-Z0-9_\\\\]*)
         (?<sep>::|->)
@@ -104,6 +106,9 @@ class LightHelper
             if (array_key_exists('args', $match)) {
                 $args = SmartCodeTool::parse("[" . substr($match['args'], 1, -1) . ']');
             }
+
+            $args = array_merge($prependArgs, $args);
+
 
             $ret = null;
             if ('::' === $sep) {

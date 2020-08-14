@@ -56,6 +56,10 @@ Summary
 History Log
 =============
     
+- 0.68.0 -- 2020-08-14
+
+    - update LightHelper::executeMethod, add prependArgs option
+    
 - 0.67.0 -- 2020-08-14
 
     - add "light execute notation" page
