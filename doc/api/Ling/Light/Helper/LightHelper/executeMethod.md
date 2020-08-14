@@ -16,7 +16,7 @@ Description
 ================
 
 
-public static [LightHelper::executeMethod](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper/executeMethod.md)(string $expr, [Ling\Light\ServiceContainer\LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md) $container) : mixed
+public static [LightHelper::executeMethod](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper/executeMethod.md)(string $expr, [Ling\Light\ServiceContainer\LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md) $container, ?array $options = []) : mixed
 
 
 
@@ -29,32 +29,26 @@ This technique originally comes from the [ClassTool::executePhpMethod](https://g
 We've just added the possibility to call services by prefixing the service name with the @ symbol.
 
 
-The given $method must have one of the following format (or else an exception will be thrown):
-
-- $class::$method
-- $class::$method ( $args )
-
-- $class->$method
-- $class->$method ( $args )
-
-- @$service->$method
-- @$service->$method ( $args )
+The given $expr must use the [light execute notation](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/notation/light-execute-notation.md).
 
 
-Note that the first two forms refer to a static method call, the next two forms refer to a method call on
-an instance (instantiation is done by this method), and the last ones call a service's method.
+See the [examples here](https://github.com/lingtalfi/Bat/blob/master/ClassTool.md#executephpmethod-aka-smart-php-method-call).
 
 
-With:
 
-- $class: the full class name (example: Ling\Bat)
-- $method: the name of the method to execute
-- $args: a list of arguments written with smartCode notation (see SmartCodeTool class for more details).
-             Note: we can use regular php notation as it's a subset of the smartCode notation.
-- $service: the name of the service to call
+Available options are:
+- onCallBefore: a callable to execute just before the actual method is executed.
+     The callable has the following signature:
+     - fn ( type, classOrService, method, args ): void
 
-
-See the [examples here](https://github.com/lingtalfi/Bat/blob/master/ClassTool.md#executephpmethod-aka-smart-php-method-call)
+     With:
+     - type: string, the type of call being executed, can be one of:
+         - static, for static calls
+         - instance, for calls on a new class instance
+         - service, for service calls
+     - classOrService: string, the name of the class or service being called
+     - method: string, the name of the method being called
+     - args: array, the array of arguments passed to the called method
 
 
 
@@ -68,6 +62,10 @@ Parameters
     
 
 - container
+
+    
+
+- options
 
     
 
@@ -91,7 +89,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightHelper::executeMethod](https://github.com/lingtalfi/Light/blob/master/Helper/LightHelper.php#L88-L131)
+See the source code for method [LightHelper::executeMethod](https://github.com/lingtalfi/Light/blob/master/Helper/LightHelper.php#L84-L140)
 
 
 See Also

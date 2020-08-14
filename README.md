@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2020-08-06
+2019-04-05 -> 2020-08-14
 
 
 
@@ -45,6 +45,8 @@ Summary
     - [how to debug](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/how-to-debug.md)
     - Design
         - [late service registration](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/design/late-service-registration.md)
+    - Notation
+        - [light execute notation](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/notation/light-execute-notation.md)
 - [License](https://lingtalfi.com/no-license)
 
 
@@ -53,6 +55,10 @@ Summary
 
 History Log
 =============
+    
+- 0.67.0 -- 2020-08-14
+
+    - add "light execute notation" page
     
 - 0.66.4 -- 2020-08-06
 

@@ -48,32 +48,27 @@ class LightHelper
      * We've just added the possibility to call services by prefixing the service name with the @ symbol.
      *
      *
-     * The given $method must have one of the following format (or else an exception will be thrown):
-     *
-     * - $class::$method
-     * - $class::$method ( $args )
-     *
-     * - $class->$method
-     * - $class->$method ( $args )
-     *
-     * - @$service->$method
-     * - @$service->$method ( $args )
+     * The given $expr must use the @page(light execute notation).
      *
      *
-     * Note that the first two forms refer to a static method call, the next two forms refer to a method call on
-     * an instance (instantiation is done by this method), and the last ones call a service's method.
+     * See the [examples here](https://github.com/lingtalfi/Bat/blob/master/ClassTool.md#executephpmethod-aka-smart-php-method-call).
      *
      *
-     * With:
      *
-     * - $class: the full class name (example: Ling\Bat)
-     * - $method: the name of the method to execute
-     * - $args: a list of arguments written with smartCode notation (see SmartCodeTool class for more details).
-     *              Note: we can use regular php notation as it's a subset of the smartCode notation.
-     * - $service: the name of the service to call
+     * Available options are:
+     * - onCallBefore: a callable to execute just before the actual method is executed.
+     *      The callable has the following signature:
+     *      - fn ( type, classOrService, method, args ): void
      *
+     *      With:
+     *      - type: string, the type of call being executed, can be one of:
+     *          - static, for static calls
+     *          - instance, for calls on a new class instance
+     *          - service, for service calls
+     *      - classOrService: string, the name of the class or service being called
+     *      - method: string, the name of the method being called
+     *      - args: array, the array of arguments passed to the called method
      *
-     * See the [examples here](https://github.com/lingtalfi/Bat/blob/master/ClassTool.md#executephpmethod-aka-smart-php-method-call)
      *
      *
      *
@@ -82,12 +77,14 @@ class LightHelper
      *
      * @param string $expr
      * @param LightServiceContainerInterface $container
+     * @param array $options
      * @return mixed
      * @throws \Exception
      */
-    public static function executeMethod(string $expr, LightServiceContainerInterface $container)
+    public static function executeMethod(string $expr, LightServiceContainerInterface $container, array $options = [])
     {
 
+        $onCallBefore = $options['onCallBefore'] ?? null;
         if (preg_match('!
         (?<class>[@a-zA-Z0-9_\\\\]*)
         (?<sep>::|->)
@@ -112,16 +109,28 @@ class LightHelper
             if ('::' === $sep) {
                 if (null === $service) {
 //                $ret = $class::$method($args);
+                    if (is_callable($onCallBefore)) {
+                        $onCallBefore('static', $class, $method, $args);
+                    }
                     $ret = call_user_func_array([$class, $method], $args);
                 } else {
+                    if (is_callable($onCallBefore)) {
+                        $onCallBefore('service', $service, $method, $args);
+                    }
                     $ret = call_user_func_array([$container->get($service), $method], $args);
                 }
             } else {
 
                 if (null === $service) {
                     $instance = new $class;
+                    if (is_callable($onCallBefore)) {
+                        $onCallBefore('instance', $class, $method, $args);
+                    }
                 } else {
                     $instance = $container->get($service);
+                    if (is_callable($onCallBefore)) {
+                        $onCallBefore('service', $service, $method, $args);
+                    }
                 }
                 $ret = call_user_func_array([$instance, $method], $args);
             }

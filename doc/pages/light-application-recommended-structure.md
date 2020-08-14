@@ -1,6 +1,6 @@
 Light application recommended structure
 =============
-2019-04-09 -> 2020-06-08
+2019-04-09 -> 2020-07-10
 
 
 
@@ -54,6 +54,7 @@ The **services** part contains the static configuration as written by the plugin
 and which might be changed from time to time by the application maintainer.
 
 Practice revealed that the **data** part contains the configuration of plugins a particular plugin subscribes to.
+Those files are sometimes referred to as **nuggets**, as they hold a bit of the configuration of the services.
 So for instance, if plugin AAA subscribes to plugin Apple and plugin Banana, we will have a structure that looks like this:
 
 
@@ -76,6 +77,7 @@ on the app initialization.
 
 Basically, with the **dynamic** directory our idea is to implement the [late service registration system](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/design/late-service-registration.md). 
 
+The writing in this directory is still static, but the fetching is dynamic, hence the name.
 
 
 
@@ -94,6 +96,9 @@ Basically, with the **dynamic** directory our idea is to implement the [late ser
 
 Service configuration organisation
 ---------------------------
+2019-04-09
+
+
 
 Light being a service oriented application, we will inevitably have a lot of services subscribing to each others.
 

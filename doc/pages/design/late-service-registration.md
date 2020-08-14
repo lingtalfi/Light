@@ -1,6 +1,6 @@
 Design: Late service registration
 ===============
-2020-08-03
+2020-08-03 -> 2020-08-07
 
 
 Lots of so-called **provider** services provide a registration method, so that other third-party plugins can subscribe to whatever services the **provider** has to offer.
@@ -26,7 +26,7 @@ For instance, consider a service which basically displays list.
 Third party plugins can register to it and provide **list ids**.
 If we do this statically, then when we call the service via the **service container**, all the registration dependencies are resolved upon the call,
 but usually only one is used.
-With **dynamic registration**, we can register the **list id** only when we know for sure that it's going to be used (probably inside a controller), and therefore alleviate 
+With **dynamic registration**, we can register the **list id** only when we know for sure it's going to be used (probably inside a controller), and therefore alleviate 
 the number of static registration calls written in the container, thus improving the application performances a bit.
 
 

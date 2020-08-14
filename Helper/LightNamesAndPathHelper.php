@@ -19,6 +19,7 @@ class LightNamesAndPathHelper
      * @return string
      * @throws \Exception
      */
+
     public static function getServiceName(string $planet): string
     {
         if (0 !== strpos($planet, 'Light_')) {

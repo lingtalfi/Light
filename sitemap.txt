@@ -257,6 +257,7 @@ https://github.com/lingtalfi/Light/blob/master/doc/pages/light-application-recom
 https://github.com/lingtalfi/Light/blob/master/doc/pages/light-general-philosophy.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/light-service-container.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/my-snippets.md
+https://github.com/lingtalfi/Light/blob/master/doc/pages/notation/light-execute-notation.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/plugin.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/rights.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/route.md
