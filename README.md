@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2020-08-14
+2019-04-05 -> 2020-08-17
 
 
 
@@ -55,7 +55,11 @@ Summary
 
 History Log
 =============
-    
+
+- 0.69.0 -- 2020-08-17
+
+    - update LightHelper::executeMethod, add argReplace option
+        
 - 0.69.0 -- 2020-08-14
 
     - update LightHelper::executeMethod, removed options

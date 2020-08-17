@@ -16,7 +16,7 @@ Description
 ================
 
 
-public static [LightHelper::executeMethod](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper/executeMethod.md)(string $expr, [Ling\Light\ServiceContainer\LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md) $container) : mixed
+public static [LightHelper::executeMethod](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper/executeMethod.md)(string $expr, [Ling\Light\ServiceContainer\LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md) $container, ?array $options = []) : mixed
 
 
 
@@ -34,6 +34,9 @@ The given $expr must use the [light execute notation](https://github.com/lingtal
 
 See the [examples here](https://github.com/lingtalfi/Bat/blob/master/ClassTool.md#executephpmethod-aka-smart-php-method-call).
 
+Available options are:
+- argReplace: array=null, if set, will replace the arguments found in the given expr by some value. It's an array of argName => value.
+
 
 
 
@@ -46,6 +49,10 @@ Parameters
     
 
 - container
+
+    
+
+- options
 
     
 
@@ -69,7 +76,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightHelper::executeMethod](https://github.com/lingtalfi/Light/blob/master/Helper/LightHelper.php#L64-L108)
+See the source code for method [LightHelper::executeMethod](https://github.com/lingtalfi/Light/blob/master/Helper/LightHelper.php#L68-L128)
 
 
 See Also

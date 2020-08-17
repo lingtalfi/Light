@@ -53,16 +53,23 @@ class LightHelper
      *
      * See the [examples here](https://github.com/lingtalfi/Bat/blob/master/ClassTool.md#executephpmethod-aka-smart-php-method-call).
      *
+     * Available options are:
+     * - argReplace: array=null, if set, will replace the arguments found in the given expr by some value. It's an array of argName => value.
+     *
      *
      *
      *
      * @param string $expr
      * @param LightServiceContainerInterface $container
+     * @param array $options
      * @return mixed
      * @throws \Exception
      */
-    public static function executeMethod(string $expr, LightServiceContainerInterface $container)
+    public static function executeMethod(string $expr, LightServiceContainerInterface $container, array $options = [])
     {
+
+        $argReplace = $options['argReplace'] ?? null;
+
 
         if (preg_match('!
         (?<class>[@a-zA-Z0-9_\\\\]*)
@@ -84,6 +91,13 @@ class LightHelper
                 $args = SmartCodeTool::parse("[" . substr($match['args'], 1, -1) . ']');
             }
 
+            if (null !== $argReplace) {
+                foreach ($args as $k => $v) {
+                    if (array_key_exists($v, $argReplace)) {
+                        $args[$k] = $argReplace[$v];
+                    }
+                }
+            }
 
             $ret = null;
             if ('::' === $sep) {
@@ -97,10 +111,16 @@ class LightHelper
 
                 if (null === $service) {
                     $instance = new $class;
+                    $sDebug = "class \"$class\"";
                 } else {
                     $instance = $container->get($service);
+                    $sDebug = "service \"$service\"";
                 }
-                $ret = call_user_func_array([$instance, $method], $args);
+                $callable = [$instance, $method];
+                if (false === is_callable($callable)) {
+                    throw new LightException("Invalid callable passed, with $sDebug and method \"$method\".");
+                }
+                $ret = call_user_func_array($callable, $args);
             }
             return $ret;
         }
