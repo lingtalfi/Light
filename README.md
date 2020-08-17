@@ -56,6 +56,10 @@ Summary
 History Log
 =============
 
+- 0.69.1 -- 2020-08-17
+
+    - update light-service-container.md document
+    
 - 0.69.0 -- 2020-08-17
 
     - update LightHelper::executeMethod, add argReplace option

@@ -22,9 +22,13 @@ The service container brings third-party services to the application, thus being
 
 Configuration
 ---------------
+2019-07-17
 
 
 ### The configuration structure
+2019-07-17
+
+
 
 To configure the service container, we use [baby yaml](https://github.com/lingtalfi/BabyYaml) files.
 
@@ -58,13 +62,27 @@ The order in which configuration files are parsed is important, because the file
 the file **a.byml** (in case of conflicts).
 
 
+
 ### The zzz.byml file
+2019-07-17 -> 2020-08-17
+
 
 You might have noticed the **_zzz.byml** file in my previous example. This is a convention I personally use (you can use it too)
 to ensure that this file is executed after all the other files. 
 
 I call it the application maintainer's file since it overrides all the other files, and so I use it 
 to tweak potentially any service configuration that I want.
+
+Often, I will put in there the configuration that cannot be guessed by plugin authors, such as:
+
+- the database credentials
+- the smtp credentials and info (port, host, etc...)
+
+Also, all the maintainer's preferences will go in that file, such as for instance:
+
+- which type of user notifications should I send by email to the administrator of the app 
+
+
 
 For instance if the service provided by a third party plugin is not exactly as I want, I will override the part that I don't like
 from the **_zzz.byml** file rather than directly from the service configuration file.
@@ -86,6 +104,7 @@ there are plenty of configuration files in it.
 
 
 ### The configuration merging mechanism
+2019-07-17
 
 How are the service configuration files combined together?
 
