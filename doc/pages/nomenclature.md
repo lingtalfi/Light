@@ -25,3 +25,16 @@ Usually, the **provider (service)** requires the subscriber to register before i
 
 
 
+Nugget
+----------
+2020-08-21
+
+
+A **nugget**, in the light lingo, often refers to a bit of service configuration.
+
+Usually, when a [subscriber service](#provider-service-subscriber-service) uses the service of a provider, a **nugget** is required
+to have full control over the behaviour of the executed service.
+
+
+
+ 

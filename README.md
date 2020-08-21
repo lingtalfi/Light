@@ -57,6 +57,10 @@ Summary
 History Log
 =============
 
+- 0.69.4 -- 2020-08-21
+
+    - update nomenclature.md document, add nugget definition
+    
 - 0.69.3 -- 2020-08-21
 
     - update plugin.md document
