@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2020-08-17
+2019-04-05 -> 2020-08-21
 
 
 
@@ -32,17 +32,18 @@ Summary
 ===========
 - [Light api](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light.md) (generated with [DocTools](https://github.com/lingtalfi/DocTools))
 - Pages
+    - [Application recommended structure](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/light-application-recommended-structure.md)
     - [Diary](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/diary.md)
+    - [Efficiency tips](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/efficiency-tips.md)
     - [Events](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/events.md)
+    - [General philosophy](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/light-general-philosophy.md)
+    - [how to debug](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/how-to-debug.md)
+    - [Nomenclature](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/nomenclature.md)
     - [Plugin](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/plugin.md)
     - [Rights](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/rights.md)
     - [Route](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/route.md)
     - [Service container](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/light-service-container.md)
-    - [General philosophy](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/light-general-philosophy.md)
-    - [Application recommended structure](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/light-application-recommended-structure.md)
     - [Security](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/security.md)
-    - [Efficiency tips](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/efficiency-tips.md)
-    - [how to debug](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/how-to-debug.md)
     - Design
         - [late service registration](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/design/late-service-registration.md)
     - Notation
@@ -56,6 +57,10 @@ Summary
 History Log
 =============
 
+- 0.69.2 -- 2020-08-21
+
+    - add nomenclature.md document
+    
 - 0.69.1 -- 2020-08-17
 
     - update light-service-container.md document
