@@ -3,8 +3,6 @@ General philosophy of the Light framework
 2019-04-09 
 
 
- 
-
 
 
 Layers addition

@@ -59,6 +59,10 @@ History Log
 
 - 0.69.2 -- 2020-08-21
 
+    - update plugin.md document
+    
+- 0.69.2 -- 2020-08-21
+
     - add nomenclature.md document
     
 - 0.69.1 -- 2020-08-17
