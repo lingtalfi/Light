@@ -57,7 +57,7 @@ Summary
 History Log
 =============
 
-- 0.69.2 -- 2020-08-21
+- 0.69.3 -- 2020-08-21
 
     - update plugin.md document
     
