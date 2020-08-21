@@ -45,6 +45,7 @@ Summary
     - [Service container](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/light-service-container.md)
     - [Security](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/security.md)
     - Design
+        - [ajax permission philosophy](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/design/ajax-permission-philosophy.md)
         - [late service registration](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/design/late-service-registration.md)
     - Notation
         - [light execute notation](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/notation/light-execute-notation.md)
@@ -57,6 +58,11 @@ Summary
 History Log
 =============
 
+- 0.69.5 -- 2020-08-21
+
+    - update nomenclature.md document, update nugget definition, add ajax-nugget definition
+    - add ajax-permission-philosophy.md 
+    
 - 0.69.4 -- 2020-08-21
 
     - update nomenclature.md document, add nugget definition

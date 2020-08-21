@@ -4,6 +4,50 @@ Nomenclature
 
 
 
+Summary
+-----------
+
+- [Ajax nugget](#ajax-nugget)
+- [Nugget](#nugget)
+- [Provider service, subscriber service](#provider-service-subscriber-service)
+
+
+
+Ajax nugget
+----------
+2020-08-21
+
+An **ajax nugget** is the [nugget](#nugget) used in a communication where a [subscriber service](#provider-service-subscriber-service) wants to execute a method of the provider via ajax.
+In order to execute that method, an extra bit of configuration is required, and so the idea is that the subscriber passes an extra identifier parameter to the provider, which the provider transforms into a nugget.
+
+The main idea behind this is security. By passing an identifier instead of directly passing configuration parameters, we limit the actions of a malicious user who might try to use the service improperly. 
+
+
+Often, the provider service uses the [ajax handler](https://github.com/lingtalfi/Light_AjaxHandler) system, in combination with the [Light_Nugget](https://github.com/lingtalfi/Light_Nugget) plugin to access the nugget.
+
+
+
+
+Related: [nugget](#nugget).
+
+
+
+Nugget
+----------
+2020-08-21
+
+
+A **nugget**, in the light lingo, often refers to a bit of service configuration.
+
+Usually, when a [subscriber service](#provider-service-subscriber-service) uses the service of a provider, a **nugget** is required
+to have full control over the behaviour of the executed service.
+
+In **light**, a **nugget** is often stored in the form of a [babyYaml](https://github.com/lingtalfi/BabyYaml) file.
+
+ 
+Related: [ajax nugget](#ajax-nugget).
+ 
+
 
 Provider service, subscriber service
 -----------------
@@ -23,18 +67,3 @@ Usually, the **provider (service)** requires the subscriber to register before i
 
 
 
-
-
-Nugget
-----------
-2020-08-21
-
-
-A **nugget**, in the light lingo, often refers to a bit of service configuration.
-
-Usually, when a [subscriber service](#provider-service-subscriber-service) uses the service of a provider, a **nugget** is required
-to have full control over the behaviour of the executed service.
-
-
-
- 
