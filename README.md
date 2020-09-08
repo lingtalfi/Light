@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2020-08-21
+2019-04-05 -> 2020-09-08
 
 
 
@@ -58,6 +58,10 @@ Summary
 History Log
 =============
 
+- 0.69.6 -- 2020-09-08
+
+    - update HttpRedirectResponse and HttpResponse, internal adjustments
+    
 - 0.69.5 -- 2020-08-21
 
     - update nomenclature.md document, update nugget definition, add ajax-nugget definition

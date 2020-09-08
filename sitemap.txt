@@ -84,7 +84,10 @@ https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpJsonR
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpJsonResponse/displayBody.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpJsonResponse/sendHeaders.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpJsonResponse.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRedirectResponse/__construct.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRedirectResponse/create.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRedirectResponse/getRedirectBody.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRedirectResponse/setUrl.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRedirectResponse.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequest/__construct.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequest/createFromEnv.md
