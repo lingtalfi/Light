@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2020-09-08
+2019-04-05 -> 2020-09-11
 
 
 
@@ -58,6 +58,10 @@ Summary
 History Log
 =============
 
+- 0.69.7 -- 2020-09-11
+
+    - add LightBlueServiceContainer.__debugInfo method 
+    
 - 0.69.6 -- 2020-09-08
 
     - update HttpRedirectResponse and HttpResponse, internal adjustments

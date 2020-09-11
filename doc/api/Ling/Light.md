@@ -1,6 +1,6 @@
 Ling/Light
 ================
-2019-04-09 --> 2020-09-08
+2019-04-09 --> 2020-09-11
 
 
 
@@ -202,6 +202,7 @@ Table of contents
     - [LightBlueServiceContainer::getLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/getLight.md) &ndash; Returns the light instance of the application using this container.
     - [LightBlueServiceContainer::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/setLight.md) &ndash; Sets the light instance.
     - [LightBlueServiceContainer::setApplicationDir](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/setApplicationDir.md) &ndash; Sets the application directory.
+    - [LightBlueServiceContainer::__debugInfo](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightBlueServiceContainer/__debugInfo.md) &ndash; Defines which information to display when var_dump is called on this instance.
     - BlueOctopusServiceContainer::get &ndash; Returns the service which name is given.
     - BlueOctopusServiceContainer::has &ndash; The has method
     - BlueOctopusServiceContainer::all &ndash; Returns the list of all service names for this instance.
