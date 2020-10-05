@@ -119,7 +119,11 @@ class LightHelper
                     $instance = new $class;
                     $sDebug = "class \"$class\"";
                 } else {
-                    $instance = $container->get($service);
+                    if ('container' === $service) {
+                        $instance = $container;
+                    } else {
+                        $instance = $container->get($service);
+                    }
                     $sDebug = "service \"$service\"";
                 }
                 $callable = [$instance, $method];

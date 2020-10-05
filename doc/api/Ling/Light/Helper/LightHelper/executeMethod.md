@@ -79,7 +79,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightHelper::executeMethod](https://github.com/lingtalfi/Light/blob/master/Helper/LightHelper.php#L73-L137)
+See the source code for method [LightHelper::executeMethod](https://github.com/lingtalfi/Light/blob/master/Helper/LightHelper.php#L73-L141)
 
 
 See Also

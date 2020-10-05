@@ -58,6 +58,10 @@ Summary
 History Log
 =============
 
+- 0.69.9 -- 2020-10-05
+
+    - update light execute notation, now we can access the container directly 
+    
 - 0.69.8 -- 2020-10-05
 
     - add LightHelper::executeParenthesisWrappersByArray method 
