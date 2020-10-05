@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2020-09-11
+2019-04-05 -> 2020-10-05
 
 
 
@@ -58,6 +58,10 @@ Summary
 History Log
 =============
 
+- 0.69.8 -- 2020-10-05
+
+    - add LightHelper::executeParenthesisWrappersByArray method 
+    
 - 0.69.7 -- 2020-09-11
 
     - add LightBlueServiceContainer.__debugInfo method 

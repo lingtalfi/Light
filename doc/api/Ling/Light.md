@@ -1,6 +1,6 @@
 Ling/Light
 ================
-2019-04-09 --> 2020-09-11
+2019-04-09 --> 2020-10-05
 
 
 
@@ -62,6 +62,7 @@ Table of contents
 - [LightHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper.md) &ndash; The LightHelper class.
     - [LightHelper::createDummyRoutes](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper/createDummyRoutes.md) &ndash; Register all the routes which patterns are given.
     - [LightHelper::executeMethod](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper/executeMethod.md) &ndash; Executes a php method based on the notation described below, and returns the result.
+    - [LightHelper::executeParenthesisWrappersByArray](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper/executeParenthesisWrappersByArray.md) &ndash; Parses the given array, executes the "executeMethod" method on every parenthesis wrapper, and returns the result.
 - [LightNamesAndPathHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightNamesAndPathHelper.md) &ndash; The LightNamesAndPathHelper class.
     - [LightNamesAndPathHelper::getServiceName](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightNamesAndPathHelper/getServiceName.md) &ndash; Returns the service name, based on the given planet name.
     - [LightNamesAndPathHelper::getSymbolicPath](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightNamesAndPathHelper/getSymbolicPath.md) &ndash; Returns a symbolic path, where the given absolute path to the application directory is replaced by the symbol [app].
@@ -296,6 +297,7 @@ Dependencies
 - [Light_Events](https://github.com/lingtalfi/Light_Events)
 - [SicTools](https://github.com/lingtalfi/SicTools)
 - [Bat](https://github.com/lingtalfi/Bat)
+- [ParenthesisMirrorParser](https://github.com/lingtalfi/ParenthesisMirrorParser)
 - [DirScanner](https://github.com/lingtalfi/DirScanner)
 - [Octopus](https://github.com/lingtalfi/Octopus)
 - [PhpUploadFileFix](https://github.com/lingtalfi/PhpUploadFileFix)

@@ -9,6 +9,7 @@ use Ling\Light\Core\Light;
 use Ling\Light\Exception\LightException;
 use Ling\Light\Http\HttpResponse;
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
+use Ling\ParenthesisMirrorParser\ParenthesisMirrorParser;
 
 /**
  * The LightHelper class.
@@ -43,6 +44,7 @@ class LightHelper
      * Executes a php method based on the notation described below, and returns the result.
      *
      *
+     *
      * This technique originally comes from the [ClassTool::executePhpMethod](https://github.com/lingtalfi/Bat/blob/master/ClassTool.md#executephpmethod-aka-smart-php-method-call).
      *
      * We've just added the possibility to call services by prefixing the service name with the @ symbol.
@@ -55,6 +57,9 @@ class LightHelper
      *
      * Available options are:
      * - argReplace: array=null, if set, will replace the arguments found in the given expr by some value. It's an array of argName => value.
+     * - throwEx: bool=true, whether to throw an exception if the given expression is not a valid "light execute notation" string.
+     *      If false, the method returns the given expression as is.
+     *
      *
      *
      *
@@ -69,6 +74,7 @@ class LightHelper
     {
 
         $argReplace = $options['argReplace'] ?? null;
+        $throwEx = $options['throwEx'] ?? true;
 
 
         if (preg_match('!
@@ -124,6 +130,51 @@ class LightHelper
             }
             return $ret;
         }
-        throw new LightException("Unrecognized method syntax: $expr.");
+        if (true === $throwEx) {
+            throw new LightException("Unrecognized method syntax: $expr.");
+        }
+        return $expr;
+    }
+
+
+    /**
+     * Parses the given array, executes the "executeMethod" method on every parenthesis wrapper, and returns the result.
+     * By default, the identifier is pmp.
+     *
+     * See more details in the @page(ParenthesisMirrorWrapper conception notes).
+     *
+     *
+     *
+     * @param array $arr
+     * @param LightServiceContainerInterface $container
+     * @param array|null $identifiers
+     * @return array
+     */
+    public static function executeParenthesisWrappersByArray(array $arr, LightServiceContainerInterface $container, array $identifiers = null): array
+    {
+        if (null === $identifiers) {
+            $identifiers = ['pmp'];
+        }
+        $parsers = [];
+        foreach ($identifiers as $id) {
+            $parser = new ParenthesisMirrorParser();
+            $parser->setIdentifier($id);
+            $parser->setConverter(function (string $s) use ($container) {
+                return self::executeMethod($s, $container, [
+                    "throwEx" => false,
+                ]);
+            });
+            $parsers[] = $parser;
+
+        }
+        array_walk_recursive($arr, function (&$v) use ($parsers) {
+            foreach ($parsers as $parser) {
+                /**
+                 * @var $parser ParenthesisMirrorParser
+                 */
+                $v = $parser->parseString($v);
+            }
+        });
+        return $arr;
     }
 }

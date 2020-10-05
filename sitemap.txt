@@ -64,6 +64,7 @@ https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightCl
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightClassHelper.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper/createDummyRoutes.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper/executeMethod.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper/executeParenthesisWrappersByArray.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightNamesAndPathHelper/getServiceName.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightNamesAndPathHelper/getSymbolicPath.md
@@ -255,6 +256,7 @@ https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Tool/LightTool
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/design/ajax-permission-philosophy.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/design/late-service-registration.md
+https://github.com/lingtalfi/Light/blob/master/doc/pages/developer-memo.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/diary.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/efficiency-tips.md
 https://github.com/lingtalfi/Light/blob/master/doc/pages/events.md
