@@ -172,11 +172,13 @@ class LightHelper
 
         }
         array_walk_recursive($arr, function (&$v) use ($parsers) {
-            foreach ($parsers as $parser) {
-                /**
-                 * @var $parser ParenthesisMirrorParser
-                 */
-                $v = $parser->parseString($v);
+            if (is_string($v)) {
+                foreach ($parsers as $parser) {
+                    /**
+                     * @var $parser ParenthesisMirrorParser
+                     */
+                    $v = $parser->parseString($v);
+                }
             }
         });
         return $arr;

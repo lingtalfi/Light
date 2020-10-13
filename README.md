@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2020-10-05
+2019-04-05 -> 2020-10-13
 
 
 
@@ -58,6 +58,10 @@ Summary
 History Log
 =============
 
+- 0.69.10 -- 2020-10-13
+
+    - fix LightHelper::executeParenthesisWrappersByArray trying to parse null values 
+    
 - 0.69.9 -- 2020-10-05
 
     - update light execute notation, now we can access the container directly 

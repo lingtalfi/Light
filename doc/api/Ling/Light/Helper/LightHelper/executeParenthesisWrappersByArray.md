@@ -60,7 +60,7 @@ Returns array.
 
 Source Code
 ===========
-See the source code for method [LightHelper::executeParenthesisWrappersByArray](https://github.com/lingtalfi/Light/blob/master/Helper/LightHelper.php#L157-L183)
+See the source code for method [LightHelper::executeParenthesisWrappersByArray](https://github.com/lingtalfi/Light/blob/master/Helper/LightHelper.php#L157-L185)
 
 
 See Also
