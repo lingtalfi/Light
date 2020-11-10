@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2020-10-13
+2019-04-05 -> 2020-11-10
 
 
 
@@ -58,6 +58,10 @@ Summary
 History Log
 =============
 
+- 0.69.11 -- 2020-11-10
+
+    - update app recommended structure documentation 
+    
 - 0.69.10 -- 2020-10-13
 
     - fix LightHelper::executeParenthesisWrappersByArray trying to parse null values 

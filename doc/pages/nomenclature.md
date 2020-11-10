@@ -1,6 +1,6 @@
 Nomenclature
 =============
-2020-08-21
+2020-08-21 -> 2020-11-10
 
 
 
@@ -34,10 +34,13 @@ Related: [nugget](#nugget).
 
 Nugget
 ----------
-2020-08-21
+2020-08-21 -> 2020-11-10
 
 
 A **nugget**, in the light lingo, often refers to a bit of service configuration.
+
+By extension, it refers to a bit of configuration in general.
+
 
 Usually, when a [subscriber service](#provider-service-subscriber-service) uses the service of a provider, a **nugget** is required
 to have full control over the behaviour of the executed service.

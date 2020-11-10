@@ -22,7 +22,7 @@ The service container brings third-party services to the application, thus being
 
 Configuration
 ---------------
-2019-07-17
+2019-07-17 -> 2020-11-10
 
 
 ### The configuration structure
@@ -47,15 +47,21 @@ The files are organized in a directory under the **config/services** of the appl
 ```
 
 
-All configuration files should have the **.byml** file extension, which is the extension for babyYaml files.
+The **config/services** directory contains the so-called **service configuration files**, which define the services
+to add to the (service) container. 
+
+All **service configuration files** should have the **.byml** file extension, which is the extension for babyYaml files.
 
 By convention, if the service configuration file is brought by a third-party plugin, the configuration file
-has the same name as the plugin. So for instance if the plugin is Light_ReverseRouter, then the corresponding
-configuration file will be named Light_ReverseRouter.byml. 
+has the same name as the plugin. So for instance if the plugin is **Light_ReverseRouter**, then the corresponding
+configuration file will be named **Light_ReverseRouter.byml**. 
 
 
 
 The resulting configuration is created by parsing all the configuration files one by one, and merging them on the fly.
+
+We use the [sic notation](https://github.com/lingtalfi/NotationFan/blob/master/sic.md) to create services and register them to the container.
+
 The service container configuration is basically the result of some array manipulation (more on that later).
 
 The order in which configuration files are parsed is important, because the file **z.byml** will potentially override 
@@ -104,9 +110,9 @@ there are plenty of configuration files in it.
 
 
 ### The configuration merging mechanism
-2019-07-17
+2019-07-17 -> 2020-11-10
 
-How are the service configuration files combined together?
+How are the service configuration files combined?
 
 The mechanism used is basically to convert all service configuration files to arrays, and merge those arrays together on the fly.
 
