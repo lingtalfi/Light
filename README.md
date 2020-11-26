@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2020-11-10
+2019-04-05 -> 2020-11-26
 
 
 
@@ -58,6 +58,10 @@ Summary
 History Log
 =============
 
+- 0.69.12 -- 2020-11-26
+
+    - update app recommended structure documentation, add one sentence 
+    
 - 0.69.11 -- 2020-11-10
 
     - update app recommended structure documentation 

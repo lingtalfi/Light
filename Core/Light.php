@@ -4,6 +4,7 @@
 namespace Ling\Light\Core;
 
 
+use Ling\CheapLogger\CheapLogger;
 use Ling\Light\Events\LightEvent;
 use Ling\Light\Exception\LightException;
 use Ling\Light\Helper\ControllerHelper;
@@ -473,6 +474,7 @@ class Light
             }
 
         } catch (\Exception $e) {
+
 
 
             $wasHandled = false;

@@ -50,7 +50,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [Light::setHttpRequest](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L251-L254)
+See the source code for method [Light::setHttpRequest](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L252-L255)
 
 
 See Also

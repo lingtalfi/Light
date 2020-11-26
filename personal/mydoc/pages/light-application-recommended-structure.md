@@ -95,6 +95,7 @@ So for instance a plugin named **Light_AAA** will store its private configuratio
 
 - config/data/Light_AAA
 
+
 Oftentimes, a plugin will use other plugins.
 
 For instance, plugin **Light_AAA** might use a menu service provided by the plugin **Light_BBB**.
@@ -118,6 +119,9 @@ So for instance, if plugin **Light_AAA** uses the services provided by plugin **
                 /Light_CCC:
                     - some-banana-conf.byml
 ``` 
+
+This is just one example, but the plugin author can also store any files he/she needs in order to help its plugin work.
+
 
 
 The config dynamic directory

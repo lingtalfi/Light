@@ -1,6 +1,6 @@
 Ling/Light
 ================
-2019-04-09 --> 2020-11-10
+2019-04-09 --> 2020-11-26
 
 
 
@@ -294,6 +294,7 @@ Table of contents
 
 Dependencies
 ============
+- [CheapLogger](https://github.com/lingtalfi/CheapLogger)
 - [Light_Events](https://github.com/lingtalfi/Light_Events)
 - [SicTools](https://github.com/lingtalfi/SicTools)
 - [Bat](https://github.com/lingtalfi/Bat)
