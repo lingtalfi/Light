@@ -1,11 +1,11 @@
 Light execute notation
 =============
-2020-08-14 -> 2020-10-05
+2020-08-14 -> 2020-11-27
 
 
 
 
-The **light execute notation** allows for plugin authors to use a powerful syntax to call php methods.
+The **light execute notation** allows for plugin authors to use a syntax to call methods from php classes and/or light services.
 
 
 The notation must have one of the following format:
@@ -36,6 +36,33 @@ Note: if the class (i.e. not a service) needs to be instantiated, we just call t
 
 
 
+Using the notation in configuration files
+-----------
+2020-11-27
+
+
+When used inside a configuration file, to avoid potential interpretation conflict with other notations, the **light execute notation** is often
+wrapped inside a [pmp wrapper](https://github.com/lingtalfi/ParenthesisMirrorParser) with a double colon identifier (::).
+
+
+So, for instance:
+
+- ::(  $class->$method ( $args )  )::
+
+
+Note: in the above example I added extra whitespace for reading clarity, but usually you'll use a more compact form without
+any whitespace, although both forms are functionally equivalent.
+
+
+
+By convention, the double colon identifier inside configuration files is reserved for the **light execute notation**; other plugins
+might use different notations with different pmp wrapper identifiers.
+ 
+
+
+
+
+
 
 Related tools
 ---------
@@ -43,3 +70,4 @@ Related tools
 
 
 - [The LightHelper::executeMethod](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper/executeMethod.md)
+- [The LightHelper::executeParenthesisWrappersByArray](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightHelper/executeParenthesisWrappersByArray.md)
