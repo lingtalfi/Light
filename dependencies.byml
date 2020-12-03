@@ -1,8 +1,8 @@
 dependencies: 
     Ling: 
-        - CheapLogger
         - Light_Events
         - SicTools
+        - CheapLogger
         - Bat
         - ParenthesisMirrorParser
         - DirScanner

@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2020-11-27
+2019-04-05 -> 2020-12-03
 
 
 
@@ -58,6 +58,10 @@ Summary
 History Log
 =============
 
+- 0.69.14 -- 2020-12-01
+
+    - add VoidHttpRequest, update light execute notation document 
+    
 - 0.69.13 -- 2020-11-27
 
     - update light execute notation document 

@@ -1,6 +1,6 @@
 Light execute notation
 =============
-2020-08-14 -> 2020-11-27
+2020-08-14 -> 2020-12-03
 
 
 
@@ -36,18 +36,21 @@ Note: if the class (i.e. not a service) needs to be instantiated, we just call t
 
 
 
-Using the notation in configuration files
+light execute notation with light pmp wrapper
 -----------
-2020-11-27
+2020-12-03
 
 
-When used inside a configuration file, to avoid potential interpretation conflict with other notations, the **light execute notation** is often
-wrapped inside a [pmp wrapper](https://github.com/lingtalfi/ParenthesisMirrorParser) with a double colon identifier (::).
+When there is a potential interpretation conflict with other notations, the **light execute notation** is often
+wrapped inside what we call the **light pmp wrapper**.  The **light pmp wrapper** is a [pmp wrapper](https://github.com/lingtalfi/ParenthesisMirrorParser) with a double colon identifier (::).
 
 
 So, for instance:
 
 - ::(  $class->$method ( $args )  )::
+
+
+You'll find this notation in configuration files for instance.
 
 
 Note: in the above example I added extra whitespace for reading clarity, but usually you'll use a more compact form without
@@ -58,6 +61,18 @@ any whitespace, although both forms are functionally equivalent.
 By convention, the double colon identifier inside configuration files is reserved for the **light execute notation**; other plugins
 might use different notations with different pmp wrapper identifiers.
  
+
+
+
+
+Using the notation in configuration files
+-----------
+2020-11-27 -> 2020-12-03
+
+
+See the [light execute notation with light pmp wrapper](#light-execute-notation-with-light-pmp-wrapper) section.
+
+
 
 
 
