@@ -58,6 +58,10 @@ Summary
 History Log
 =============
 
+- 0.69.15 -- 2020-12-03
+
+    - update service container document 
+    
 - 0.69.14 -- 2020-12-01
 
     - add VoidHttpRequest, update light execute notation document 
