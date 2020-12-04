@@ -59,6 +59,10 @@ Summary
 History Log
 =============
 
+- 0.69.17 -- 2020-12-04
+
+    - Add lpi-deps.byml file
+
 - 0.69.16 -- 2020-12-03
 
     - add "light init script" concept 
