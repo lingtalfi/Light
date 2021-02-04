@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2020-12-03
+2019-04-05 -> 2021-02-04
 
 
 
@@ -59,9 +59,13 @@ Summary
 History Log
 =============
 
+- 0.69.19 -- 2021-02-04
+
+    - updated light app recommended structure document
+  
 - 0.69.18 -- 2020-12-08
 
-    - Fix lpi-deps not using natsort.
+    - Fix lpi-deps not using natsort
 
 - 0.69.17 -- 2020-12-04
 
