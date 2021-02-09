@@ -5,6 +5,7 @@ dependencies:
         - CheapLogger
         - Bat
         - ParenthesisMirrorParser
+        - BabyYaml
         - DirScanner
         - Octopus
         - PhpUploadFileFix

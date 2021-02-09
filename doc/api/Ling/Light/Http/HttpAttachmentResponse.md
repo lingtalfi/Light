@@ -4,7 +4,7 @@
 
 The HttpAttachmentResponse class
 ================
-2019-04-09 --> 2021-02-04
+2019-04-09 --> 2021-02-09
 
 
 
@@ -162,4 +162,4 @@ See the source code of [Ling\Light\Http\HttpAttachmentResponse](https://github.c
 
 SeeAlso
 ==============
-Previous class: [ServiceContainerHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ServiceContainerHelper.md)<br>Next class: [HttpJsonResponse](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpJsonResponse.md)<br>
+Previous class: [ZFileHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ZFileHelper.md)<br>Next class: [HttpJsonResponse](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpJsonResponse.md)<br>

@@ -1067,3 +1067,13 @@
     - Ling:DirScanner:1.13.3+
     - Ling:Octopus:1.4.3+
     - Ling:PhpUploadFileFix:1.0.2+
+
+0.69.20: 
+    - Ling:Light_Events:1.9.6+
+    - Ling:SicTools:1.6.4+
+    - Ling:CheapLogger:1.0.3+
+    - Ling:Bat:1.303+
+    - Ling:ParenthesisMirrorParser:1.0.3+
+    - Ling:DirScanner:1.13.3+
+    - Ling:Octopus:1.4.3+
+    - Ling:PhpUploadFileFix:1.0.2+

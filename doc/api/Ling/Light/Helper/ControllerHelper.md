@@ -4,7 +4,7 @@
 
 The ControllerHelper class
 ================
-2019-04-09 --> 2021-02-04
+2019-04-09 --> 2021-02-09
 
 
 
@@ -58,4 +58,4 @@ See the source code of [Ling\Light\Helper\ControllerHelper](https://github.com/l
 
 SeeAlso
 ==============
-Previous class: [ConfigurationHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ConfigurationHelper.md)<br>Next class: [EnvironmentHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/EnvironmentHelper.md)<br>
+Previous class: [ConfigurationHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ConfigurationHelper.md)<br>Next class: [LightClassHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightClassHelper.md)<br>

@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2021-02-04
+2019-04-05 -> 2021-02-09
 
 
 
@@ -35,6 +35,7 @@ Summary
     - [Application recommended structure](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/light-application-recommended-structure.md)
     - [Diary](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/diary.md)
     - [Efficiency tips](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/efficiency-tips.md)
+    - [Environments](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/environments.md)
     - [Events](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/events.md)
     - [General philosophy](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/light-general-philosophy.md)
     - [how to debug](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/how-to-debug.md)
@@ -59,6 +60,10 @@ Summary
 History Log
 =============
 
+- 0.69.20 -- 2021-02-09
+
+    - add environment sensitive file concept and implementation
+  
 - 0.69.19 -- 2021-02-04
 
     - updated light app recommended structure document
