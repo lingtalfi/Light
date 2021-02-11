@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2021-02-09
+2019-04-05 -> 2021-02-11
 
 
 
@@ -60,6 +60,10 @@ Summary
 History Log
 =============
 
+- 0.69.21 -- 2021-02-11
+
+    - adding assets 
+  
 - 0.69.20 -- 2021-02-09
 
     - add environment sensitive file concept and implementation
