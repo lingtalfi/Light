@@ -3,6 +3,8 @@
 
 use Ling\Light\Helper\ServiceContainerHelper;
 
+
+
 require_once __DIR__ . "/../../../universe/bigbang.php"; // activate universe
 
 
@@ -22,8 +24,6 @@ $container = ServiceContainerHelper::getInstance($appDir, [
     'blueMode' => 'create',
     'environment' => $_SERVER['APPLICATION_ENVIRONMENT'] ?? 'prod',
 ]);
-
-
 
 
 
