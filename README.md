@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2021-02-15
+2019-04-05 -> 2021-02-22
 
 
 
@@ -60,6 +60,10 @@ Summary
 History Log
 =============
 
+- 0.69.23 -- 2021-02-22
+
+    - update recommended app structure, /www/plugins is not part of the recommendation anymore, using universe assets instead
+  
 - 0.69.22 -- 2021-02-15
 
     - checkpoint commit

@@ -1,6 +1,6 @@
 Light application recommended structure
 =============
-2019-04-09 -> 2021-02-04
+2019-04-09 -> 2021-02-22
 
 
 
@@ -61,14 +61,20 @@ The filesystem structure looks like this:
         # The index.php script is the entry point for the web app. 
         - index.php
         
-        # the directory for light plugins web assets
-        /plugins:                           
-            # the web assets dir for the Light_MyPlugin planet
-            /Light_MyPlugin:                
-                # an example directory, not part of the recommendation
-                /css:                       
-                    # an example file, not part of the recommendation
-                    - style.css             
+        # 
+        /libs:
+
+            # We recommend using universe assets organization
+            # https://github.com/lingtalfi/NotationFan/blob/master/universe-assets.md
+            /universe:
+                # the galaxy name
+                /Ling:
+                    # the planet name. Inside this directory, all your web assets.
+                    /Light_MyPlugin:                
+                        # an example directory, not part of the recommendation
+                        /css:                       
+                            # an example file, not part of the recommendation
+                            - style.css             
                                                                
 ```
 
