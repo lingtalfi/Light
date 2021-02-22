@@ -48,7 +48,7 @@ Summary
     - [Security](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/security.md)
     - Design
         - [ajax permission philosophy](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/design/ajax-permission-philosophy.md)
-        - [late service registration](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/design/late-service-registration.md)
+        - [open vs close service registration](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/design/open-vs-close-service-registration.md)
     - Notation
         - [light execute notation](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/notation/light-execute-notation.md)
 - [License](https://lingtalfi.com/no-license)
@@ -60,6 +60,10 @@ Summary
 History Log
 =============
 
+- 0.69.24 -- 2021-02-22
+
+    - add "Open vs close service registration" document, config/dynamic has now moved to config/open
+  
 - 0.69.23 -- 2021-02-22
 
     - update recommended app structure, /www/plugins is not part of the recommendation anymore, using universe assets instead
