@@ -66,6 +66,7 @@ Table of contents
 - [ZFileHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ZFileHelper.md) &ndash; The ZFileHelper class.
     - [ZFileHelper::getZPath](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ZFileHelper/getZPath.md) &ndash; Returns the path of the z file.
     - [ZFileHelper::setProp](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ZFileHelper/setProp.md) &ndash; Sets a property in the z file.
+    - [ZFileHelper::hasProp](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ZFileHelper/hasProp.md) &ndash; Returns whether the z file has the given property.
 - [HttpAttachmentResponse](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpAttachmentResponse.md) &ndash; The HttpAttachmentResponse class.
     - [HttpAttachmentResponse::create](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpAttachmentResponse/create.md) &ndash; Creates and returns the http attachment response instance.
     - [HttpAttachmentResponse::setFile](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpAttachmentResponse/setFile.md) &ndash; Sets the file and optionally filename for this attachment.

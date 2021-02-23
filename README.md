@@ -59,6 +59,10 @@ Summary
 History Log
 =============
 
+- 0.69.26 -- 2021-02-23
+
+    - add ZFileHelper::hasProp method
+  
 - 0.69.25 -- 2021-02-23
 
     - mark optional route properties as optional in the route document
