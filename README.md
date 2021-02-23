@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2021-02-22
+2019-04-05 -> 2021-02-23
 
 
 
@@ -8,7 +8,6 @@ WORK IN PROGRESS, COME BACK IN A FEW MONTHS..., OR USE IT NOW AT YOUR OWN RISKS
 
 
 A light framework for creating web apps.
-This supersedes the [Jin](https://github.com/lingtalfi/Jin) framework. 
 
 
 This is part of the [universe framework](https://github.com/karayabin/universe-snapshot).
@@ -60,6 +59,10 @@ Summary
 History Log
 =============
 
+- 0.69.25 -- 2021-02-23
+
+    - mark optional route properties as optional in the route document
+  
 - 0.69.24 -- 2021-02-22
 
     - add "Open vs close service registration" document, config/dynamic has now moved to config/open
