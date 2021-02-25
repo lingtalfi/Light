@@ -59,6 +59,11 @@ Summary
 History Log
 =============
 
+- 0.69.29 -- 2021-02-25
+
+    - update Light->registerRoute method, now the pattern and controller argument have precedence over their equivalents in the route array
+    - add container notation definition
+  
 - 0.69.28 -- 2021-02-25
 
     - checkpoint commit
