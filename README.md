@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2021-02-23
+2019-04-05 -> 2021-02-25
 
 
 
@@ -59,6 +59,10 @@ Summary
 History Log
 =============
 
+- 0.69.27 -- 2021-02-25
+
+    - checkpoint commit
+  
 - 0.69.26 -- 2021-02-23
 
     - add ZFileHelper::hasProp method
