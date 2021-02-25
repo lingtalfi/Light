@@ -59,6 +59,10 @@ Summary
 History Log
 =============
 
+- 0.69.28 -- 2021-02-25
+
+    - checkpoint commit
+  
 - 0.69.27 -- 2021-02-25
 
     - checkpoint commit
