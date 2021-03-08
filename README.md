@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2021-03-05
+2019-04-05 -> 2021-03-08
 
 
 
@@ -64,6 +64,10 @@ Summary
 History Log
 =============
 
+- 0.69.31 -- 2021-03-08
+
+    - update nomenclature.md, add eco-structure definition
+  
 - 0.69.30 -- 2021-03-05
 
     - update README.md, add install alternative
