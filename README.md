@@ -64,6 +64,10 @@ Summary
 History Log
 =============
 
+- 0.69.32 -- 2021-03-08
+
+    - update open vs close document, now use planet dotNames instead of planet names in the open section
+  
 - 0.69.31 -- 2021-03-08
 
     - update nomenclature.md, add eco-structure definition
