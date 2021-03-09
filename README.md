@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2021-03-08
+2019-04-05 -> 2021-03-09
 
 
 
@@ -64,6 +64,10 @@ Summary
 History Log
 =============
 
+- 0.70.0 -- 2021-03-09
+
+    - update application recommended structure, planet should always include their galaxy name
+  
 - 0.69.32 -- 2021-03-08
 
     - update open vs close document, now use planet dotNames instead of planet names in the open section
