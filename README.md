@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2021-03-09
+2019-04-05 -> 2021-03-18
 
 
 
@@ -64,6 +64,10 @@ Summary
 History Log
 =============
 
+- 0.70.1 -- 2021-03-18
+
+    - update openVsClose registration document
+  
 - 0.70.0 -- 2021-03-09
 
     - update application recommended structure, planet should always include their galaxy name
@@ -304,7 +308,7 @@ History Log
     
 - 0.52.0 -- 2019-12-19
 
-    - update Light, now dispatches Light.end_routine event instead of using the end_routine service
+    - update Light, now dispatches Ling.Light.end_routine event instead of using the end_routine service
     
 - 0.51.0 -- 2019-12-17
 
@@ -341,7 +345,7 @@ History Log
     
 - 0.43.0 -- 2019-11-11
 
-    - add Light.on_unhandled_exception_caught event
+    - add Ling.Light.on_unhandled_exception_caught event
     
 - 0.42.0 -- 2019-11-11
 
@@ -373,7 +377,7 @@ History Log
     
 - 0.36.0 -- 2019-11-06
 
-    - update Core/Light, now dispatches the Light.on_route_found event
+    - update Core/Light, now dispatches the Ling.Light.on_route_found event
     
 - 0.35.0 -- 2019-10-28
 
