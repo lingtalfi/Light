@@ -65,6 +65,10 @@ Summary
 History Log
 =============
 
+- 0.70.3 -- 2021-05-03
+
+    - Update dependencies to Ling.Light_Events (pushed by SubscribersUtil)
+
 - 0.70.2 -- 2021-03-23
 
     - add nugget registration system document, update light-execute-notation document
