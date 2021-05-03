@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2021-03-18
+2019-04-05 -> 2021-05-03
 
 
 
@@ -53,6 +53,7 @@ Summary
     - Design
         - [ajax permission philosophy](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/design/ajax-permission-philosophy.md)
         - [open vs close service registration](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/design/open-vs-close-service-registration.md)
+        - [nugget registration system](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/design/nugget-registration-system.md)
     - Notation
         - [light execute notation](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/notation/light-execute-notation.md)
 - [License](https://lingtalfi.com/no-license)
@@ -64,6 +65,10 @@ Summary
 History Log
 =============
 
+- 0.70.2 -- 2021-03-23
+
+    - add nugget registration system document, update light-execute-notation document
+  
 - 0.70.1 -- 2021-03-18
 
     - update openVsClose registration document

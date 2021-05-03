@@ -455,7 +455,8 @@ class Light
 
                             $response = ControllerHelper::executeController($route['controller'], $this);
                         } else {
-                            throw LightException::create("No route matches", "404");
+                            $url = $this->httpRequest->getUri();
+                            throw LightException::create("No route matches for url $url.", "404");
                         }
 
 
