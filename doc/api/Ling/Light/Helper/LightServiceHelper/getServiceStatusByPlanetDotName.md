@@ -57,7 +57,7 @@ Returns int.
 
 Source Code
 ===========
-See the source code for method [LightServiceHelper::getServiceStatusByPlanetDotName](https://github.com/lingtalfi/Light/blob/master/Helper/LightServiceHelper.php#L25-L36)
+See the source code for method [LightServiceHelper::getServiceStatusByPlanetDotName](https://github.com/lingtalfi/Light/blob/master/Helper/LightServiceHelper.php#L27-L38)
 
 
 See Also
@@ -65,5 +65,5 @@ See Also
 
 The [LightServiceHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightServiceHelper.md) class.
 
-
+Next method: [getServiceFileByPlanetDotName](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightServiceHelper/getServiceFileByPlanetDotName.md)<br>
 

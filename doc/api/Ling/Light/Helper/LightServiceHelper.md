@@ -26,6 +26,9 @@ class <span class="pl-k">LightServiceHelper</span>  {
 
 - Methods
     - public static [getServiceStatusByPlanetDotName](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightServiceHelper/getServiceStatusByPlanetDotName.md)(string $appDir, string $planetDotName) : int
+    - public static [getServiceFileByPlanetDotName](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightServiceHelper/getServiceFileByPlanetDotName.md)(string $appDir, string $planetDotName) : string
+    - public static [disableServiceByPlanetDotName](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightServiceHelper/disableServiceByPlanetDotName.md)(string $appDir, string $planetDotName) : int
+    - public static [enableServiceByPlanetDotName](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightServiceHelper/enableServiceByPlanetDotName.md)(string $appDir, string $planetDotName) : int
 
 }
 
@@ -38,6 +41,9 @@ Methods
 ==============
 
 - [LightServiceHelper::getServiceStatusByPlanetDotName](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightServiceHelper/getServiceStatusByPlanetDotName.md) &ndash; Returns the status of a service for a given app and planetDotName.
+- [LightServiceHelper::getServiceFileByPlanetDotName](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightServiceHelper/getServiceFileByPlanetDotName.md) &ndash; Returns the service file for a given planet.
+- [LightServiceHelper::disableServiceByPlanetDotName](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightServiceHelper/disableServiceByPlanetDotName.md) &ndash; Disables the service file for the given planet, and returns an int.
+- [LightServiceHelper::enableServiceByPlanetDotName](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightServiceHelper/enableServiceByPlanetDotName.md) &ndash; Enables the service file for the given planet, and returns an int.
 
 
 

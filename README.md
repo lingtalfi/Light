@@ -65,6 +65,10 @@ Summary
 History Log
 =============
 
+- 0.70.9 -- 2021-05-31
+
+    - add LightServiceHelper methods to help with service
+
 - 0.70.8 -- 2021-05-31
 
     - add LightServiceHelper class
