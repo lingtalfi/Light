@@ -65,6 +65,10 @@ Summary
 History Log
 =============
 
+- 0.70.8 -- 2021-05-31
+
+    - add LightServiceHelper class
+
 - 0.70.7 -- 2021-05-31
 
     - add service enable/disable convention

@@ -61,6 +61,8 @@ Table of contents
 - [LightNamesAndPathHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightNamesAndPathHelper.md) &ndash; The LightNamesAndPathHelper class.
     - [LightNamesAndPathHelper::getServiceName](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightNamesAndPathHelper/getServiceName.md) &ndash; Returns the service name, based on the given planet name.
     - [LightNamesAndPathHelper::getSymbolicPath](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightNamesAndPathHelper/getSymbolicPath.md) &ndash; Returns a symbolic path, where the given absolute path to the application directory is replaced by the symbol [app].
+- [LightServiceHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightServiceHelper.md) &ndash; The LightServiceHelper class.
+    - [LightServiceHelper::getServiceStatusByPlanetDotName](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/LightServiceHelper/getServiceStatusByPlanetDotName.md) &ndash; Returns the status of a service for a given app and planetDotName.
 - [ServiceContainerHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ServiceContainerHelper.md) &ndash; The ServiceContainerHelper class.
     - [ServiceContainerHelper::getInstance](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ServiceContainerHelper/getInstance.md) &ndash; Returns an instance of a service container according to the given options.
 - [ZFileHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ZFileHelper.md) &ndash; The ZFileHelper class.
