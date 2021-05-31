@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2021-05-03
+2019-04-05 -> 2021-05-31
 
 
 
@@ -65,6 +65,11 @@ Summary
 History Log
 =============
 
+- 0.70.5 -- 2021-05-31
+
+    - ZFileHelper::getZPath now uses appDir as its first argument
+    - update init.container.inc 
+  
 - 0.70.4 -- 2021-05-03
 
     - Update dependencies to Ling.Light_Events (pushed by SubscribersUtil)
