@@ -65,6 +65,10 @@ Summary
 History Log
 =============
 
+- 0.70.7 -- 2021-05-31
+
+    - add service enable/disable convention
+  
 - 0.70.6 -- 2021-05-31
 
     - Removing trailing plus in lpi-deps file (to work with Light_PlanetInstaller:2.0.0 api

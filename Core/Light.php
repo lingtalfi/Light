@@ -378,7 +378,6 @@ class Light
         $container = $this->getContainer();
         $container->setLight($this);
 
-
         try {
 
             $response = null;
