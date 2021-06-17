@@ -40,7 +40,7 @@ interface HttpRequestInterface
     public function getUriPath(): string;
 
     /**
-     * Returns the queryString of the http request.
+     * Returns the url-decoded version of the queryString of the http request.
      * @return string
      */
     public function getQueryString(): string;

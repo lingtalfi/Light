@@ -65,6 +65,10 @@ Summary
 History Log
 =============
 
+- 0.70.10 -- 2021-06-17
+
+    - fix HttpRequest returning the url-encoded form of QUERY_STRING
+  
 - 0.70.9 -- 2021-05-31
 
     - add LightServiceHelper methods to help with service

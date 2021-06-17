@@ -4,7 +4,7 @@
 
 The HttpRequest class
 ================
-2019-04-09 --> 2021-05-31
+2019-04-09 --> 2021-06-17
 
 
 
@@ -198,7 +198,7 @@ Methods
 - [HttpRequest::getMethod](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequest/getMethod.md) &ndash; Returns the http method used for the request, in lower case.
 - [HttpRequest::getUri](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequest/getUri.md) &ndash; Returns the uri of the http request.
 - [HttpRequest::getUriPath](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequest/getUriPath.md) &ndash; Returns the uriPath of the http request.
-- [HttpRequest::getQueryString](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequest/getQueryString.md) &ndash; Returns the queryString of the http request.
+- [HttpRequest::getQueryString](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequest/getQueryString.md) &ndash; Returns the url-decoded version of the queryString of the http request.
 - [HttpRequest::getQueryArgs](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequest/getQueryArgs.md) &ndash; Returns the array version of the query string of the http request.
 - [HttpRequest::getTime](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequest/getTime.md) &ndash; The time when the http request was created.
 - [HttpRequest::getHost](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequest/getHost.md) &ndash; Returns the host of the http request.

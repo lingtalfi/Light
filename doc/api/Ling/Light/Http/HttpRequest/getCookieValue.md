@@ -57,7 +57,7 @@ Returns mixed.
 
 Source Code
 ===========
-See the source code for method [HttpRequest::getCookieValue](https://github.com/lingtalfi/Light/blob/master/Http/HttpRequest.php#L395-L404)
+See the source code for method [HttpRequest::getCookieValue](https://github.com/lingtalfi/Light/blob/master/Http/HttpRequest.php#L403-L412)
 
 
 See Also

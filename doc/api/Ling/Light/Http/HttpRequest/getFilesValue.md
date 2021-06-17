@@ -57,7 +57,7 @@ Returns mixed.
 
 Source Code
 ===========
-See the source code for method [HttpRequest::getFilesValue](https://github.com/lingtalfi/Light/blob/master/Http/HttpRequest.php#L372-L381)
+See the source code for method [HttpRequest::getFilesValue](https://github.com/lingtalfi/Light/blob/master/Http/HttpRequest.php#L380-L389)
 
 
 See Also

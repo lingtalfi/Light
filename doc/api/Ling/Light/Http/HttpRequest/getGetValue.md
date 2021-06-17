@@ -57,7 +57,7 @@ Returns mixed.
 
 Source Code
 ===========
-See the source code for method [HttpRequest::getGetValue](https://github.com/lingtalfi/Light/blob/master/Http/HttpRequest.php#L326-L335)
+See the source code for method [HttpRequest::getGetValue](https://github.com/lingtalfi/Light/blob/master/Http/HttpRequest.php#L334-L343)
 
 
 See Also

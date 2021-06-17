@@ -152,11 +152,19 @@ class HttpRequest implements HttpRequestInterface
     {
         $method = $_SERVER['REQUEST_METHOD'];
         $uriPath = explode('?', $_SERVER["REQUEST_URI"])[0];
-        $qString = $_SERVER['QUERY_STRING'];
+
+        /**
+         * From my understanding, this field is url encoded (but we want to work with the decoded version).
+         * http://www.faqs.org/rfcs/rfc3875.html
+         *
+         */
+        $qString = urldecode($_SERVER['QUERY_STRING']);
         $uri = $uriPath;
         if ($qString) {
+            //
             $uri .= "?" . $qString;
         }
+
         $time = $_SERVER["REQUEST_TIME_FLOAT"];
         $host = $_SERVER["HTTP_HOST"];
         $isHttps = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443;
