@@ -1,6 +1,6 @@
 Ling/Light
 ================
-2019-04-09 --> 2021-06-17
+2019-04-09 --> 2021-06-25
 
 
 
@@ -24,6 +24,7 @@ Table of contents
     - [Light::getHttpRequest](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/getHttpRequest.md) &ndash; Returns the httpRequest of this instance.
     - [Light::setHttpRequest](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/setHttpRequest.md) &ndash; Sets the httpRequest.
     - [Light::getMatchingRoute](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/getMatchingRoute.md) &ndash; Returns the matching route array, or false if no route matched.
+    - [Light::setMatchingRoute](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/setMatchingRoute.md) &ndash; Sets the matchingRoute.
     - [Light::registerRoute](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/registerRoute.md) &ndash; Registers a route item, as defined in [the route page](https://github.com/lingtalfi/Light/blob/master/doc/pages/route.md).
     - [Light::get](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/get.md) &ndash; An alias for the registerRoute method.
     - [Light::initialize](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/initialize.md) &ndash; Triggers the initialize phase if set in the service container.
@@ -49,6 +50,7 @@ Table of contents
     - [ConfigurationHelper::getCombinedConf](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ConfigurationHelper/getCombinedConf.md) &ndash; Returns the merged configuration of all [BabyYaml](https://github.com/lingtalfi/BabyYaml) configuration files found in the given directory.
 - [ControllerHelper](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper.md) &ndash; The ControllerHelper class.
     - [ControllerHelper::executeController](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper/executeController.md) &ndash; Executes the given controller and returns the appropriate response.
+    - [ControllerHelper::executeControllerByRouteName](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper/executeControllerByRouteName.md) &ndash; Executes the controller corresponding to the given route, if found, and returns the returned response.
     - [ControllerHelper::resolveController](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper/resolveController.md) &ndash; controller can be extracted out of the given value.
     - [ControllerHelper::getControllerArgs](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper/getControllerArgs.md) &ndash; Returns the controller arguments for the given controller and light instance.
     - [ControllerHelper::getControllerArgsInfo](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Helper/ControllerHelper/getControllerArgsInfo.md) &ndash; Returns an array of controller args corresponding to the given controller.
@@ -322,7 +324,6 @@ Dependencies
 ============
 - [BabyYaml](https://github.com/lingtalfi/BabyYaml)
 - [Bat](https://github.com/lingtalfi/Bat)
-- [CheapLogger](https://github.com/lingtalfi/CheapLogger)
 - [DirScanner](https://github.com/lingtalfi/DirScanner)
 - [Light_Events](https://github.com/lingtalfi/Light_Events)
 - [Octopus](https://github.com/lingtalfi/Octopus)

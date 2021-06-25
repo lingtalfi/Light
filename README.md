@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2021-05-31
+2019-04-05 -> 2021-06-25
 
 
 
@@ -41,6 +41,7 @@ Summary
     - [Efficiency tips](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/efficiency-tips.md)
     - [Environments](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/environments.md)
     - [Events](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/events.md)
+    - [Exceptions](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/exceptions.md)
     - [General philosophy](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/light-general-philosophy.md)
     - [how to debug](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/how-to-debug.md)
     - [light init script](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/light-init-script.md)
@@ -65,6 +66,11 @@ Summary
 History Log
 =============
 
+- 0.70.11 -- 2021-06-25
+
+    - update light application recommended structure document
+    - add exceptions document
+  
 - 0.70.10 -- 2021-06-17
 
     - fix HttpRequest returning the url-encoded form of QUERY_STRING

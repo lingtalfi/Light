@@ -119,6 +119,21 @@ class Light
      * When not available, it's null.
      * When available, it's either the matching route array or false (if no route matches).
      *
+     * The matching route is basically the route leading to the controller that actually returns the http response.
+     * This is generally a controller found by the router, but in some cases it could be something else.
+     * For instance, in the case of a not found match, we could catch the "route not found" exception and return
+     * our own response using another 404 controller (for instance). In that case, the 404 controller is the one
+     * actually rendering the response, and therefore the matching route could be set to the route leading to
+     * that 404 controller.
+     *
+     * Note that this idea about the matching route is experimental. It might change in the future.
+     * For now we go with it.
+     *
+     *
+     *
+     *
+     *
+     *
      * @var array|false|null
      */
     protected mixed $matchingRoute;
@@ -253,6 +268,28 @@ class Light
         }
         throw new LightException("The matching route is not available yet (the matching route test hasn't been executed yet).");
     }
+
+    /**
+     * Sets the matchingRoute.
+     * You shouldn't use this method unless you know what you are doing.
+     * This is experimental.
+     *
+     * It basically allows for internal hacks.
+     * So for those hacks are:
+     *
+     * - ControllerHelper::executeControllerByRouteName
+     *      We basically created this method so that executeControllerByRouteName could specify urlParams if he wanted.
+     *      That's all. Otherwise this method shouldn't be used.
+     *
+     *
+     *
+     * @param array $matchingRoute
+     */
+    public function setMatchingRoute(array $matchingRoute)
+    {
+        $this->matchingRoute = $matchingRoute;
+    }
+
 
     /**
      * Registers a route item, as defined in @page(the route page).
