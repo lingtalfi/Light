@@ -331,7 +331,7 @@ class HttpRequest implements HttpRequestInterface
     /**
      * @implementation
      */
-    public function getGetValue(string $key, bool $throwEx = true)
+    public function getGetValue(string $key, bool $throwEx = false)
     {
         if (array_key_exists($key, $this->get)) {
             return $this->get[$key];
@@ -354,7 +354,7 @@ class HttpRequest implements HttpRequestInterface
     /**
      * @implementation
      */
-    public function getPostValue(string $key, bool $throwEx = true)
+    public function getPostValue(string $key, bool $throwEx = false)
     {
         if (array_key_exists($key, $this->post)) {
             return $this->post[$key];
@@ -377,7 +377,7 @@ class HttpRequest implements HttpRequestInterface
     /**
      * @implementation
      */
-    public function getFilesValue(string $key, bool $throwEx = true)
+    public function getFilesValue(string $key, bool $throwEx = false)
     {
         if (array_key_exists($key, $this->files)) {
             return $this->files[$key];
@@ -400,7 +400,7 @@ class HttpRequest implements HttpRequestInterface
     /**
      * @implementation
      */
-    public function getCookieValue(string $key, bool $throwEx = true)
+    public function getCookieValue(string $key, bool $throwEx = false)
     {
         if (array_key_exists($key, $this->cookie)) {
             return $this->cookie[$key];

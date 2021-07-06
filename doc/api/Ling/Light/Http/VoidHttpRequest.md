@@ -4,7 +4,7 @@
 
 The VoidHttpRequest class
 ================
-2019-04-09 --> 2021-06-25
+2019-04-09 --> 2021-07-06
 
 
 
@@ -40,13 +40,13 @@ class <span class="pl-k">VoidHttpRequest</span> implements [HttpRequestInterface
     - public [getHeaders](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/VoidHttpRequest/getHeaders.md)() : array
     - public [getHeader](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/VoidHttpRequest/getHeader.md)(string $header, ?$default = null) : string | mixed
     - public [getGet](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/VoidHttpRequest/getGet.md)() : array
-    - public [getGetValue](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/VoidHttpRequest/getGetValue.md)(string $key, ?bool $throwEx = true) : mixed
+    - public [getGetValue](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/VoidHttpRequest/getGetValue.md)(string $key, ?bool $throwEx = false) : mixed
     - public [getPost](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/VoidHttpRequest/getPost.md)() : array
-    - public [getPostValue](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/VoidHttpRequest/getPostValue.md)(string $key, ?bool $throwEx = true) : mixed
+    - public [getPostValue](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/VoidHttpRequest/getPostValue.md)(string $key, ?bool $throwEx = false) : mixed
     - public [getFiles](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/VoidHttpRequest/getFiles.md)() : array
-    - public [getFilesValue](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/VoidHttpRequest/getFilesValue.md)(string $key, ?bool $throwEx = true) : mixed
+    - public [getFilesValue](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/VoidHttpRequest/getFilesValue.md)(string $key, ?bool $throwEx = false) : mixed
     - public [getCookie](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/VoidHttpRequest/getCookie.md)() : array
-    - public [getCookieValue](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/VoidHttpRequest/getCookieValue.md)(string $key, ?bool $throwEx = true) : mixed
+    - public [getCookieValue](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/VoidHttpRequest/getCookieValue.md)(string $key, ?bool $throwEx = false) : mixed
 
 }
 

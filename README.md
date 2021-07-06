@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2021-06-25
+2019-04-05 -> 2021-07-06
 
 
 
@@ -66,6 +66,11 @@ Summary
 History Log
 =============
 
+- 0.70.12 -- 2021-06-29
+
+    - add logging section to general philosophy document
+    - update HttpRequestInterface, now the accessors to main arrays don't throw exception by default
+  
 - 0.70.11 -- 2021-06-25
 
     - update light application recommended structure document

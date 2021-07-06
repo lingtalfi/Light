@@ -16,7 +16,7 @@ Description
 ================
 
 
-public [HttpRequest::getGetValue](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequest/getGetValue.md)(string $key, ?bool $throwEx = true) : mixed
+public [HttpRequest::getGetValue](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequest/getGetValue.md)(string $key, ?bool $throwEx = false) : mixed
 
 
 

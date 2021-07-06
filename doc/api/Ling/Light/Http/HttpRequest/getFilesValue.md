@@ -16,7 +16,7 @@ Description
 ================
 
 
-public [HttpRequest::getFilesValue](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequest/getFilesValue.md)(string $key, ?bool $throwEx = true) : mixed
+public [HttpRequest::getFilesValue](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequest/getFilesValue.md)(string $key, ?bool $throwEx = false) : mixed
 
 
 
