@@ -4,7 +4,7 @@
 
 The Light class
 ================
-2019-04-09 --> 2021-07-06
+2019-04-09 --> 2021-07-30
 
 
 
@@ -85,6 +85,7 @@ class <span class="pl-k">Light</span>  {
     - public [get](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/get.md)(string $pattern, $controller, ?string $name = null, ?array $route = []) : void
     - public [initialize](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/initialize.md)(?[Ling\Light\Http\HttpRequestInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpRequestInterface.md) $httpRequest = null) : void
     - public [run](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/run.md)() : void
+    - public [logError](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/logError.md)($msg) : void
     - protected [renderDebugPage](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/renderDebugPage.md)(Exception $e) : string | [HttpResponseInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpResponseInterface.md)
     - protected [renderInternalServerErrorPage](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/renderInternalServerErrorPage.md)() : string | [HttpResponseInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Http/HttpResponseInterface.md)
 
@@ -178,6 +179,7 @@ Methods
 - [Light::get](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/get.md) &ndash; An alias for the registerRoute method.
 - [Light::initialize](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/initialize.md) &ndash; Triggers the initialize phase if set in the service container.
 - [Light::run](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/run.md) &ndash; Runs the Light web application.
+- [Light::logError](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/logError.md) &ndash; Sends a log message to the logger service's error channel.
 - [Light::renderDebugPage](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/renderDebugPage.md) &ndash; Renders (returns the html code of) the debug page.
 - [Light::renderInternalServerErrorPage](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/renderInternalServerErrorPage.md) &ndash; it should display an internal server error page with code 500.
 

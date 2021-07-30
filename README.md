@@ -1,6 +1,6 @@
 Light
 ===========
-2019-04-05 -> 2021-07-06
+2019-04-05 -> 2021-07-30
 
 
 
@@ -66,6 +66,11 @@ Summary
 History Log
 =============
 
+- 0.70.13 -- 2021-07-30
+
+    - fix LightTool::isAjax calling undefined service router
+    - add Light->logError method, and LightController->logError method
+  
 - 0.70.12 -- 2021-06-29
 
     - add logging section to general philosophy document

@@ -1350,3 +1350,14 @@
     - Ling:ParenthesisMirrorParser:1.0.5
     - Ling:PhpUploadFileFix:1.0.5
     - Ling:SicTools:1.6.7
+
+0.70.13: 
+    - Ling:BabyYaml:1.7.11
+    - Ling:Bat:1.338
+    - Ling:DirScanner:1.13.6
+    - Ling:Light_Events:1.10.8
+    - Ling:Light_Logger:1.11.11
+    - Ling:Octopus:1.4.5
+    - Ling:ParenthesisMirrorParser:1.0.5
+    - Ling:PhpUploadFileFix:1.0.5
+    - Ling:SicTools:1.6.7

@@ -4,6 +4,7 @@ https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/Lig
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/LightController/getHttpRequest.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/LightController/getLight.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/LightController/hasService.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/LightController/logError.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/LightController/setLight.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/LightController.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Controller/LightControllerInterface.md
@@ -19,6 +20,7 @@ https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/get
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/getRoutes.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/initialize.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/isDebug.md
+https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/logError.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/registerErrorHandler.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/registerRoute.md
 https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/renderDebugPage.md

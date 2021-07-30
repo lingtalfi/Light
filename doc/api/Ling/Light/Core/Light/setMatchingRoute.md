@@ -58,7 +58,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [Light::setMatchingRoute](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L288-L291)
+See the source code for method [Light::setMatchingRoute](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L289-L292)
 
 
 See Also

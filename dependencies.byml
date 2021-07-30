@@ -4,6 +4,7 @@ dependencies:
         - Bat
         - DirScanner
         - Light_Events
+        - Light_Logger
         - Octopus
         - ParenthesisMirrorParser
         - PhpUploadFileFix

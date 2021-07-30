@@ -16,6 +16,7 @@ use Ling\Light\Router\LightRouter;
 use Ling\Light\ServiceContainer\LightDummyServiceContainer;
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
 use Ling\Light_Events\Service\LightEventsService;
+use Ling\Light_Logger\Service\LightLoggerService;
 
 /**
  * The Light class.
@@ -581,6 +582,25 @@ class Light
 
     }
 
+
+
+    /**
+     *
+     * Sends a log message to the logger service's error channel.
+     *
+     * See the @page(light philosophy page) for more details.
+     *
+     * @param $msg
+     * @throws \Exception
+     */
+    public function logError($msg)
+    {
+        /**
+         * @var $_lo LightLoggerService
+         */
+        $_lo = $this->getContainer()->get("logger");
+        $_lo->error($msg);
+    }
 
 
     //--------------------------------------------

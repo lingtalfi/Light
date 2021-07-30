@@ -1,6 +1,6 @@
 Ling/Light
 ================
-2019-04-09 --> 2021-07-06
+2019-04-09 --> 2021-07-30
 
 
 
@@ -29,6 +29,7 @@ Table of contents
     - [Light::get](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/get.md) &ndash; An alias for the registerRoute method.
     - [Light::initialize](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/initialize.md) &ndash; Triggers the initialize phase if set in the service container.
     - [Light::run](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/run.md) &ndash; Runs the Light web application.
+    - [Light::logError](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/Light/logError.md) &ndash; Sends a log message to the logger service's error channel.
 - [LightAwareInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/LightAwareInterface.md) &ndash; The LightAwareInterface interface.
     - [LightAwareInterface::setLight](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Core/LightAwareInterface/setLight.md) &ndash; Sets the light instance.
 - [LightEvent](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/Events/LightEvent.md) &ndash; The LightEvent class.
@@ -326,6 +327,7 @@ Dependencies
 - [Bat](https://github.com/lingtalfi/Bat)
 - [DirScanner](https://github.com/lingtalfi/DirScanner)
 - [Light_Events](https://github.com/lingtalfi/Light_Events)
+- [Light_Logger](https://github.com/lingtalfi/Light_Logger)
 - [Octopus](https://github.com/lingtalfi/Octopus)
 - [ParenthesisMirrorParser](https://github.com/lingtalfi/ParenthesisMirrorParser)
 - [PhpUploadFileFix](https://github.com/lingtalfi/PhpUploadFileFix)

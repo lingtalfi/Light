@@ -56,7 +56,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [Light::initialize](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L377-L407)
+See the source code for method [Light::initialize](https://github.com/lingtalfi/Light/blob/master/Core/Light.php#L378-L408)
 
 
 See Also
