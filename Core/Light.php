@@ -508,7 +508,6 @@ class Light
 
         } catch (\Exception $e) {
 
-
             $wasHandled = false;
 
             if (null !== $events) {
@@ -516,6 +515,7 @@ class Light
                 $data->setVar('exception', $e);
 
                 $events->dispatch("Ling.Light.on_exception_caught", $data);
+
 
                 // some plugins can change the exception
                 $e = $data->getVar('exception');

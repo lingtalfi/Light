@@ -3,10 +3,6 @@ Light
 2019-04-05 -> 2021-07-30
 
 
-
-WORK IN PROGRESS, COME BACK IN A FEW MONTHS..., OR USE IT NOW AT YOUR OWN RISKS
-
-
 A light framework for creating web apps.
 
 
